@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Standard — 1CELL Health</title>
+<meta name="description" content="The 1CELL Health standard — cGMP manufacturing, flow-cytometry characterization, third-party Certificates of Analysis and a validated 2–8 °C cold chain on every product." />
+<meta name="author" content="1CELL Health" />
+<meta name="theme-color" content="#FFFFFF" />
+<meta property="og:site_name" content="1CELL HEALTH" />
+<meta property="og:title" content="The Standard — 1CELL Health" />
+<meta property="og:description" content="cGMP manufacturing, per-batch COA, and validated cold chain — the standard on every vial." />
+<meta property="og:image" content="assets/img/lab-cleanroom.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%230B5A54'/%3E%3Cpath d='M16 7l7.8 4.5v9L16 25l-7.8-4.5v-9z' fill='none' stroke='%23fff' stroke-width='1.6'/%3E%3Ccircle cx='16' cy='16' r='2.4' fill='%23fff'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;450;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/styles.css?v=16" />
+<script>document.documentElement.className+=" js";</script>
+</head>
+<body>
+
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="preloader__mark">
+    <svg viewBox="0 0 32 32" width="42" height="42"><path d="M16 3l11.3 6.5v13L16 29 4.7 22.5v-13z" fill="none" stroke="currentColor" stroke-width="1" opacity=".4"/><path class="pl-hex" d="M16 9l6.9 4v8l-6.9 4-6.9-4v-8z" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="16" cy="16" r="2.4" fill="currentColor"/></svg>
+    <span class="preloader__word">1CELL</span>
+  </div>
+  <div class="preloader__bar"><span id="plBar"></span></div>
+  <span class="preloader__pct" id="plPct">0</span>
+</div>
+
+<div class="cursor" id="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"></span></div>
+
+<div class="topbar" id="top">
+  <div class="container topbar__inner">
+    <p><span class="livedot"></span> <span data-i18n="top.ship">Cold-chain shipped worldwide — free over</span> <strong>$150</strong></p>
+    <div class="topbar__right">
+      <a href="#professional" data-i18n="top.clin">For clinicians →</a>
+      <button class="langtoggle" id="langToggle" aria-label="Switch language"><b data-lang="en">EN</b><span>/</span><b data-lang="es">ES</b></button>
+    </div>
+  </div>
+</div>
+
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a class="brand" href="index.html" data-cursor aria-label="1CELL Health home">
+      <svg class="brand__mark" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><path d="M16 3l11.3 6.5v13L16 29 4.7 22.5v-13z" fill="none" stroke="currentColor" stroke-width="1.3" opacity="0.32"/><path d="M16 9l6.9 4v8l-6.9 4-6.9-4v-8z" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="16" cy="16" r="2.4" fill="currentColor"/></svg>
+      <span class="brand__word">1CELL<span class="brand__sub">HEALTH</span></span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="products.html" data-cursor data-i18n="nav.products">Products</a>
+      <a href="standard.html" data-cursor data-i18n="nav.standard">Standard</a>
+      <a href="process.html" data-cursor data-i18n="nav.process">Process</a>
+      <a href="faq.html" data-cursor data-i18n="nav.faq">FAQ</a>
+      <a href="about.html" data-cursor data-i18n="page.about">About</a>
+    </nav>
+    <div class="header__actions">
+      <button class="iconbtn" id="searchOpen" data-cursor aria-label="Search products">
+        <svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      </button>
+      <button class="cartbtn iconbtn" id="cartOpen" data-cursor aria-label="Open cart">
+        <svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><path d="M6 7h13l-1.2 9.2a2 2 0 0 1-2 1.8H9.2a2 2 0 0 1-2-1.8L6 7zM6 7L5.2 4H3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9.5" cy="20.5" r="1.2" fill="currentColor"/><circle cx="15.5" cy="20.5" r="1.2" fill="currentColor"/></svg>
+        <span class="cartbtn__count" id="cartCount" hidden>0</span>
+      </button>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="drawer" id="drawer" hidden>
+    <a href="products.html" data-i18n="nav.products">Products</a><a href="standard.html" data-i18n="nav.standard">Standard</a><a href="process.html" data-i18n="nav.process">Process</a><a href="faq.html" data-i18n="nav.faq">FAQ</a><a href="about.html" data-i18n="page.about">About</a>
+    <a href="#professional" class="btn btn--primary" data-i18n="nav.clin">For clinicians</a>
+  </div>
+</header>
+
+<main>
+<section class="pagehero">
+  <div class="container pagehero__inner">
+    <div class="crumbs" data-reveal><a href="index.html" data-i18n="crumb.home">Home</a><span>/</span><span data-i18n="nav.standard">Standard</span></div>
+    <span class="kicker" data-reveal data-i18n="std.kicker">Why 1CELL</span>
+    <h1 data-reveal data-delay="60" data-i18n="sp.h1">The standard, on every vial.</h1>
+    <p data-reveal data-delay="120" data-i18n="sp.lead">Nothing ships without documentation, a clinical plan and a validated temperature record. This page covers exactly how — from the cleanroom to the Certificate of Analysis in your inbox.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="pillars" style="grid-template-columns:repeat(2,1fr)">
+      <article class="pillar" data-reveal>
+        <span class="pillar__ic"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M4 7l8-4 8 4v10l-8 4-8-4z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M4 7l8 4 8-4M12 11v10" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></span>
+        <h3 data-i18n="std.p1t">Traceable biology</h3><p data-i18n="std.p1p">cGMP manufacturing, flow-cytometry characterization and a third-party COA archived for every lot.</p></article>
+      <article class="pillar" data-reveal data-delay="80">
+        <span class="pillar__ic"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M12 3v11" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="17.5" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M10 6h4M10 9h4" stroke="currentColor" stroke-width="1.5"/></svg></span>
+        <h3 data-i18n="std.p2t">Unbroken cold chain</h3><p data-i18n="std.p2p">2–8 °C from culture to clinic, with a digital logger on every shipment. Out-of-range lots are rejected.</p></article>
+      <article class="pillar" data-reveal>
+        <span class="pillar__ic"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M12 21s-7-4.5-7-10a7 7 0 0 1 14 0c0 5.5-7 10-7 10z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M9 11l2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></span>
+        <h3 data-i18n="std.p3t">Real medical guidance</h3><p data-i18n="std.p3p">A clinical protocol ships with every order, and a dedicated medical team guides application and follow-up.</p></article>
+      <article class="pillar" data-reveal data-delay="80">
+        <span class="pillar__ic"><svg viewBox="0 0 24 24" width="22" height="22"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8.5 12l2.4 2.4L16 9" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <h3 data-i18n="sp.p4t">Independently verified</h3><p data-i18n="sp.p4p">Every lot is tested by a third-party laboratory, not just released on internal QA. The result ships with the product, not just on request.</p></article>
+    </div>
+    <div class="metrics" data-reveal style="margin-top:64px">
+      <div class="metric"><span class="metric__n" data-count="7">0</span><span class="metric__l" data-i18n="std.m1">Biological families</span></div>
+      <div class="metric"><span class="metric__n" data-count="100" data-suffix="%">0</span><span class="metric__l" data-i18n="std.m2">COA per batch</span></div>
+      <div class="metric"><span class="metric__n" data-count="24" data-suffix="/7">0</span><span class="metric__l" data-i18n="std.m3">Medical support</span></div>
+      <div class="metric"><span class="metric__n"><i>≤</i><span data-count="8" data-suffix="°C">0</span></span><span class="metric__l" data-i18n="std.m4">Cold chain</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOW WE TEST ===== -->
+<section class="section standard">
+  <div class="container">
+    <div class="section__head" data-reveal>
+      <span class="kicker" data-i18n="sp.testkicker">Quality control</span>
+      <h2 class="section__title" data-i18n="sp.testtitle">One standard. Every batch.</h2>
+      <p class="section__sub" data-i18n="sp.testsub">Five checkpoints, run in order, before a single vial is released for shipment.</p>
+    </div>
+    <ol class="steps" style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px">
+      <li class="step is-active" data-reveal><span class="step__no">01</span><h3 data-i18n="sp.test0t">Reception</h3><p data-i18n="sp.test0p">Source material is logged, inspected and matched against its chain-of-origin documentation before it enters the lab.</p></li>
+      <li class="step is-active" data-reveal data-delay="60"><span class="step__no">02</span><h3 data-i18n="sp.test1t">Cytometry</h3><p data-i18n="sp.test1p">Flow cytometry confirms the surface-marker profile that defines each cell type — and rules out cross-contamination between lots.</p></li>
+      <li class="step is-active" data-reveal data-delay="120"><span class="step__no">03</span><h3 data-i18n="sp.test2t">Quality control</h3><p data-i18n="sp.test2p">Viability, sterility and endotoxin are tested against pharmacopeial limits — cellular products are held to a ≥ 95% viability threshold.</p></li>
+      <li class="step is-active" data-reveal><span class="step__no">04</span><h3 data-i18n="sp.test3t">Release with COA</h3><p data-i18n="sp.test3p">A signed Certificate of Analysis is issued per lot, documenting every result above before the batch is cleared for shipment.</p></li>
+      <li class="step is-active" data-reveal data-delay="60"><span class="step__no">05</span><h3 data-i18n="sp.test4t">Cold chain</h3><p data-i18n="sp.test4p">The released lot enters validated 2–8 °C packaging with a digital logger — and never leaves that range until it reaches you.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===== WHAT'S IN A COA ===== -->
+<section class="section" style="padding-top:0">
+  <div class="container" style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,72px);align-items:center">
+    <div data-reveal>
+      <span class="kicker" data-i18n="sp.coakicker">Documentation</span>
+      <h2 class="section__title" data-i18n="sp.coatitle">What ships in a Certificate of Analysis.</h2>
+      <p class="section__sub" data-i18n="sp.coasub">A COA is a signed, independent record — not a marketing sheet. Every 1CELL shipment includes one, tied to a specific lot number.</p>
+    </div>
+    <div class="pillar" data-reveal data-delay="100" style="padding:0;overflow:hidden">
+      <div style="background:var(--forest);color:#fff;padding:18px 26px;display:flex;justify-content:space-between;align-items:center;font-family:var(--font-mono);font-size:12px;letter-spacing:.06em">
+        <span data-i18n="sp.coalabel">CERTIFICATE OF ANALYSIS</span><span>LOT #1C-2607-A</span>
+      </div>
+      <div style="padding:26px">
+        <div style="display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--line)"><span style="color:var(--muted);font-size:13.5px" data-i18n="sp.coaf1">Identity markers</span><strong style="font-size:13.5px">CD73+ CD90+ CD105+</strong></div>
+        <div style="display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--line)"><span style="color:var(--muted);font-size:13.5px" data-i18n="sp.coaf2">Viability</span><strong style="font-size:13.5px;color:var(--green)">96.4%</strong></div>
+        <div style="display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--line)"><span style="color:var(--muted);font-size:13.5px" data-i18n="sp.coaf3">Sterility</span><strong style="font-size:13.5px;color:var(--green)" data-i18n="sp.pass">Pass</strong></div>
+        <div style="display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--line)"><span style="color:var(--muted);font-size:13.5px" data-i18n="sp.coaf4">Endotoxin</span><strong style="font-size:13.5px" data-i18n="sp.coaf4v">&lt; 0.5 EU/mL</strong></div>
+        <div style="display:flex;justify-content:space-between;padding:11px 0"><span style="color:var(--muted);font-size:13.5px" data-i18n="sp.coaf5">Released</span><strong style="font-size:13.5px">2026-07-14</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== COLD CHAIN ===== -->
+<section class="section section--dark coldchain">
+  <div class="container coldchain__inner">
+    <figure class="coldchain__media" data-reveal>
+      <img src="assets/img/coldchain.jpg" alt="Cold-chain box with vials and a digital temperature logger" />
+      <span class="coldchain__chip"><span class="livedot"></span><b id="liveTemp">4.2</b>&nbsp;°C · <span data-i18n="cc.range">in range</span></span>
+    </figure>
+    <div class="coldchain__copy" data-reveal data-delay="100">
+      <span class="kicker kicker--glow" data-i18n="cc.kicker">Logistics</span>
+      <h2 class="section__title on-dark" data-i18n="cc.title">Never leaving<br>2–8&nbsp;°C.</h2>
+      <p class="section__sub on-dark" data-i18n="cc.sub">Every shipment carries a digital temperature logger, monitored 24/7. Out-of-range readings automatically reject the lot — so the biology you order is the biology you receive.</p>
+      <div class="coldchain__meta">
+        <div><span class="cc__k" data-i18n="cc.k1">Range</span><span class="cc__v">2–8 °C</span></div>
+        <div><span class="cc__k" data-i18n="cc.k2">Monitoring</span><span class="cc__v">24/7</span></div>
+        <div><span class="cc__k" data-i18n="cc.k3">Logger</span><span class="cc__v" data-i18n="cc.v3">Per box</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--green professional" id="professional">
+  <div class="container professional__inner" data-reveal>
+    <span class="kicker kicker--glow" data-i18n="pro.kicker">Professional access</span>
+    <h2 class="professional__title" data-i18n="pro.title">Join the 1CELL physician network.</h2>
+    <p class="professional__sub" data-i18n="pro.sub">License validation, institutional pricing and dedicated scientific support. Held to one standard.</p>
+    <form class="professional__form" id="proForm" novalidate>
+      <input type="email" id="proEmail" placeholder="Your professional email" aria-label="Professional email" required data-i18n-ph="pro.ph" />
+      <button class="btn btn--light btn--lg" type="submit" data-cursor data-i18n="pro.btn">Request access</button>
+    </form>
+    <p class="professional__fine" id="proMsg" data-i18n="pro.fine">License verification within 24 h · Per-batch evidence, no noise.</p>
+  </div>
+</section>
+</main>
+
+<footer class="footer" id="contact">
+  <div class="container footer__top">
+    <h2 class="footer__cta" data-reveal>Regeneration,<br>engineered.</h2>
+    <form class="footer__news" id="newsForm" data-reveal data-delay="80" novalidate>
+      <label data-i18n="foot.news">Get per-batch evidence, no noise.</label>
+      <div class="footer__newsrow"><input type="email" id="newsEmail" placeholder="Email address" aria-label="Email" required data-i18n-ph="foot.ph" /><button class="btn btn--primary" type="submit" data-cursor data-i18n="foot.sub">Subscribe</button></div>
+      <span class="footer__newsmsg" id="newsMsg"></span>
+    </form>
+  </div>
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <a class="brand brand--light" href="index.html" data-cursor aria-label="1CELL Health home">
+        <svg class="brand__mark" viewBox="0 0 32 32" width="26" height="26" aria-hidden="true"><path d="M16 3l11.3 6.5v13L16 29 4.7 22.5v-13z" fill="none" stroke="currentColor" stroke-width="1.3" opacity="0.4"/><path d="M16 9l6.9 4v8l-6.9 4-6.9-4v-8z" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="16" cy="16" r="2.4" fill="currentColor"/></svg>
+        <span class="brand__word">1CELL<span class="brand__sub">HEALTH</span></span>
+      </a>
+      <p class="footer__tag" data-i18n="foot.tag">Clinical-grade regenerative biologics with per-batch traceability and real medical guidance.</p>
+      <p class="footer__contact" data-i18n="foot.contactinfo">contacto@1cellhealth.com · Lun–Vie 9:00–18:00 (CT)</p>
+      <div class="footer__socials" aria-label="Social links">
+        <a href="#" data-cursor aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="17" height="17"><path fill="currentColor" d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.8-2 3.7-2 4 0 4.45 2.6 4.45 6V21H21v-5.3c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21H13z"/></svg></a>
+        <a href="#" data-cursor aria-label="Instagram"><svg viewBox="0 0 24 24" width="17" height="17"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M4 8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><circle cx="12" cy="12" r="3.4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17" cy="7" r="1" fill="currentColor"/></svg></a>
+        <a href="#" data-cursor aria-label="X"><svg viewBox="0 0 24 24" width="17" height="17"><path fill="currentColor" d="M17.5 3h3l-7 8 8.2 10h-6.4l-5-6.1L7 21H4l7.5-8.6L3.6 3H10l4.5 5.6z"/></svg></a>
+      </div>
+    </div>
+    <nav class="footer__cols" aria-label="Footer">
+      <div class="footer__col"><h4 data-i18n="nav.products">Products</h4><a href="products.html?goto=msc">Stem Cells</a><a href="products.html?goto=exo">Exosomes</a><a href="products.html?goto=nk">NK Cells</a><a href="products.html?goto=pep">Peptides</a></div>
+      <div class="footer__col"><h4 data-i18n="foot.science">Science</h4><a href="standard.html" data-i18n="nav.standard">Standard</a><a href="process.html" data-i18n="nav.process">Process</a><a href="faq.html" data-i18n="nav.faq">FAQ</a></div>
+      <div class="footer__col"><h4 data-i18n="foot.company">Company</h4><a href="#professional" data-i18n="pro.kicker">Professional access</a><a href="#contact" data-i18n="foot.contact">Contact</a><a href="about.html" data-i18n="page.about">About</a></div>
+      <div class="footer__col"><h4 data-i18n="foot.legal">Legal</h4><a href="#" data-page="privacy" data-i18n="page.privacy">Privacy</a><a href="#" data-page="terms" data-i18n="page.terms">Terms</a><a href="#" data-page="compliance" data-i18n="page.compliance">Compliance</a></div>
+    </nav>
+  </div>
+  <div class="footer__bar"><div class="container footer__bar-inner"><span>© 2026 1CELL HEALTH. All rights reserved.</span><span class="footer__biologics">1CELL · Biologics</span></div></div>
+  <p class="footer__disclaimer container">These statements have not been evaluated by a regulatory agency. Cellular therapies and exosomes are provided for professional use where permitted by law. This site is informational and not medical advice; consult a qualified clinician.</p>
+</footer>
+
+<div class="overlay" id="overlay" hidden></div>
+<aside class="cart" id="cart" aria-label="Shopping cart" aria-hidden="true">
+  <div class="cart__head"><h3 data-i18n="cart.title">Your cart</h3><button class="cart__close" id="cartClose" data-cursor aria-label="Close cart">&times;</button></div>
+  <div class="cart__items" id="cartItems"></div>
+  <div class="cart__empty" id="cartEmpty">
+    <svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true"><path d="M6 7h13l-1.2 9.2a2 2 0 0 1-2 1.8H9.2a2 2 0 0 1-2-1.8L6 7zM6 7L5.2 4H3" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <p data-i18n="cart.empty">Nothing here yet — your regimen starts in the catalog.</p><button class="btn btn--ghost btn--sm" id="cartKeep" data-cursor data-i18n="cart.browse">Browse products</button>
+  </div>
+  <div class="cart__foot" id="cartFoot" hidden>
+    <div class="cart__row"><span data-i18n="cart.subtotal">Subtotal</span><strong id="cartTotal">$0</strong></div>
+    <p class="cart__note" data-i18n="cart.ship">Cold-chain shipping calculated at checkout.</p>
+    <button class="btn btn--primary btn--block" id="checkout" data-cursor data-i18n="cart.checkout">Checkout</button>
+  </div>
+</aside>
+
+<div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="modal__box">
+    <button class="modal__close" id="modalClose" data-cursor aria-label="Close">&times;</button>
+    <div class="modal__media"><img id="mvImg" src="" alt="" /></div>
+    <div class="modal__body"><span class="modal__cat" id="mvCat"></span><h3 id="mvName"></h3><p class="modal__spec" id="mvSpec"></p><div class="modal__detail" id="mvDetail"></div>
+      <div class="modal__foot"><span class="price price--lg" id="mvPrice"></span><button class="btn btn--primary" id="mvAction" data-cursor></button></div>
+      <p class="modal__note" id="mvNote"></p></div>
+  </div>
+</div>
+
+<div class="modal modal--checkout" id="checkoutModal" aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="co">
+    <button class="modal__close" id="coClose" data-cursor aria-label="Close">&times;</button>
+    <div class="co__steps" id="coSteps"><span class="is-active" data-i18n="co.s1">Details</span><span data-i18n="co.s2">Review</span><span data-i18n="co.s3">Done</span></div>
+    <form class="co__pane is-active" id="coStep1" data-pane="1" novalidate>
+      <h3 data-i18n="co.detailsh">Shipping details</h3>
+      <p class="co__demo" data-i18n="co.demo">Demo checkout — no payment is taken and nothing is shipped.</p>
+      <div class="co__field"><label data-i18n="co.name">Full name</label><input type="text" id="coName" required /></div>
+      <div class="co__field"><label data-i18n="co.email">Email</label><input type="email" id="coEmail" required /></div>
+      <div class="co__field"><label data-i18n="co.addr">Address</label><input type="text" id="coAddr" required /></div>
+      <div class="co__two"><div class="co__field"><label data-i18n="co.city">City</label><input type="text" id="coCity" required /></div><div class="co__field"><label data-i18n="co.country">Country</label><input type="text" id="coCountry" required /></div></div>
+      <button class="btn btn--primary btn--block" type="submit" data-cursor data-i18n="co.toreview">Continue to review</button>
+    </form>
+    <div class="co__pane" id="coStep2" data-pane="2">
+      <h3 data-i18n="co.reviewh">Review your order</h3>
+      <div class="co__summary" id="coSummary"></div>
+      <div class="co__totrow"><span data-i18n="cart.subtotal">Subtotal</span><strong id="coTotal">$0</strong></div>
+      <div class="co__totrow co__totrow--muted"><span data-i18n="co.shiprow">Cold-chain shipping</span><span data-i18n="co.free">Free</span></div>
+      <div class="co__actions"><button class="btn btn--ghost" id="coBack" data-cursor data-i18n="co.back">Back</button><button class="btn btn--primary" id="coPlace" data-cursor data-i18n="co.place">Place order</button></div>
+    </div>
+    <div class="co__pane co__pane--done" id="coStep3" data-pane="3">
+      <div class="co__check"><svg viewBox="0 0 24 24" width="30" height="30"><path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <h3 data-i18n="co.doneh">Order placed</h3>
+      <p id="coDoneMsg" data-i18n="co.donep">Thank you — this was a demo, so no payment was taken. A confirmation would normally arrive by email.</p>
+      <button class="btn btn--primary" id="coFinish" data-cursor data-i18n="co.finish">Continue browsing</button>
+    </div>
+  </div>
+</div>
+
+<div class="searchmodal" id="searchModal" aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="searchmodal__box">
+    <div class="searchmodal__field"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><input type="search" id="searchModalInput" placeholder="Search products…" aria-label="Search" data-i18n-ph="prod.search" /><button id="searchClose" data-cursor aria-label="Close">Esc</button></div>
+    <div class="searchmodal__results" id="searchResults"></div>
+  </div>
+</div>
+
+<div class="pagemodal" id="pageModal" aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="pagemodal__box">
+    <div class="pagemodal__head"><h2 id="pageTitle"></h2><button class="modal__close" id="pageClose" data-cursor aria-label="Close">&times;</button></div>
+    <div class="pagemodal__body" id="pageBody"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+<a href="#top" class="totop" id="toTop" data-cursor aria-label="Back to top">↑</a>
+<script src="assets/js/main.js?v=16"></script>
+</body>
+</html>
