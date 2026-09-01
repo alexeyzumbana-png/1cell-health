@@ -526,6 +526,109 @@ p{margin:0}ul,ol{margin:0;padding:0;list-style:none}
 .pagemodal__body strong{color:var(--ink);font-weight:600}
 
 /* =========================================================
+   v17 — professionalized logo (wordmark-forward, two-tone)
+   ========================================================= */
+.brand{display:inline-flex;align-items:center;gap:9px;color:var(--green)}
+.brand__lock{display:inline-flex;flex-direction:column;line-height:1;gap:3px}
+.brand__word{font-family:var(--font-display);font-weight:700;font-size:21px;letter-spacing:-.022em;color:var(--ink);line-height:.88}
+.brand__word i{font-style:normal;color:var(--green)}
+.brand__sub{display:block;font-family:var(--font-mono);font-weight:500;font-size:8px;letter-spacing:.46em;color:var(--green);padding-left:2px}
+.brand:hover .brand__word i{color:var(--green-deep)}
+.brand--light .brand__word{color:#fff}
+.brand--light .brand__word i{color:var(--live)}
+.brand--light .brand__sub{color:var(--live)}
+.preloader__word i{font-style:normal;color:var(--green)}
+
+/* =========================================================
+   v17 — "The 1CELL way": product + protocol + guidance
+   ========================================================= */
+.approach{background:var(--paper-2);position:relative;overflow:hidden}
+.approach__head{max-width:660px;margin:0 auto clamp(40px,5vw,60px);text-align:center}
+.approach__head .section__sub{margin-inline:auto}
+.approach__row{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:clamp(10px,1.6vw,20px);align-items:stretch;max-width:1000px;margin-inline:auto}
+.approach__card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-xl);padding:34px 28px;text-align:left;transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s;position:relative}
+.approach__card:hover{transform:translateY(-5px);box-shadow:var(--shadow-sm);border-color:transparent}
+.approach__ic{width:52px;height:52px;border-radius:15px;display:grid;place-items:center;color:#fff;background:linear-gradient(150deg,var(--green),var(--green-deep));box-shadow:0 12px 24px -12px rgba(11,90,84,.6);margin-bottom:20px}
+.approach__k{font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;color:var(--green);display:block;margin-bottom:6px}
+.approach__card h3{font-size:19px;font-weight:600;margin-bottom:9px}
+.approach__card p{color:var(--muted);font-size:14.5px;line-height:1.55}
+.approach__plus{display:grid;place-items:center;font-family:var(--font-display);font-weight:600;font-size:30px;color:var(--green);opacity:.55}
+.approach__result{max-width:1000px;margin:22px auto 0;text-align:center;font-family:var(--font-mono);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.approach__result b{color:var(--green);font-weight:600}
+
+/* pillar icon — premium gradient badge */
+.pillar__ic{background:linear-gradient(150deg,var(--green-tint),var(--green-tint-2));box-shadow:inset 0 0 0 1px rgba(11,90,84,.08)}
+.pillar--accent .pillar__ic{background:linear-gradient(150deg,var(--green),var(--green-deep));color:#fff;box-shadow:0 12px 24px -14px rgba(11,90,84,.6)}
+
+/* =========================================================
+   v17 — About: impactful green hero (Apple-grade)
+   ========================================================= */
+.abouthero{position:relative;overflow:hidden;background:radial-gradient(120% 120% at 78% 30%,#0a4a43 0%,#06322c 46%,var(--forest-2) 100%);color:#fff;padding:clamp(120px,16vw,180px) 0 clamp(72px,9vw,110px)}
+.abouthero__grid{position:absolute;inset:0;opacity:.4;pointer-events:none;background:radial-gradient(circle at 1px 1px,rgba(255,255,255,.08) 1px,transparent 0);background-size:36px 36px;-webkit-mask-image:radial-gradient(80% 80% at 60% 30%,#000,transparent 74%);mask-image:radial-gradient(80% 80% at 60% 30%,#000,transparent 74%)}
+.abouthero__glow{position:absolute;top:-10%;right:-6%;width:min(60vw,620px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(31,184,148,.32),transparent 62%);filter:blur(20px);pointer-events:none;animation:heroGlow 7s ease-in-out infinite}
+.abouthero__inner{position:relative;z-index:2;max-width:920px}
+.abouthero .crumbs{color:rgba(224,238,233,.55)}
+.abouthero .crumbs a{color:var(--live)}
+.abouthero .kicker{color:var(--live)}
+.abouthero h1{font-size:clamp(44px,7.4vw,96px);letter-spacing:-.045em;line-height:.96;margin:.28em 0 .34em;color:#fff;font-weight:600}
+.abouthero h1 em{font-style:normal;color:var(--live)}
+.abouthero__lead{color:rgba(224,238,233,.82);font-size:clamp(17px,2vw,21px);max-width:60ch;line-height:1.55}
+.abouthero__stats{display:flex;flex-wrap:wrap;gap:clamp(28px,5vw,64px);margin-top:clamp(38px,5vw,54px);padding-top:32px;border-top:1px solid rgba(255,255,255,.14)}
+.abouthero__stat b{display:block;font-family:var(--font-display);font-weight:600;font-size:clamp(28px,3.6vw,44px);color:#fff;letter-spacing:-.03em;line-height:1}
+.abouthero__stat span{display:block;margin-top:8px;font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:rgba(224,238,233,.6)}
+
+/* mission split with accent card */
+.mission__card{background:linear-gradient(155deg,var(--green),var(--green-deep));color:#fff;border-radius:var(--r-2xl);padding:clamp(30px,4vw,52px);box-shadow:var(--shadow-lg);position:relative;overflow:hidden}
+.mission__card::before{content:"";position:absolute;inset:0;opacity:.5;background:radial-gradient(circle at 1px 1px,rgba(255,255,255,.09) 1px,transparent 0);background-size:26px 26px;-webkit-mask-image:radial-gradient(70% 90% at 80% 10%,#000,transparent 70%);mask-image:radial-gradient(70% 90% at 80% 10%,#000,transparent 70%)}
+.mission__card .kicker{color:var(--live)}
+.mission__card h2{color:#fff;position:relative}
+.mission__card p{color:rgba(224,238,233,.85);position:relative}
+
+/* minimized founders row */
+.founders{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;max-width:900px;margin:0 auto}
+.founder{display:inline-flex;align-items:center;gap:13px;background:var(--paper);border:1px solid var(--line);border-radius:100px;padding:10px 20px 10px 10px;transition:border-color .25s,transform .25s}
+.founder:hover{border-color:var(--green-tint-2);transform:translateY(-2px)}
+.founder__av{width:42px;height:42px;border-radius:50%;background:linear-gradient(150deg,var(--green-tint),var(--green-tint-2));color:var(--green-deep);display:grid;place-items:center;font-family:var(--font-display);font-weight:600;font-size:14px;flex:none}
+.founder__n{font-family:var(--font-display);font-weight:600;font-size:15px;line-height:1.1}
+.founder__r{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.04em;color:var(--muted);text-transform:uppercase}
+
+/* =========================================================
+   v17 — Process: animated cell / molecular visuals
+   ========================================================= */
+.cellviz{position:relative;margin:0;border-radius:var(--r-2xl);overflow:hidden;aspect-ratio:4/3;background:radial-gradient(120% 120% at 30% 20%,#0a4a43 0%,#06322c 52%,var(--forest-2) 100%);box-shadow:var(--shadow-lg);border:1px solid rgba(31,184,148,.14)}
+.cellviz__grid{position:absolute;inset:0;opacity:.5;background:radial-gradient(circle at 1px 1px,rgba(255,255,255,.07) 1px,transparent 0);background-size:30px 30px;-webkit-mask-image:radial-gradient(80% 80% at 50% 50%,#000,transparent 78%);mask-image:radial-gradient(80% 80% at 50% 50%,#000,transparent 78%)}
+.cellviz__scene{position:absolute;inset:0;display:grid;place-items:center}
+.cellviz__stage{position:relative;width:min(58%,240px);aspect-ratio:1;display:grid;place-items:center}
+.cellviz__stage>*{grid-area:1/1}
+.cellviz__ring{width:100%;aspect-ratio:1;border-radius:50%;border:1px solid rgba(255,255,255,.16);animation:cvSpin 26s linear infinite}
+.cellviz__ring::before{content:"";position:absolute;top:-4px;left:50%;width:8px;height:8px;border-radius:50%;background:var(--live);box-shadow:0 0 14px var(--live);transform:translateX(-50%)}
+.cellviz__ring--2{width:74%;justify-self:center;align-self:center;border-style:dashed;border-color:rgba(127,228,214,.22);animation:cvSpinR 34s linear infinite}
+.cellviz__ring--2::before{width:6px;height:6px;background:#7fe4d6;box-shadow:0 0 10px #7fe4d6}
+.cellviz__core{width:44%;aspect-ratio:1;border-radius:50%;display:grid;place-items:center;color:#fff;background:radial-gradient(circle at 38% 32%,rgba(31,184,148,.55),rgba(11,90,84,.25) 60%,transparent 72%);box-shadow:0 0 40px rgba(31,184,148,.35),inset 0 0 24px rgba(31,184,148,.25);border:1px solid rgba(127,228,214,.35);animation:cvFloat 6s ease-in-out infinite}
+.cellviz__core svg{width:46%;height:46%;color:#fff;filter:drop-shadow(0 2px 8px rgba(0,0,0,.4))}
+.cellviz__node{width:12px;height:12px;border-radius:50%;background:var(--live);box-shadow:0 0 12px var(--live);align-self:center;justify-self:center}
+.cellviz__node--a{--tf:translate(88px,-34px);animation:cvBlink 2.6s var(--ease) infinite}
+.cellviz__node--b{width:9px;height:9px;background:#7fe4d6;box-shadow:0 0 10px #7fe4d6;--tf:translate(-92px,26px);animation:cvBlink 3.2s var(--ease) infinite .4s}
+.cellviz__node--c{width:7px;height:7px;--tf:translate(30px,96px);animation:cvBlink 2.9s var(--ease) infinite .8s}
+.cellviz__node{transform:var(--tf,translate(0,0))}
+.cellviz__cap{position:absolute;left:16px;bottom:14px;z-index:3;font-family:var(--font-mono);font-size:11px;color:#fff;background:rgba(4,26,24,.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);padding:6px 12px;border-radius:100px;border:1px solid rgba(31,184,148,.24)}
+.cellviz__badge{position:absolute;right:16px;top:14px;z-index:3;font-family:var(--font-mono);font-size:10.5px;letter-spacing:.06em;color:var(--live);background:rgba(4,26,24,.5);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);padding:6px 11px;border-radius:100px;border:1px solid rgba(31,184,148,.2)}
+@keyframes cvSpin{to{transform:rotate(360deg)}}
+@keyframes cvSpinR{to{transform:rotate(-360deg)}}
+@keyframes cvFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@keyframes cvBlink{0%,100%{opacity:.28;transform:var(--tf,translate(0,0)) scale(.85)}50%{opacity:1;transform:var(--tf,translate(0,0)) scale(1)}}
+.cellviz--scatter .cellviz__dot{position:absolute;width:7px;height:7px;border-radius:50%;background:var(--live);box-shadow:0 0 8px var(--live);opacity:.85;animation:cvBlink 3s var(--ease) infinite}
+
+@media (prefers-reduced-motion:reduce){
+  .cellviz__ring,.cellviz__ring--2,.cellviz__core,.cellviz__node,.abouthero__glow{animation:none}
+}
+@media (max-width:860px){
+  .approach__row{grid-template-columns:1fr}
+  .approach__plus{display:none}
+  .abouthero__stats{gap:28px}
+}
+
+/* =========================================================
    Responsive
    ========================================================= */
 @media (max-width:1024px){
