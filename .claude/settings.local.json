@@ -10,24 +10,7 @@
       "Bash(git add *)",
       "Bash(git commit *)",
       "Bash(git push *)",
-      "Bash(npx vercel *)",
-      "mcp__claude-in-chrome__tabs_context_mcp",
-      "Bash(curl -s \"https://1cell-health-n1ie8c8ic-1cell1.vercel.app/assets/css/styles.css\" -I)",
-      "Bash(curl -s \"https://1cell-health-n1ie8c8ic-1cell1.vercel.app/\" -I)",
-      "Bash(git checkout *)",
-      "Bash(git rm *)",
-      "Bash(gh repo *)",
-      "Bash(env)",
-      "Bash(security find-internet-password *)",
-      "Bash(curl -X POST -H 'Authorization: token ghp_H8s0Kz3FdH6RAzBM7EBgBvZMcSqDe0cw0xj' -H 'Accept: application/vnd.github.v3+json' https://api.github.com/repos/alexeyzumbana-png/1cell-health/pages -d '{\"source\":{\"branch\":\"gh-pages\",\"path\":\"/\"}}')",
-      "Bash(brew install *)",
-      "Bash(find ~/.claude -name \"*.json\" -o -name \"config*\" 2>/dev/null | head -20)",
-      "Bash(open -a \"Google Chrome\" \"https://github.com/alexeyzumbana-png/1cell-health/settings/pages\")",
-      "Bash(open -a \"Google Chrome\" \"https://github.com/alexeyzumbana-png/1cell-health\")",
-      "mcp__claude-in-chrome__read_page",
-      "Bash(timeout 10 curl -vI https://1cellhealth.com/)",
-      "Bash(dig 1cellhealth.com +short)",
-      "Bash(cd /Users/nexusmed/1cell *)"
+      "Bash(npx vercel *)"
     ]
   }
 }
