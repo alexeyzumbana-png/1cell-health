@@ -8,8 +8,14 @@ body_class: page-home
 preload: <link rel="preload" as="image" href="assets/img/hero-vial.png" fetchpriority="high" />
 -->
 <section class="hero">
+  <div class="hero__media" aria-hidden="true">
+    <img class="hero__bg" src="assets/img/cell-macro.jpg" width="1600" height="912" alt="" decoding="async" />
+    <canvas class="hero__mesh" id="mesh"></canvas>
+    <div class="hero__scrim"></div>
+  </div>
   <div class="container hero__inner">
     <div class="hero__copy">
+      <p class="hero__eyebrow"><span class="pulse" aria-hidden="true"></span><span data-es="Biológicos regenerativos · Logística especializada">Regenerative biologics · Specialized logistics</span></p>
       <h1 class="hero__title" data-split data-es="Regeneración, diseñada con precisión.">Regeneration, engineered.</h1>
       <p class="hero__lead" data-es="Biológicos avanzados: verificados, preservados y entregados del origen a la clínica.">Advanced biologics — verified, preserved and delivered from source to clinic.</p>
       <div class="hero__cta">
@@ -18,8 +24,12 @@ preload: <link rel="preload" as="image" href="assets/img/hero-vial.png" fetchpri
       </div>
     </div>
     <div class="hero__visual">
-      <img class="hero__vial" src="assets/img/hero-vial.png" width="720" height="900" alt="1CELL vial" data-es-aria="Vial de 1CELL" fetchpriority="high" decoding="async" />
-      <p class="hero__chip"><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg><span data-es="Documentado de la liberación a la entrega">Documented from release to delivery</span></p>
+      <span class="hero__glow" aria-hidden="true"></span>
+      <span class="hero__ring hero__ring--2" aria-hidden="true"></span>
+      <span class="hero__ring hero__ring--1" aria-hidden="true"></span>
+      <div class="hero__depth" data-depth="18"><div class="hero__float"><img class="hero__vial" src="assets/img/hero-vial.png" width="720" height="900" alt="1CELL vial" data-es-aria="Vial de 1CELL" fetchpriority="high" decoding="async" /></div></div>
+      <p class="hero__chip hero__chip--a" data-depth="34"><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg><span data-es="COA por lote">COA per lot</span></p>
+      <p class="hero__chip hero__chip--b" data-depth="26"><span data-es="Origen">Source</span><i aria-hidden="true"></i><span data-es="Clínica">Clinic</span></p>
     </div>
   </div>
   <div class="container">
@@ -29,6 +39,13 @@ preload: <link rel="preload" as="image" href="assets/img/hero-vial.png" fetchpri
       <li class="strip__item"><span class="strip__k" data-es="Preservación">Preservation</span><span class="strip__t" data-es="Condiciones adecuadas a cada producto.">Conditions matched to each product.</span></li>
       <li class="strip__item"><span class="strip__k" data-es="Entrega">Delivery</span><span class="strip__t" data-es="Coordinada del origen a la clínica.">Coordinated from source to clinic.</span></li>
     </ul>
+  </div>
+</section>
+
+<section class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span data-es="Células madre mesenquimales">Mesenchymal Stem Cells</span><span data-es="Células NK">NK Cells</span><span data-es="Células Muse">Muse Cells</span><span data-es="Exosomas">Exosomes</span><span data-es="Cadena de frío">Cold chain</span><span data-es="Criopreservación">Cryopreservation</span><span data-es="Cadena de custodia">Chain of custody</span><span data-es="EE.&nbsp;UU. y LATAM">US &amp; LATAM</span>
+    <span data-es="Células madre mesenquimales">Mesenchymal Stem Cells</span><span data-es="Células NK">NK Cells</span><span data-es="Células Muse">Muse Cells</span><span data-es="Exosomas">Exosomes</span><span data-es="Cadena de frío">Cold chain</span><span data-es="Criopreservación">Cryopreservation</span><span data-es="Cadena de custodia">Chain of custody</span><span data-es="EE.&nbsp;UU. y LATAM">US &amp; LATAM</span>
   </div>
 </section>
 
@@ -42,29 +59,31 @@ preload: <link rel="preload" as="image" href="assets/img/hero-vial.png" fetchpri
       </div>
       <a class="link" href="therapies.html"><span data-es="Ver todas las terapias">View all therapies</span><span class="arr" aria-hidden="true">→</span></a>
     </div>
-    <div class="tgrid">
-      <a class="tcard" href="stem-cells.html" data-reveal>
-        <div class="vtile" aria-hidden="true"><!-- ASSET NEEDED: product photograph (stem cell vial) --><span class="vtile__label">1CELL Clinical</span><span class="vtile__abbr">MSC</span><svg class="vtile__vial"><use href="#i-vial-tall"/></svg></div>
-        <div class="tcard__body"><span class="tcard__cat" data-es="Terapia celular">Cell therapy</span><h3 data-es="Células madre mesenquimales">Mesenchymal Stem Cells</h3><p data-es="Células multipotentes caracterizadas por citometría de flujo, en presentaciones de 50M, 100M y 200M.">Multipotent cells characterized by flow cytometry, in 50M, 100M and 200M presentations.</p><span class="tcard__more"><span data-es="Ver terapia">View therapy</span><span class="arr" aria-hidden="true">→</span></span></div>
+    <div class="bento">
+      <a class="pc xl spot" href="stem-cells.html" data-reveal>
+        <img src="assets/img/product-stemcell.jpg" width="1024" height="1024" alt="Mesenchymal stem cell vial" data-es-aria="Vial de células madre mesenquimales" loading="lazy" decoding="async" />
+        <span class="pc__tag" data-es="Profesional">Professional</span>
+        <div class="pc__body"><span class="pc__cat" data-es="Terapia celular">Cell therapy</span><h3 data-es="Células madre mesenquimales">Mesenchymal Stem Cells</h3><p data-es="Células multipotentes caracterizadas por citometría de flujo, en presentaciones de 50M, 100M y 200M.">Multipotent cells characterized by flow cytometry, in 50M, 100M and 200M presentations.</p><span class="pc__more"><span data-es="Ver terapia">View therapy</span><b aria-hidden="true">→</b></span></div>
       </a>
-      <a class="tcard" href="nk-cells.html" data-reveal data-delay="60">
-        <div class="vtile" aria-hidden="true"><!-- ASSET NEEDED: product photograph (NK cell vial) --><span class="vtile__label">1CELL Clinical</span><span class="vtile__abbr">NK</span><svg class="vtile__vial"><use href="#i-vial-tall"/></svg></div>
-        <div class="tcard__body"><span class="tcard__cat" data-es="Inmunoterapia celular">Cell immunotherapy</span><h3 data-es="Células NK">NK Cells</h3><p data-es="Células asesinas naturales CD56+ CD3−, con pureza y actividad funcional confirmadas por lote.">CD56+ CD3− natural killer cells, with purity and functional activity confirmed per lot.</p><span class="tcard__more"><span data-es="Ver terapia">View therapy</span><span class="arr" aria-hidden="true">→</span></span></div>
+      <a class="pc wide spot" href="nk-cells.html" data-reveal data-delay="60">
+        <img src="assets/img/product-nk.jpg" width="1024" height="1024" alt="NK cell vials" data-es-aria="Viales de células NK" loading="lazy" decoding="async" />
+        <span class="pc__tag" data-es="Profesional">Professional</span>
+        <div class="pc__body"><span class="pc__cat" data-es="Inmunoterapia celular">Cell immunotherapy</span><h3 data-es="Células NK">NK Cells</h3><p data-es="CD56+ CD3−, con pureza y actividad funcional confirmadas por lote.">CD56+ CD3−, with purity and functional activity confirmed per lot.</p><span class="pc__more"><span data-es="Ver terapia">View therapy</span><b aria-hidden="true">→</b></span></div>
       </a>
-      <a class="tcard" href="muse-cells.html" data-reveal data-delay="120">
-        <div class="vtile" aria-hidden="true"><!-- ASSET NEEDED: product photograph (Muse cell vial) --><span class="vtile__label">1CELL Clinical</span><span class="vtile__abbr">Muse</span><svg class="vtile__vial"><use href="#i-vial-tall"/></svg></div>
-        <div class="tcard__body"><span class="tcard__cat" data-es="Terapia celular">Cell therapy</span><h3 data-es="Células Muse">Muse Cells</h3><p data-es="Subpoblación SSEA-3+ resistente al estrés, en presentación estandarizada por dosis.">A stress-enduring SSEA-3+ subpopulation, in a standardized per-dose presentation.</p><span class="tcard__more"><span data-es="Ver terapia">View therapy</span><span class="arr" aria-hidden="true">→</span></span></div>
+      <a class="pc spot" href="muse-cells.html" data-reveal data-delay="120">
+        <img src="assets/img/product-muse.jpg" width="1024" height="1024" alt="Muse cell product" data-es-aria="Producto de células Muse" loading="lazy" decoding="async" />
+        <div class="pc__body"><span class="pc__cat" data-es="Terapia celular">Cell therapy</span><h3 data-es="Células Muse">Muse Cells</h3><span class="pc__more"><span data-es="Ver terapia">View therapy</span><b aria-hidden="true">→</b></span></div>
       </a>
-      <a class="tcard" href="exosomes.html" data-reveal data-delay="180">
-        <div class="vtile" aria-hidden="true"><!-- ASSET NEEDED: product photograph (exosome vial) --><span class="vtile__label">1CELL Clinical</span><span class="vtile__abbr">EV</span><svg class="vtile__vial"><use href="#i-vial-tall"/></svg></div>
-        <div class="tcard__body"><span class="tcard__cat" data-es="Vesículas extracelulares">Extracellular vesicles</span><h3 data-es="Exosomas">Exosomes</h3><p data-es="Vesículas de 30–150 nm, cuantificadas por NTA y confirmadas CD9+ CD63+ CD81+.">30–150 nm vesicles, quantified by NTA and confirmed CD9+ CD63+ CD81+.</p><span class="tcard__more"><span data-es="Ver terapia">View therapy</span><span class="arr" aria-hidden="true">→</span></span></div>
+      <a class="pc pc--exo spot" href="exosomes.html" data-reveal data-delay="180">
+        <img src="assets/img/product-exosome-crop.jpg" width="1024" height="660" alt="Exosome vials" data-es-aria="Viales de exosomas" loading="lazy" decoding="async" />
+        <div class="pc__body"><span class="pc__cat" data-es="Vesículas extracelulares">Extracellular vesicles</span><h3 data-es="Exosomas">Exosomes</h3><span class="pc__more"><span data-es="Ver terapia">View therapy</span><b aria-hidden="true">→</b></span></div>
       </a>
     </div>
     <p class="note" data-reveal><svg width="16" height="16" aria-hidden="true"><use href="#i-shield"/></svg><span data-es="Para profesionales de la salud con licencia, donde lo permita la regulación local. <a href='clinicians.html#access'>Solicitar acceso profesional →</a>">For licensed healthcare professionals, where permitted by local regulation. <a href="clinicians.html#access">Request professional access →</a></span></p>
   </div>
 </section>
 
-<section class="section section--dark logi" id="logistics">
+<section class="section section--dark logi glowfx" id="logistics">
   <div class="container">
     <div class="head head--row" data-reveal>
       <div>
@@ -75,7 +94,7 @@ preload: <link rel="preload" as="image" href="assets/img/hero-vial.png" fetchpri
       <a class="btn btn--light" href="logistics.html"><span data-es="Explorar logística">Explore Logistics</span><span class="arr" aria-hidden="true">→</span></a>
     </div>
 
-    <ol class="flow" data-reveal>
+    <ol class="flow">
       <li class="flow__step"><span class="flow__n">01</span><h3 data-es="Liberación">Release</h3><p data-es="El laboratorio de origen libera el lote contra su especificación.">The source laboratory releases the lot against specification.</p></li>
       <li class="flow__step"><span class="flow__n">02</span><h3 data-es="Verificación">Verify</h3><p data-es="La documentación se coteja con el lote antes de moverlo.">Documentation is checked against the lot before it moves.</p></li>
       <li class="flow__step"><span class="flow__n">03</span><h3 data-es="Preservación">Preserve</h3><p data-es="Se empaca para las condiciones que ese producto requiere.">Packed for the conditions that product requires.</p></li>
@@ -85,10 +104,11 @@ preload: <link rel="preload" as="image" href="assets/img/hero-vial.png" fetchpri
     </ol>
 
     <div class="logi__grid">
-      <div class="video" data-video-src="" data-reveal>
-        <!-- VIDEO NEEDED: 15–20 s silent brand film (laboratory → product → vial → documentation → cryogenic logistics → transport → clinic). Set data-video-src="assets/video/brand.mp4" (and optionally data-video-poster). -->
+      <div class="video reveal-img" data-video-src="">
+        <!-- VIDEO NEEDED: 15–20 s silent brand film (laboratory → product → vial → documentation → cryogenic logistics → transport → clinic). Set data-video-src="assets/video/brand.mp4"; it plays over this photo. -->
+        <img class="video__img" src="assets/img/lab-cleanroom.jpg" width="1600" height="912" alt="" loading="lazy" decoding="async" />
         <div class="video__ph" aria-hidden="true">
-          <span class="video__label">1CELL · Source to clinic</span>
+          <span class="video__label"><span class="pulse"></span> 1CELL · Source to clinic</span>
           <ol class="video__seq">
             <li data-es="Laboratorio">Laboratory</li><li data-es="Producto">Product</li><li data-es="Documentación">Documentation</li><li data-es="Logística criogénica">Cryogenic logistics</li><li data-es="Transporte">Transport</li><li data-es="Clínica">Clinic</li>
           </ol>
@@ -108,6 +128,11 @@ preload: <link rel="preload" as="image" href="assets/img/hero-vial.png" fetchpri
   </div>
 </section>
 
+<section class="imgband" aria-label="Advanced biology, controlled from source to clinic" data-es-aria="Biología avanzada, controlada del origen a la clínica">
+  <img src="assets/img/clinician-hands.jpg" width="1024" height="1280" alt="" loading="lazy" decoding="async" />
+  <div class="container"><p class="imgband__text" data-es="Biología avanzada.<br><em>Controlada del origen a la clínica.</em>">Advanced biology.<br><em>Controlled from source to clinic.</em></p></div>
+</section>
+
 <section class="section" id="documentation">
   <div class="container">
     <div class="head head--row" data-reveal>
@@ -119,27 +144,27 @@ preload: <link rel="preload" as="image" href="assets/img/hero-vial.png" fetchpri
       <a class="link" href="standard.html#documentation"><span data-es="Ver documentación">View documentation</span><span class="arr" aria-hidden="true">→</span></a>
     </div>
     <div class="docs" data-reveal>
-      <article class="doc">
+      <article class="doc spot">
         <div class="doc__sheet" aria-hidden="true"><i class="doc__hd"></i><i></i><i class="s"></i><i></i><i class="s"></i><i></i></div>
         <h3 data-es="COA de muestra">Sample COA</h3>
         <p data-es="El Certificado de Análisis que acompaña a cada lote.">The Certificate of Analysis released with each lot.</p>
       </article>
-      <article class="doc">
+      <article class="doc spot">
         <div class="doc__sheet" aria-hidden="true"><i class="doc__hd"></i><i class="doc__plot"></i><i></i><i class="s"></i></div>
         <h3 data-es="Caracterización de producto">Product characterization</h3>
         <p data-es="Marcadores de identidad y pureza medidos en cada lote.">Identity and purity markers measured for each lot.</p>
       </article>
-      <article class="doc">
+      <article class="doc spot">
         <div class="doc__sheet" aria-hidden="true"><i class="doc__hd"></i><i></i><i></i><i class="s"></i><i></i></div>
         <h3 data-es="Documentación del lote">Batch documentation</h3>
         <p data-es="Origen, fecha de liberación y especificación del lote.">Source, release date and specification of the lot.</p>
       </article>
-      <article class="doc">
+      <article class="doc spot">
         <div class="doc__sheet" aria-hidden="true"><i class="doc__hd"></i><i class="doc__line"></i><i class="s"></i><i></i></div>
         <h3 data-es="Monitoreo de temperatura">Temperature monitoring</h3>
         <p data-es="El registro de temperatura del envío en tránsito.">The shipment's temperature record in transit.</p>
       </article>
-      <article class="doc">
+      <article class="doc spot">
         <div class="doc__sheet" aria-hidden="true"><i class="doc__hd"></i><i></i><i class="s"></i><i></i><i class="s"></i></div>
         <h3 data-es="Cadena de custodia">Chain of custody</h3>
         <p data-es="Cada traspaso, de la liberación a la recepción en clínica.">Every handoff, from release to receipt at the clinic.</p>
@@ -154,25 +179,28 @@ preload: <link rel="preload" as="image" href="assets/img/hero-vial.png" fetchpri
 </section>
 
 <section class="section section--tint" id="clinicians">
-  <div class="container coord">
-    <div class="coord__copy" data-reveal>
+  <div class="container coord coord--img">
+    <figure class="media media--45 reveal-img">
+      <img src="assets/img/consultation.jpg" width="1600" height="912" alt="Physician in a consultation" data-es-aria="Médica en consulta" loading="lazy" decoding="async" style="object-position:62% 50%" />
+      <figcaption class="media__cap"><span class="pulse" aria-hidden="true"></span><span data-es="Para clínicos">For clinicians</span></figcaption>
+    </figure>
+    <div class="coord__copy" data-reveal data-delay="80">
       <span class="kicker" data-es="Para clínicos">For clinicians</span>
       <h2 class="h2" data-es="Coordinamos lo que retrasa a las clínicas.">We coordinate what slows clinics down.</h2>
       <p class="lead" data-es="Del acceso al producto a la recepción en clínica, un solo equipo coordina el producto, sus documentos y sus condiciones.">From product access to receipt at the clinic, one team coordinates the product, its documents and its conditions.</p>
+      <ul class="coord__list">
+        <li><svg width="20" height="20" aria-hidden="true"><use href="#i-vial"/></svg><span data-es="Acceso a productos">Access to products</span></li>
+        <li><svg width="20" height="20" aria-hidden="true"><use href="#i-doc"/></svg><span data-es="Documentación">Documentation</span></li>
+        <li><svg width="20" height="20" aria-hidden="true"><use href="#i-shield"/></svg><span data-es="Preservación">Preservation</span></li>
+        <li><svg width="20" height="20" aria-hidden="true"><use href="#i-dewar"/></svg><span data-es="Criopreservación">Cryopreservation</span></li>
+        <li><svg width="20" height="20" aria-hidden="true"><use href="#i-snow"/></svg><span data-es="Cadena de frío">Cold-chain logistics</span></li>
+        <li><svg width="20" height="20" aria-hidden="true"><use href="#i-truck"/></svg><span data-es="Entrega">Delivery</span></li>
+      </ul>
       <div class="coord__cta">
         <a class="btn btn--primary btn--lg" href="clinicians.html#access" data-es="Solicitar acceso profesional">Request professional access</a>
         <a class="link" href="clinicians.html"><span data-es="Cómo funciona">How it works</span><span class="arr" aria-hidden="true">→</span></a>
       </div>
     </div>
-    <ul class="coord__list" data-reveal data-delay="80">
-      <li><svg width="20" height="20" aria-hidden="true"><use href="#i-vial"/></svg><span data-es="Acceso a productos">Access to products</span></li>
-      <li><svg width="20" height="20" aria-hidden="true"><use href="#i-doc"/></svg><span data-es="Documentación">Documentation</span></li>
-      <li><svg width="20" height="20" aria-hidden="true"><use href="#i-shield"/></svg><span data-es="Preservación">Preservation</span></li>
-      <li><svg width="20" height="20" aria-hidden="true"><use href="#i-dewar"/></svg><span data-es="Criopreservación, cuando se requiere">Cryopreservation, where required</span></li>
-      <li><svg width="20" height="20" aria-hidden="true"><use href="#i-snow"/></svg><span data-es="Logística de cadena de frío">Cold-chain logistics</span></li>
-      <li><svg width="20" height="20" aria-hidden="true"><use href="#i-truck"/></svg><span data-es="Entrega">Delivery</span></li>
-      <li><svg width="20" height="20" aria-hidden="true"><use href="#i-users"/></svg><span data-es="Coordinación profesional">Professional coordination</span></li>
-    </ul>
   </div>
 </section>
 
@@ -187,16 +215,16 @@ preload: <link rel="preload" as="image" href="assets/img/hero-vial.png" fetchpri
       <a class="btn btn--primary" href="longevity.html"><span data-es="Explorar Longevity">Explore Longevity</span><span class="arr" aria-hidden="true">→</span></a>
     </div>
     <div class="ltiles">
-      <a class="ltile" href="longevity.html#peptides" data-reveal>
-        <div class="ltile__media ptile" aria-hidden="true"><!-- ASSET NEEDED: peptide product photograph --><span class="ptile__k" data-es="Péptidos">Peptides</span><span class="ptile__names">BPC-157 · TB-500<br>GHK-Cu · Ipamorelin</span></div>
+      <a class="ltile spot" href="longevity.html#peptides" data-reveal>
+        <div class="ltile__media"><img src="assets/img/product-peptides.jpg" width="1024" height="1024" alt="Peptide line" data-es-aria="Línea de péptidos" loading="lazy" decoding="async" /></div>
         <div class="ltile__body"><h3 data-es="Péptidos">Peptides</h3><span class="ltile__more" aria-hidden="true">→</span></div>
       </a>
-      <a class="ltile" href="longevity.html#nutraceuticals" data-reveal data-delay="60">
-        <div class="ltile__media ptile" aria-hidden="true"><!-- ASSET NEEDED: nutraceutical product photograph --><span class="ptile__k" data-es="Nutracéuticos">Nutraceuticals</span><span class="ptile__names">Omega 3<br>EPA · DHA</span></div>
+      <a class="ltile spot" href="longevity.html#nutraceuticals" data-reveal data-delay="60">
+        <div class="ltile__media"><img src="assets/img/product-nutra.jpg" width="1024" height="1024" alt="Omega 3 capsules" data-es-aria="Cápsulas de Omega 3" loading="lazy" decoding="async" /></div>
         <div class="ltile__body"><h3 data-es="Nutracéuticos">Nutraceuticals</h3><span class="ltile__more" aria-hidden="true">→</span></div>
       </a>
-      <a class="ltile" href="longevity.html#skincare" data-reveal data-delay="120">
-        <div class="ltile__media ltile__media--img" aria-hidden="true"><img src="assets/img/hero-vial.png" width="720" height="900" alt="" loading="lazy" decoding="async" /></div>
+      <a class="ltile spot" href="longevity.html#skincare" data-reveal data-delay="120">
+        <div class="ltile__media"><img src="assets/img/product-cosmetic.jpg" width="1024" height="1024" alt="1CELL facial serum" data-es-aria="Sérum facial 1CELL" loading="lazy" decoding="async" /></div>
         <div class="ltile__body"><h3 data-es="Cuidado de la piel">Skincare</h3><span class="ltile__more" aria-hidden="true">→</span></div>
       </a>
     </div>

@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/css/styles.css?v=18.2" />
+<link rel="stylesheet" href="assets/css/styles.css?v=19.3" />
 <script>(function(d){d.className+=" js";try{if(localStorage.getItem("1cell_lang")==="es"){d.className+=" es-pending";setTimeout(function(){d.classList.remove("es-pending")},1500)}}catch(e){}})(document.documentElement);</script>
 </head>
 <body class="page-clin">
@@ -57,6 +57,7 @@
   </defs>
 </svg>
 <a class="skip" href="#main" data-i18n="c-skip">Skip to content</a>
+<div class="progress" aria-hidden="true"><span></span></div>
 <div class="topbar" id="top">
   <div class="container topbar__inner">
     <p class="topbar__msg"><span class="topbar__dot" aria-hidden="true"></span><span data-i18n="c-topbar.1"><span class="topbar__opt">Specialized </span>biological logistics · US &amp; LATAM</span></p>
@@ -183,6 +184,7 @@
 <section class="phero phero--dark">
   <div class="container">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="./" data-i18n="clin.1">Home</a><span aria-hidden="true">/</span><span data-i18n="clin.2">For Clinicians</span></nav>
+    <div class="phero__grid">
     <div class="phero__copy">
       <span class="kicker" data-i18n="clin.3">For clinicians</span>
       <h1 data-i18n="clin.4">Advanced biologics, <em>coordinated for your clinic.</em></h1>
@@ -192,24 +194,26 @@
         <a class="btn btn--ondark btn--lg" href="#product-information" data-i18n="clin.7">Product information</a>
       </div>
     </div>
+    <figure class="hero-photo phero__visual"><div class="media media--45 reveal-img"><img src="assets/img/clinician-hands.jpg" width="1024" height="1280" alt="Gloved hands holding a vial" data-i18n-aria="clin.a1" decoding="async" /><span class="media__cap"><span class="pulse" aria-hidden="true"></span><span data-i18n="clin.8">Source to clinic</span></span></div></figure>
+    </div>
   </div>
 </section>
 
 <section class="section" id="coordinate">
   <div class="container">
     <div class="head" data-reveal>
-      <span class="kicker" data-i18n="clin.8">What we coordinate</span>
-      <h2 class="h2" data-i18n="clin.9">One team, from request to receipt.</h2>
+      <span class="kicker" data-i18n="clin.9">What we coordinate</span>
+      <h2 class="h2" data-i18n="clin.10">One team, from request to receipt.</h2>
     </div>
     <div class="blocks blocks--4">
-      <article class="block" data-reveal><span class="block__ic"><svg width="22" height="22" aria-hidden="true"><use href="#i-vial"/></svg></span><h3 data-i18n="clin.10">Access to products</h3><p data-i18n="clin.11">Characterized cell therapies and exosomes for verified professionals.</p></article>
-      <article class="block" data-reveal data-delay="60"><span class="block__ic"><svg width="22" height="22" aria-hidden="true"><use href="#i-doc"/></svg></span><h3 data-i18n="clin.12">Documentation</h3><p data-i18n="clin.13">COAs and lot records, available before and after delivery.</p></article>
-      <article class="block" data-reveal data-delay="120"><span class="block__ic"><svg width="22" height="22" aria-hidden="true"><use href="#i-shield"/></svg></span><h3 data-i18n="clin.14">Preservation</h3><p data-i18n="clin.15">Conditions confirmed with the source laboratory for each product.</p></article>
-      <article class="block" data-reveal data-delay="180"><span class="block__ic"><svg width="22" height="22" aria-hidden="true"><use href="#i-dewar"/></svg></span><h3 data-i18n="clin.16">Cryopreservation</h3><p data-i18n="clin.17">Cryopreservation and nitrogen-based transport, where the product requires it.</p></article>
-      <article class="block" data-reveal><span class="block__ic"><svg width="22" height="22" aria-hidden="true"><use href="#i-snow"/></svg></span><h3 data-i18n="clin.18">Cold-chain logistics</h3><p data-i18n="clin.19">Qualified packaging and temperature monitoring in transit.</p></article>
-      <article class="block" data-reveal data-delay="60"><span class="block__ic"><svg width="22" height="22" aria-hidden="true"><use href="#i-truck"/></svg></span><h3 data-i18n="clin.20">Delivery</h3><p data-i18n="clin.21">Delivery coordinated with your team, with receiving instructions.</p></article>
-      <article class="block" data-reveal data-delay="120"><span class="block__ic"><svg width="22" height="22" aria-hidden="true"><use href="#i-users"/></svg></span><h3 data-i18n="clin.22">Professional coordination</h3><p data-i18n="clin.23">One point of contact for product, documents and logistics.</p></article>
-      <a class="block block--link" href="#access" data-reveal data-delay="180"><span class="block__k">→</span><h3 data-i18n="clin.24">Request access</h3><p data-i18n="clin.25">Tell us about your clinic.</p></a>
+      <article class="block spot" data-reveal><span class="block__ic"><svg width="22" height="22" aria-hidden="true"><use href="#i-vial"/></svg></span><h3 data-i18n="clin.11">Access to products</h3><p data-i18n="clin.12">Characterized cell therapies and exosomes for verified professionals.</p></article>
+      <article class="block spot" data-reveal data-delay="60"><span class="block__ic"><svg width="22" height="22" aria-hidden="true"><use href="#i-doc"/></svg></span><h3 data-i18n="clin.13">Documentation</h3><p data-i18n="clin.14">COAs and lot records, available before and after delivery.</p></article>
+      <article class="block spot" data-reveal data-delay="120"><span class="block__ic"><svg width="22" height="22" aria-hidden="true"><use href="#i-shield"/></svg></span><h3 data-i18n="clin.15">Preservation</h3><p data-i18n="clin.16">Conditions confirmed with the source laboratory for each product.</p></article>
+      <article class="block spot" data-reveal data-delay="180"><span class="block__ic"><svg width="22" height="22" aria-hidden="true"><use href="#i-dewar"/></svg></span><h3 data-i18n="clin.17">Cryopreservation</h3><p data-i18n="clin.18">Cryopreservation and nitrogen-based transport, where the product requires it.</p></article>
+      <article class="block spot" data-reveal><span class="block__ic"><svg width="22" height="22" aria-hidden="true"><use href="#i-snow"/></svg></span><h3 data-i18n="clin.19">Cold-chain logistics</h3><p data-i18n="clin.20">Qualified packaging and temperature monitoring in transit.</p></article>
+      <article class="block spot" data-reveal data-delay="60"><span class="block__ic"><svg width="22" height="22" aria-hidden="true"><use href="#i-truck"/></svg></span><h3 data-i18n="clin.21">Delivery</h3><p data-i18n="clin.22">Delivery coordinated with your team, with receiving instructions.</p></article>
+      <article class="block spot" data-reveal data-delay="120"><span class="block__ic"><svg width="22" height="22" aria-hidden="true"><use href="#i-users"/></svg></span><h3 data-i18n="clin.23">Professional coordination</h3><p data-i18n="clin.24">One point of contact for product, documents and logistics.</p></article>
+      <a class="block block--link" href="#access" data-reveal data-delay="180"><span class="block__k">→</span><h3 data-i18n="clin.25">Request access</h3><p data-i18n="clin.26">Tell us about your clinic.</p></a>
     </div>
   </div>
 </section>
@@ -217,14 +221,14 @@
 <section class="section section--tint" id="how">
   <div class="container">
     <div class="head" data-reveal>
-      <span class="kicker" data-i18n="clin.26">How it works</span>
-      <h2 class="h2" data-i18n="clin.27">Four steps to your clinic.</h2>
+      <span class="kicker" data-i18n="clin.27">How it works</span>
+      <h2 class="h2" data-i18n="clin.28">Four steps to your clinic.</h2>
     </div>
     <ol class="flow flow--light flow--4" data-reveal>
-      <li class="flow__step"><span class="flow__n">01</span><h3 data-i18n="clin.28">Request access</h3><p data-i18n="clin.29">Tell us about your clinic and areas of interest.</p></li>
-      <li class="flow__step"><span class="flow__n">02</span><h3 data-i18n="clin.30">Verification</h3><p data-i18n="clin.31">We verify your professional credentials.</p></li>
-      <li class="flow__step"><span class="flow__n">03</span><h3 data-i18n="clin.32">Planning</h3><p data-i18n="clin.33">Products, documentation and logistics planned for your clinic.</p></li>
-      <li class="flow__step"><span class="flow__n">04</span><h3 data-i18n="clin.34">Delivery</h3><p data-i18n="clin.35">Delivered with its documentation and handling instructions.</p></li>
+      <li class="flow__step"><span class="flow__n">01</span><h3 data-i18n="clin.29">Request access</h3><p data-i18n="clin.30">Tell us about your clinic and areas of interest.</p></li>
+      <li class="flow__step"><span class="flow__n">02</span><h3 data-i18n="clin.31">Verification</h3><p data-i18n="clin.32">We verify your professional credentials.</p></li>
+      <li class="flow__step"><span class="flow__n">03</span><h3 data-i18n="clin.33">Planning</h3><p data-i18n="clin.34">Products, documentation and logistics planned for your clinic.</p></li>
+      <li class="flow__step"><span class="flow__n">04</span><h3 data-i18n="clin.35">Delivery</h3><p data-i18n="clin.36">Delivered with its documentation and handling instructions.</p></li>
     </ol>
   </div>
 </section>
@@ -232,34 +236,35 @@
 <section class="section" id="partnerships">
   <div class="container split">
     <div data-reveal>
-      <span class="kicker" data-i18n="clin.36">Clinic partnerships</span>
-      <h2 class="h2" data-i18n="clin.37">For clinics with ongoing needs.</h2>
-      <p class="lead" data-i18n="clin.38">When a clinic works with us regularly, we coordinate supply, deliveries and documentation in a consistent workflow.</p>
-      <p class="cta-line"><a class="link" href="?interest=partnership#access"><span data-i18n="clin.39">Discuss a partnership</span><span class="arr" aria-hidden="true">→</span></a></p>
+      <span class="kicker" data-i18n="clin.37">Clinic partnerships</span>
+      <h2 class="h2" data-i18n="clin.38">For clinics with ongoing needs.</h2>
+      <p class="lead" data-i18n="clin.39">When a clinic works with us regularly, we coordinate supply, deliveries and documentation in a consistent workflow.</p>
+      <p class="cta-line"><a class="link" href="?interest=partnership#access"><span data-i18n="clin.40">Discuss a partnership</span><span class="arr" aria-hidden="true">→</span></a></p>
     </div>
-    <ul class="caps caps--light" data-reveal data-delay="80">
-      <li><svg width="18" height="18" aria-hidden="true"><use href="#i-layers"/></svg><span data-i18n="clin.40">Recurring supply planning</span></li>
-      <li><svg width="18" height="18" aria-hidden="true"><use href="#i-truck"/></svg><span data-i18n="clin.41">Scheduled deliveries</span></li>
-      <li><svg width="18" height="18" aria-hidden="true"><use href="#i-doc"/></svg><span data-i18n="clin.42">Consistent documentation workflow</span></li>
-      <li><svg width="18" height="18" aria-hidden="true"><use href="#i-handshake"/></svg><span data-i18n="clin.43">One point of contact for coordination</span></li>
-    </ul>
+    <figure class="media media--43 reveal-img"><img src="assets/img/consultation.jpg" width="1600" height="912" alt="Physician in a consultation" data-i18n-aria="clin.a2" loading="lazy" decoding="async" /></figure>
   </div>
+  <div class="container"><ul class="caps caps--light caps--row" data-reveal data-delay="80">
+      <li><svg width="18" height="18" aria-hidden="true"><use href="#i-layers"/></svg><span data-i18n="clin.41">Recurring supply planning</span></li>
+      <li><svg width="18" height="18" aria-hidden="true"><use href="#i-truck"/></svg><span data-i18n="clin.42">Scheduled deliveries</span></li>
+      <li><svg width="18" height="18" aria-hidden="true"><use href="#i-doc"/></svg><span data-i18n="clin.43">Consistent documentation workflow</span></li>
+      <li><svg width="18" height="18" aria-hidden="true"><use href="#i-handshake"/></svg><span data-i18n="clin.44">One point of contact for coordination</span></li>
+    </ul></div>
 </section>
 
 <section class="section section--tint" id="product-information">
   <div class="container">
     <div class="head head--row" data-reveal>
       <div>
-        <span class="kicker" data-i18n="clin.44">Product information</span>
-        <h2 class="h2" data-i18n="clin.45">Specifications and documents.</h2>
+        <span class="kicker" data-i18n="clin.45">Product information</span>
+        <h2 class="h2" data-i18n="clin.46">Specifications and documents.</h2>
       </div>
-      <a class="link" href="standard.html#documentation"><span data-i18n="clin.46">Documentation</span><span class="arr" aria-hidden="true">→</span></a>
+      <a class="link" href="standard.html#documentation"><span data-i18n="clin.47">Documentation</span><span class="arr" aria-hidden="true">→</span></a>
     </div>
     <div class="tgrid">
-      <a class="tcard" href="stem-cells.html" data-reveal><div class="vtile" aria-hidden="true"><span class="vtile__label">1CELL Clinical</span><span class="vtile__abbr">MSC</span><svg class="vtile__vial"><use href="#i-vial-tall"/></svg></div><div class="tcard__body"><h3 data-i18n="clin.47">Mesenchymal Stem Cells</h3><p>CD73+ CD90+ CD105+ · 50M/100M/200M</p><span class="tcard__more"><span data-i18n="clin.48">Specifications</span><span class="arr" aria-hidden="true">→</span></span></div></a>
-      <a class="tcard" href="nk-cells.html" data-reveal data-delay="60"><div class="vtile" aria-hidden="true"><span class="vtile__label">1CELL Clinical</span><span class="vtile__abbr">NK</span><svg class="vtile__vial"><use href="#i-vial-tall"/></svg></div><div class="tcard__body"><h3 data-i18n="clin.49">NK Cells</h3><p data-i18n="clin.50">CD56+ CD3− · purity ≥ 90%</p><span class="tcard__more"><span data-i18n="clin.51">Specifications</span><span class="arr" aria-hidden="true">→</span></span></div></a>
-      <a class="tcard" href="muse-cells.html" data-reveal data-delay="120"><div class="vtile" aria-hidden="true"><span class="vtile__label">1CELL Clinical</span><span class="vtile__abbr">Muse</span><svg class="vtile__vial"><use href="#i-vial-tall"/></svg></div><div class="tcard__body"><h3 data-i18n="clin.52">Muse Cells</h3><p data-i18n="clin.53">SSEA-3+ · per dose</p><span class="tcard__more"><span data-i18n="clin.54">Specifications</span><span class="arr" aria-hidden="true">→</span></span></div></a>
-      <a class="tcard" href="exosomes.html" data-reveal data-delay="180"><div class="vtile" aria-hidden="true"><span class="vtile__label">1CELL Clinical</span><span class="vtile__abbr">EV</span><svg class="vtile__vial"><use href="#i-vial-tall"/></svg></div><div class="tcard__body"><h3 data-i18n="clin.55">Exosomes</h3><p>CD9+ CD63+ CD81+ · NTA</p><span class="tcard__more"><span data-i18n="clin.56">Specifications</span><span class="arr" aria-hidden="true">→</span></span></div></a>
+      <a class="tcard spot" href="stem-cells.html" data-reveal><div class="tcard__img"><img src="assets/img/product-stemcell.jpg" width="1024" height="1024" alt="Mesenchymal stem cell vial" data-i18n-aria="clin.a3" loading="lazy" decoding="async" /></div><div class="tcard__body"><h3 data-i18n="clin.48">Mesenchymal Stem Cells</h3><p>CD73+ CD90+ CD105+ · 50M/100M/200M</p><span class="tcard__more"><span data-i18n="clin.49">Specifications</span><span class="arr" aria-hidden="true">→</span></span></div></a>
+      <a class="tcard spot" href="nk-cells.html" data-reveal data-delay="60"><div class="tcard__img"><img src="assets/img/product-nk.jpg" width="1024" height="1024" alt="NK cell vials" data-i18n-aria="clin.a4" loading="lazy" decoding="async" /></div><div class="tcard__body"><h3 data-i18n="clin.50">NK Cells</h3><p data-i18n="clin.51">CD56+ CD3− · purity ≥ 90%</p><span class="tcard__more"><span data-i18n="clin.52">Specifications</span><span class="arr" aria-hidden="true">→</span></span></div></a>
+      <a class="tcard spot" href="muse-cells.html" data-reveal data-delay="120"><div class="tcard__img"><img src="assets/img/product-muse.jpg" width="1024" height="1024" alt="Muse cell product" data-i18n-aria="clin.a5" loading="lazy" decoding="async" /></div><div class="tcard__body"><h3 data-i18n="clin.53">Muse Cells</h3><p data-i18n="clin.54">SSEA-3+ · per dose</p><span class="tcard__more"><span data-i18n="clin.55">Specifications</span><span class="arr" aria-hidden="true">→</span></span></div></a>
+      <a class="tcard spot" href="exosomes.html" data-reveal data-delay="180"><div class="tcard__img"><img src="assets/img/product-exosome-crop.jpg" width="1024" height="660" alt="Exosome vials" data-i18n-aria="clin.a6" loading="lazy" decoding="async" /></div><div class="tcard__body"><h3 data-i18n="clin.56">Exosomes</h3><p>CD9+ CD63+ CD81+ · NTA</p><span class="tcard__more"><span data-i18n="clin.57">Specifications</span><span class="arr" aria-hidden="true">→</span></span></div></a>
     </div>
   </div>
 </section>
@@ -267,57 +272,57 @@
 <section class="section" id="access">
   <div class="container split split--top">
     <div data-reveal>
-      <span class="kicker" data-i18n="clin.57">Professional access</span>
-      <h2 class="h2" data-i18n="clin.58">Request professional access.</h2>
-      <p class="lead" data-i18n="clin.59">We verify professional credentials before granting access to clinical products. Your information is used only to respond to your request.</p>
+      <span class="kicker" data-i18n="clin.58">Professional access</span>
+      <h2 class="h2" data-i18n="clin.59">Request professional access.</h2>
+      <p class="lead" data-i18n="clin.60">We verify professional credentials before granting access to clinical products. Your information is used only to respond to your request.</p>
       <ul class="contactlist">
-        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-mail"/></svg><div><b data-i18n="clin.60">Email</b><a href="mailto:contacto@1cellhealth.com">contacto@1cellhealth.com</a></div></li>
-        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-clock"/></svg><div><b data-i18n="clin.61">Hours</b><span data-i18n="clin.62">Mon–Fri · 9:00–18:00 (CT)</span></div></li>
-        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-pin"/></svg><div><b data-i18n="clin.63">Markets</b><span data-i18n="clin.64">United States · Mexico · Latin America</span></div></li>
+        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-mail"/></svg><div><b data-i18n="clin.61">Email</b><a href="mailto:contacto@1cellhealth.com">contacto@1cellhealth.com</a></div></li>
+        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-clock"/></svg><div><b data-i18n="clin.62">Hours</b><span data-i18n="clin.63">Mon–Fri · 9:00–18:00 (CT)</span></div></li>
+        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-pin"/></svg><div><b data-i18n="clin.64">Markets</b><span data-i18n="clin.65">United States · Mexico · Latin America</span></div></li>
       </ul>
     </div>
     <div class="formcard" data-reveal data-delay="80">
       <form class="form" data-form="professional" novalidate>
         <div class="form__row">
-          <div class="field"><label for="pName" data-i18n="clin.65">Name</label><input id="pName" name="name" type="text" autocomplete="name" required /><p class="field__err" data-i18n="clin.66">Please enter your name.</p></div>
-          <div class="field"><label for="pEmail">Email</label><input id="pEmail" name="email" type="email" autocomplete="email" required /><p class="field__err" data-i18n="clin.67">Please enter a valid email.</p></div>
+          <div class="field"><label for="pName" data-i18n="clin.66">Name</label><input id="pName" name="name" type="text" autocomplete="name" required /><p class="field__err" data-i18n="clin.67">Please enter your name.</p></div>
+          <div class="field"><label for="pEmail">Email</label><input id="pEmail" name="email" type="email" autocomplete="email" required /><p class="field__err" data-i18n="clin.68">Please enter a valid email.</p></div>
         </div>
         <div class="form__row">
-          <div class="field"><label for="pCountry" data-i18n="clin.68">Country</label><input id="pCountry" name="country" type="text" autocomplete="country-name" required /><p class="field__err" data-i18n="clin.69">Please enter your country.</p></div>
-          <div class="field"><label for="pOrg" data-i18n="clin.70">Clinic / Organization</label><input id="pOrg" name="organization" type="text" autocomplete="organization" required /><p class="field__err" data-i18n="clin.71">Please enter your clinic or organization.</p></div>
+          <div class="field"><label for="pCountry" data-i18n="clin.69">Country</label><input id="pCountry" name="country" type="text" autocomplete="country-name" required /><p class="field__err" data-i18n="clin.70">Please enter your country.</p></div>
+          <div class="field"><label for="pOrg" data-i18n="clin.71">Clinic / Organization</label><input id="pOrg" name="organization" type="text" autocomplete="organization" required /><p class="field__err" data-i18n="clin.72">Please enter your clinic or organization.</p></div>
         </div>
         <div class="field">
-          <label for="pRole" data-i18n="clin.72">Professional role</label>
+          <label for="pRole" data-i18n="clin.73">Professional role</label>
           <select id="pRole" name="role" required>
-            <option value="" data-i18n="clin.73">Select…</option>
-            <option value="Physician" data-i18n="clin.74">Physician</option>
-            <option value="Clinic or medical director" data-i18n="clin.75">Clinic or medical director</option>
-            <option value="Researcher" data-i18n="clin.76">Researcher</option>
-            <option value="Pharmacist" data-i18n="clin.77">Pharmacist</option>
-            <option value="Distributor or partner" data-i18n="clin.78">Distributor or partner</option>
-            <option value="Other" data-i18n="clin.79">Other</option>
+            <option value="" data-i18n="clin.74">Select…</option>
+            <option value="Physician" data-i18n="clin.75">Physician</option>
+            <option value="Clinic or medical director" data-i18n="clin.76">Clinic or medical director</option>
+            <option value="Researcher" data-i18n="clin.77">Researcher</option>
+            <option value="Pharmacist" data-i18n="clin.78">Pharmacist</option>
+            <option value="Distributor or partner" data-i18n="clin.79">Distributor or partner</option>
+            <option value="Other" data-i18n="clin.80">Other</option>
           </select>
-          <p class="field__err" data-i18n="clin.80">Please select your role.</p>
+          <p class="field__err" data-i18n="clin.81">Please select your role.</p>
         </div>
         <fieldset class="fieldset" data-required>
-          <legend data-i18n="clin.81">Areas of interest</legend>
+          <legend data-i18n="clin.82">Areas of interest</legend>
           <div class="chips">
-            <label class="chip"><input type="checkbox" name="interest" value="stem-cells" /><span data-i18n="clin.82">Stem Cells</span></label>
-            <label class="chip"><input type="checkbox" name="interest" value="nk-cells" /><span data-i18n="clin.83">NK Cells</span></label>
-            <label class="chip"><input type="checkbox" name="interest" value="muse-cells" /><span data-i18n="clin.84">Muse Cells</span></label>
-            <label class="chip"><input type="checkbox" name="interest" value="exosomes" /><span data-i18n="clin.85">Exosomes</span></label>
-            <label class="chip"><input type="checkbox" name="interest" value="peptides" /><span data-i18n="clin.86">Peptides</span></label>
-            <label class="chip"><input type="checkbox" name="interest" value="cryopreservation" /><span data-i18n="clin.87">Cryopreservation</span></label>
-            <label class="chip"><input type="checkbox" name="interest" value="logistics" /><span data-i18n="clin.88">Logistics</span></label>
-            <label class="chip"><input type="checkbox" name="interest" value="documentation" /><span data-i18n="clin.89">Documentation / COA</span></label>
-            <label class="chip"><input type="checkbox" name="interest" value="partnership" /><span data-i18n="clin.90">Clinic partnership</span></label>
-            <label class="chip"><input type="checkbox" name="interest" value="other" /><span data-i18n="clin.91">Other</span></label>
+            <label class="chip"><input type="checkbox" name="interest" value="stem-cells" /><span data-i18n="clin.83">Stem Cells</span></label>
+            <label class="chip"><input type="checkbox" name="interest" value="nk-cells" /><span data-i18n="clin.84">NK Cells</span></label>
+            <label class="chip"><input type="checkbox" name="interest" value="muse-cells" /><span data-i18n="clin.85">Muse Cells</span></label>
+            <label class="chip"><input type="checkbox" name="interest" value="exosomes" /><span data-i18n="clin.86">Exosomes</span></label>
+            <label class="chip"><input type="checkbox" name="interest" value="peptides" /><span data-i18n="clin.87">Peptides</span></label>
+            <label class="chip"><input type="checkbox" name="interest" value="cryopreservation" /><span data-i18n="clin.88">Cryopreservation</span></label>
+            <label class="chip"><input type="checkbox" name="interest" value="logistics" /><span data-i18n="clin.89">Logistics</span></label>
+            <label class="chip"><input type="checkbox" name="interest" value="documentation" /><span data-i18n="clin.90">Documentation / COA</span></label>
+            <label class="chip"><input type="checkbox" name="interest" value="partnership" /><span data-i18n="clin.91">Clinic partnership</span></label>
+            <label class="chip"><input type="checkbox" name="interest" value="other" /><span data-i18n="clin.92">Other</span></label>
           </div>
-          <p class="field__err" data-i18n="clin.92">Select at least one area.</p>
+          <p class="field__err" data-i18n="clin.93">Select at least one area.</p>
         </fieldset>
-        <div class="field"><label for="pMsg" data-i18n="clin.93">Message (optional)</label><textarea id="pMsg" name="message" rows="4"></textarea></div>
-        <button class="btn btn--primary btn--lg btn--block" type="submit" data-i18n="clin.94">Request professional access</button>
-        <p class="form__note" data-i18n="clin.95">By sending, you agree to our <a href="legal.html#privacy">privacy notice</a>.</p>
+        <div class="field"><label for="pMsg" data-i18n="clin.94">Message (optional)</label><textarea id="pMsg" name="message" rows="4"></textarea></div>
+        <button class="btn btn--primary btn--lg btn--block" type="submit" data-i18n="clin.95">Request professional access</button>
+        <p class="form__note" data-i18n="clin.96">By sending, you agree to our <a href="legal.html#privacy">privacy notice</a>.</p>
       </form>
       <div class="form__done" data-form-done hidden></div>
     </div>
@@ -429,7 +434,7 @@
 
 <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 <a href="#top" class="totop" id="toTop" aria-label="Back to top" data-i18n-aria="c-overlays.a3"><svg width="18" height="18" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-<script src="assets/js/i18n-es.js?v=18.2" defer></script>
-<script src="assets/js/main.js?v=18.2" defer></script>
+<script src="assets/js/i18n-es.js?v=19.3" defer></script>
+<script src="assets/js/main.js?v=19.3" defer></script>
 </body>
 </html>

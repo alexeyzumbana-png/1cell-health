@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/css/styles.css?v=18.2" />
+<link rel="stylesheet" href="assets/css/styles.css?v=19.3" />
 <script>(function(d){d.className+=" js";try{if(localStorage.getItem("1cell_lang")==="es"){d.className+=" es-pending";setTimeout(function(){d.classList.remove("es-pending")},1500)}}catch(e){}})(document.documentElement);</script>
 </head>
 <body class="page-therapies">
@@ -57,6 +57,7 @@
   </defs>
 </svg>
 <a class="skip" href="#main" data-i18n="c-skip">Skip to content</a>
+<div class="progress" aria-hidden="true"><span></span></div>
 <div class="topbar" id="top">
   <div class="container topbar__inner">
     <p class="topbar__msg"><span class="topbar__dot" aria-hidden="true"></span><span data-i18n="c-topbar.1"><span class="topbar__opt">Specialized </span>biological logistics · US &amp; LATAM</span></p>
@@ -183,6 +184,7 @@
 <section class="phero phero--tint">
   <div class="container">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="./" data-i18n="therapies.1">Home</a><span aria-hidden="true">/</span><span data-i18n="therapies.2">Therapies</span></nav>
+    <div class="phero__grid">
     <div class="phero__copy">
       <span class="kicker">1CELL Clinical</span>
       <h1 data-i18n="therapies.3">Advanced biologics, <em>documented and preserved.</em></h1>
@@ -192,14 +194,16 @@
         <a class="btn btn--ghost btn--lg" href="standard.html" data-i18n="therapies.6">Our standard</a>
       </div>
     </div>
+    <figure class="hero-photo phero__visual"><div class="media media--43 reveal-img"><img src="assets/img/product-family.jpg" width="1600" height="912" alt="1CELL product vials" data-i18n-aria="therapies.a1" decoding="async" /><span class="media__cap"><span class="pulse" aria-hidden="true"></span>1CELL Clinical</span></div></figure>
+    </div>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
     <div class="tgrid tgrid--2">
-      <a class="tcard" href="stem-cells.html" id="msc" data-reveal>
-        <div class="vtile" aria-hidden="true"><span class="vtile__label">1CELL Clinical</span><span class="vtile__abbr">MSC</span><svg class="vtile__vial"><use href="#i-vial-tall"/></svg></div>
+      <a class="tcard spot" href="stem-cells.html" id="msc" data-reveal>
+        <div class="tcard__img"><img src="assets/img/product-stemcell.jpg" width="1024" height="1024" alt="Mesenchymal stem cell vial" data-i18n-aria="therapies.a2" loading="lazy" decoding="async" /></div>
         <div class="tcard__body">
           <span class="tcard__cat" data-i18n="therapies.7">Cell therapy</span>
           <h3 data-i18n="therapies.8">Mesenchymal Stem Cells</h3>
@@ -208,8 +212,8 @@
           <span class="tcard__more"><span data-i18n="therapies.10">View therapy</span><span class="arr" aria-hidden="true">→</span></span>
         </div>
       </a>
-      <a class="tcard" href="nk-cells.html" id="nk" data-reveal data-delay="60">
-        <div class="vtile" aria-hidden="true"><span class="vtile__label">1CELL Clinical</span><span class="vtile__abbr">NK</span><svg class="vtile__vial"><use href="#i-vial-tall"/></svg></div>
+      <a class="tcard spot" href="nk-cells.html" id="nk" data-reveal data-delay="60">
+        <div class="tcard__img"><img src="assets/img/product-nk.jpg" width="1024" height="1024" alt="NK cell vials" data-i18n-aria="therapies.a3" loading="lazy" decoding="async" /></div>
         <div class="tcard__body">
           <span class="tcard__cat" data-i18n="therapies.11">Cell immunotherapy</span>
           <h3 data-i18n="therapies.12">NK Cells</h3>
@@ -218,8 +222,8 @@
           <span class="tcard__more"><span data-i18n="therapies.15">View therapy</span><span class="arr" aria-hidden="true">→</span></span>
         </div>
       </a>
-      <a class="tcard" href="muse-cells.html" id="muse" data-reveal>
-        <div class="vtile" aria-hidden="true"><span class="vtile__label">1CELL Clinical</span><span class="vtile__abbr">Muse</span><svg class="vtile__vial"><use href="#i-vial-tall"/></svg></div>
+      <a class="tcard spot" href="muse-cells.html" id="muse" data-reveal>
+        <div class="tcard__img"><img src="assets/img/product-muse.jpg" width="1024" height="1024" alt="Muse cell product" data-i18n-aria="therapies.a4" loading="lazy" decoding="async" /></div>
         <div class="tcard__body">
           <span class="tcard__cat" data-i18n="therapies.16">Cell therapy</span>
           <h3 data-i18n="therapies.17">Muse Cells</h3>
@@ -228,8 +232,8 @@
           <span class="tcard__more"><span data-i18n="therapies.20">View therapy</span><span class="arr" aria-hidden="true">→</span></span>
         </div>
       </a>
-      <a class="tcard" href="exosomes.html" id="exosomes" data-reveal data-delay="60">
-        <div class="vtile" aria-hidden="true"><span class="vtile__label">1CELL Clinical</span><span class="vtile__abbr">EV</span><svg class="vtile__vial"><use href="#i-vial-tall"/></svg></div>
+      <a class="tcard spot" href="exosomes.html" id="exosomes" data-reveal data-delay="60">
+        <div class="tcard__img"><img src="assets/img/product-exosome-crop.jpg" width="1024" height="660" alt="Exosome vials" data-i18n-aria="therapies.a5" loading="lazy" decoding="async" /></div>
         <div class="tcard__body">
           <span class="tcard__cat" data-i18n="therapies.21">Extracellular vesicles</span>
           <h3 data-i18n="therapies.22">Exosomes</h3>
@@ -249,17 +253,17 @@
       <h2 class="h2" data-i18n="therapies.27">The product is only one part.</h2>
     </div>
     <div class="blocks">
-      <article class="block" data-reveal>
+      <article class="block spot" data-reveal>
         <span class="block__ic"><svg width="22" height="22" aria-hidden="true"><use href="#i-doc"/></svg></span>
         <h3 data-i18n="therapies.28">Documented</h3>
         <p data-i18n="therapies.29">A lot-specific Certificate of Analysis with characterization and quality results.</p>
       </article>
-      <article class="block" data-reveal data-delay="60">
+      <article class="block spot" data-reveal data-delay="60">
         <span class="block__ic"><svg width="22" height="22" aria-hidden="true"><use href="#i-dewar"/></svg></span>
         <h3 data-i18n="therapies.30">Preserved</h3>
         <p data-i18n="therapies.31">Storage and transport conditions confirmed with the source laboratory for each product.</p>
       </article>
-      <article class="block" data-reveal data-delay="120">
+      <article class="block spot" data-reveal data-delay="120">
         <span class="block__ic"><svg width="22" height="22" aria-hidden="true"><use href="#i-clinic"/></svg></span>
         <h3 data-i18n="therapies.32">Delivered</h3>
         <p data-i18n="therapies.33">Delivery coordinated with the receiving clinic, with receiving and handling instructions.</p>
@@ -388,7 +392,7 @@
 
 <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 <a href="#top" class="totop" id="toTop" aria-label="Back to top" data-i18n-aria="c-overlays.a3"><svg width="18" height="18" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-<script src="assets/js/i18n-es.js?v=18.2" defer></script>
-<script src="assets/js/main.js?v=18.2" defer></script>
+<script src="assets/js/i18n-es.js?v=19.3" defer></script>
+<script src="assets/js/main.js?v=19.3" defer></script>
 </body>
 </html>

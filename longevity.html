@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/css/styles.css?v=18.2" />
+<link rel="stylesheet" href="assets/css/styles.css?v=19.3" />
 <script>(function(d){d.className+=" js";try{if(localStorage.getItem("1cell_lang")==="es"){d.className+=" es-pending";setTimeout(function(){d.classList.remove("es-pending")},1500)}}catch(e){}})(document.documentElement);</script>
 </head>
 <body class="page-longevity">
@@ -57,6 +57,7 @@
   </defs>
 </svg>
 <a class="skip" href="#main" data-i18n="c-skip">Skip to content</a>
+<div class="progress" aria-hidden="true"><span></span></div>
 <div class="topbar" id="top">
   <div class="container topbar__inner">
     <p class="topbar__msg"><span class="topbar__dot" aria-hidden="true"></span><span data-i18n="c-topbar.1"><span class="topbar__opt">Specialized </span>biological logistics · US &amp; LATAM</span></p>
@@ -183,6 +184,7 @@
 <section class="phero phero--tint">
   <div class="container">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="./" data-i18n="lon.1">Home</a><span aria-hidden="true">/</span><span>1CELL Longevity</span></nav>
+    <div class="phero__grid">
     <div class="phero__copy">
       <span class="kicker">1CELL Longevity</span>
       <h1 data-i18n="lon.2">Longevity, held to a <em>clinical standard.</em></h1>
@@ -192,69 +194,71 @@
         <a class="btn btn--ghost btn--lg" href="#order" data-i18n="lon.5">How ordering works</a>
       </div>
     </div>
+    <figure class="hero-photo phero__visual"><div class="media media--43 reveal-img"><img src="assets/img/product-family.jpg" width="1600" height="912" alt="1CELL product vials" data-i18n-aria="lon.a1" decoding="async" /><span class="media__cap"><span class="pulse" aria-hidden="true"></span>1CELL Longevity</span></div></figure>
+    </div>
   </div>
 </section>
 
 <section class="section" id="products">
   <div class="container">
     <div class="pgrid">
-      <article class="pcard" id="peptides" data-reveal>
-        <div class="pcard__media ptile" aria-hidden="true"><!-- ASSET NEEDED: peptide product photograph --><span class="ptile__k" data-i18n="lon.6">Peptides</span><span class="ptile__names">BPC-157 · TB-500<br>GHK-Cu · Ipamorelin</span></div>
+      <article class="pcard spot" id="peptides" data-reveal>
+        <div class="pcard__media"><img src="assets/img/product-peptides.jpg" width="1024" height="1024" alt="Peptide line" data-i18n-aria="lon.a2" loading="lazy" decoding="async" /></div>
         <div class="pcard__body">
-          <span class="pcard__cat" data-i18n="lon.7">Peptides</span>
-          <h3 data-i18n="lon.8">Peptide Line</h3>
-          <p data-i18n="lon.9">High-purity synthetic peptides — BPC-157, TB-500, GHK-Cu and ipamorelin.</p>
+          <span class="pcard__cat" data-i18n="lon.6">Peptides</span>
+          <h3 data-i18n="lon.7">Peptide Line</h3>
+          <p data-i18n="lon.8">High-purity synthetic peptides — BPC-157, TB-500, GHK-Cu and ipamorelin.</p>
           <ul>
-            <li><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="lon.10">HPLC purity ≥ 98%, verified by mass spectrometry</span></li>
-            <li><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="lon.11">Reconstitution and storage guide</span></li>
-            <li><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="lon.12">Written usage protocol</span></li>
+            <li><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="lon.9">HPLC purity ≥ 98%, verified by mass spectrometry</span></li>
+            <li><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="lon.10">Reconstitution and storage guide</span></li>
+            <li><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="lon.11">Written usage protocol</span></li>
           </ul>
-          <div class="pcard__foot"><span class="price">$89 <small>USD</small></span><button class="btn btn--primary btn--sm" type="button" data-add="pep" data-i18n="lon.13">Add to order</button></div>
+          <div class="pcard__foot"><span class="price">$89 <small>USD</small></span><button class="btn btn--primary btn--sm" type="button" data-add="pep" data-i18n="lon.12">Add to order</button></div>
         </div>
       </article>
-      <article class="pcard" id="nutraceuticals" data-reveal data-delay="60">
-        <div class="pcard__media ptile" aria-hidden="true"><!-- ASSET NEEDED: nutraceutical product photograph --><span class="ptile__k" data-i18n="lon.14">Nutraceuticals</span><span class="ptile__names">Omega 3<br>EPA · DHA</span></div>
+      <article class="pcard spot" id="nutraceuticals" data-reveal data-delay="60">
+        <div class="pcard__media"><img src="assets/img/product-nutra.jpg" width="1024" height="1024" alt="Omega 3 capsules" data-i18n-aria="lon.a3" loading="lazy" decoding="async" /></div>
         <div class="pcard__body">
-          <span class="pcard__cat" data-i18n="lon.15">Nutraceuticals</span>
+          <span class="pcard__cat" data-i18n="lon.13">Nutraceuticals</span>
           <h3>Omega 3 Premium</h3>
-          <p data-i18n="lon.16">High-purity EPA/DHA in re-esterified triglyceride (rTG) form, purified by molecular distillation.</p>
+          <p data-i18n="lon.14">High-purity EPA/DHA in re-esterified triglyceride (rTG) form, purified by molecular distillation.</p>
           <ul>
-            <li><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="lon.17">Tested for purity and potency</span></li>
-            <li><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="lon.18">Usage guide</span></li>
+            <li><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="lon.15">Tested for purity and potency</span></li>
+            <li><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="lon.16">Usage guide</span></li>
           </ul>
-          <div class="pcard__foot"><span class="price">$39 <small>USD</small></span><button class="btn btn--primary btn--sm" type="button" data-add="omega" data-i18n="lon.19">Add to order</button></div>
+          <div class="pcard__foot"><span class="price">$39 <small>USD</small></span><button class="btn btn--primary btn--sm" type="button" data-add="omega" data-i18n="lon.17">Add to order</button></div>
         </div>
       </article>
-      <article class="pcard" id="skincare" data-reveal data-delay="120">
-        <div class="pcard__media ltile__media--img" aria-hidden="true"><img src="assets/img/hero-vial.png" width="720" height="900" alt="" loading="lazy" decoding="async" /></div>
+      <article class="pcard spot" id="skincare" data-reveal data-delay="120">
+        <div class="pcard__media"><img src="assets/img/product-cosmetic.jpg" width="1024" height="1024" alt="1CELL facial serum" data-i18n-aria="lon.a4" loading="lazy" decoding="async" /></div>
         <div class="pcard__body">
-          <span class="pcard__cat" data-i18n="lon.20">Skincare</span>
-          <h3 data-i18n="lon.21">1CELL Facial Serum</h3>
-          <p data-i18n="lon.22">Exosome-derived signaling actives combined with GHK-Cu copper peptide.</p>
+          <span class="pcard__cat" data-i18n="lon.18">Skincare</span>
+          <h3 data-i18n="lon.19">1CELL Facial Serum</h3>
+          <p data-i18n="lon.20">Exosome-derived signaling actives combined with GHK-Cu copper peptide.</p>
           <ul>
-            <li><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="lon.23">Certificate of Analysis</span></li>
-            <li><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="lon.24">Usage and storage protocol</span></li>
+            <li><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="lon.21">Certificate of Analysis</span></li>
+            <li><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="lon.22">Usage and storage protocol</span></li>
           </ul>
-          <div class="pcard__foot"><span class="price">$89 <small>USD</small></span><button class="btn btn--primary btn--sm" type="button" data-add="serum" data-i18n="lon.25">Add to order</button></div>
+          <div class="pcard__foot"><span class="price">$89 <small>USD</small></span><button class="btn btn--primary btn--sm" type="button" data-add="serum" data-i18n="lon.23">Add to order</button></div>
         </div>
       </article>
     </div>
-    <p class="note" data-reveal><svg width="16" height="16" aria-hidden="true"><use href="#i-shield"/></svg><span data-i18n="lon.26">Not medical advice. Consult a qualified clinician before using any product. Several peptides are not approved for therapeutic use — see <a href="science.html#peptides">the evidence</a>.</span></p>
+    <p class="note" data-reveal><svg width="16" height="16" aria-hidden="true"><use href="#i-shield"/></svg><span data-i18n="lon.24">Not medical advice. Consult a qualified clinician before using any product. Several peptides are not approved for therapeutic use — see <a href="science.html#peptides">the evidence</a>.</span></p>
   </div>
 </section>
 
 <section class="section section--tint" id="order">
   <div class="container">
     <div class="head" data-reveal>
-      <span class="kicker" data-i18n="lon.27">Ordering</span>
-      <h2 class="h2" data-i18n="lon.28">How ordering works.</h2>
-      <p class="lead" data-i18n="lon.29">Every order is confirmed with a person on our team before it ships, so it arrives with its protocol and the right guidance.</p>
+      <span class="kicker" data-i18n="lon.25">Ordering</span>
+      <h2 class="h2" data-i18n="lon.26">How ordering works.</h2>
+      <p class="lead" data-i18n="lon.27">Every order is confirmed with a person on our team before it ships, so it arrives with its protocol and the right guidance.</p>
     </div>
     <ol class="flow flow--light flow--4" data-reveal>
-      <li class="flow__step"><span class="flow__n">01</span><h3 data-i18n="lon.30">Choose</h3><p data-i18n="lon.31">Add products to your order.</p></li>
-      <li class="flow__step"><span class="flow__n">02</span><h3 data-i18n="lon.32">Request</h3><p data-i18n="lon.33">Send your request with your details.</p></li>
-      <li class="flow__step"><span class="flow__n">03</span><h3 data-i18n="lon.34">Confirm</h3><p data-i18n="lon.35">We confirm availability, protocol and payment with you.</p></li>
-      <li class="flow__step"><span class="flow__n">04</span><h3 data-i18n="lon.36">Receive</h3><p data-i18n="lon.37">Shipped with its documentation and written protocol.</p></li>
+      <li class="flow__step"><span class="flow__n">01</span><h3 data-i18n="lon.28">Choose</h3><p data-i18n="lon.29">Add products to your order.</p></li>
+      <li class="flow__step"><span class="flow__n">02</span><h3 data-i18n="lon.30">Request</h3><p data-i18n="lon.31">Send your request with your details.</p></li>
+      <li class="flow__step"><span class="flow__n">03</span><h3 data-i18n="lon.32">Confirm</h3><p data-i18n="lon.33">We confirm availability, protocol and payment with you.</p></li>
+      <li class="flow__step"><span class="flow__n">04</span><h3 data-i18n="lon.34">Receive</h3><p data-i18n="lon.35">Shipped with its documentation and written protocol.</p></li>
     </ol>
   </div>
 </section>
@@ -263,12 +267,12 @@
   <div class="container">
     <div class="band" data-reveal>
       <div>
-        <h2 data-i18n="lon.38">Are you a healthcare professional?</h2>
-        <p data-i18n="lon.39">1CELL Clinical cell therapies and exosomes are available with professional access.</p>
+        <h2 data-i18n="lon.36">Are you a healthcare professional?</h2>
+        <p data-i18n="lon.37">1CELL Clinical cell therapies and exosomes are available with professional access.</p>
       </div>
       <div class="band__cta">
-        <a class="btn btn--light" href="therapies.html" data-i18n="lon.40">View therapies</a>
-        <a class="btn btn--ondark" href="clinicians.html#access" data-i18n="lon.41">Professional access</a>
+        <a class="btn btn--light" href="therapies.html" data-i18n="lon.38">View therapies</a>
+        <a class="btn btn--ondark" href="clinicians.html#access" data-i18n="lon.39">Professional access</a>
       </div>
     </div>
   </div>
@@ -379,7 +383,7 @@
 
 <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 <a href="#top" class="totop" id="toTop" aria-label="Back to top" data-i18n-aria="c-overlays.a3"><svg width="18" height="18" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-<script src="assets/js/i18n-es.js?v=18.2" defer></script>
-<script src="assets/js/main.js?v=18.2" defer></script>
+<script src="assets/js/i18n-es.js?v=19.3" defer></script>
+<script src="assets/js/main.js?v=19.3" defer></script>
 </body>
 </html>

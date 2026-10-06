@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/css/styles.css?v=18.2" />
+<link rel="stylesheet" href="assets/css/styles.css?v=19.3" />
 <script>(function(d){d.className+=" js";try{if(localStorage.getItem("1cell_lang")==="es"){d.className+=" es-pending";setTimeout(function(){d.classList.remove("es-pending")},1500)}}catch(e){}})(document.documentElement);</script>
 </head>
 <body class="page-std">
@@ -57,6 +57,7 @@
   </defs>
 </svg>
 <a class="skip" href="#main" data-i18n="c-skip">Skip to content</a>
+<div class="progress" aria-hidden="true"><span></span></div>
 <div class="topbar" id="top">
   <div class="container topbar__inner">
     <p class="topbar__msg"><span class="topbar__dot" aria-hidden="true"></span><span data-i18n="c-topbar.1"><span class="topbar__opt">Specialized </span>biological logistics · US &amp; LATAM</span></p>
@@ -194,13 +195,13 @@
 <section class="section" id="principles">
   <div class="container">
     <div class="blocks blocks--4">
-      <article class="block" data-reveal><span class="block__k">01</span><h3 data-i18n="std.6">Identity</h3><p data-i18n="std.7">Each product is confirmed to be what its specification says it is.</p></article>
-      <article class="block" data-reveal data-delay="60"><span class="block__k">02</span><h3 data-i18n="std.8">Characterization</h3><p data-i18n="std.9">Defining markers and parameters are measured for every lot.</p></article>
-      <article class="block" data-reveal data-delay="120"><span class="block__k">03</span><h3 data-i18n="std.10">Quality</h3><p data-i18n="std.11">Sourced from cGMP production and released against specification.</p></article>
-      <article class="block" data-reveal data-delay="180"><span class="block__k">04</span><h3 data-i18n="std.12">Documentation</h3><p data-i18n="std.13">Every lot is released with a lot-specific Certificate of Analysis.</p></article>
-      <article class="block" data-reveal><span class="block__k">05</span><h3 data-i18n="std.14">Traceability</h3><p data-i18n="std.15">Every vial links back to its lot, its source and its custody record.</p></article>
-      <article class="block" data-reveal data-delay="60"><span class="block__k">06</span><h3 data-i18n="std.16">Preservation</h3><p data-i18n="std.17">Storage and transport follow each product's requirements.</p></article>
-      <article class="block" data-reveal data-delay="120"><span class="block__k">07</span><h3 data-i18n="std.18">Delivery</h3><p data-i18n="std.19">Handoff to the clinic is coordinated, documented and confirmed.</p></article>
+      <article class="block spot" data-reveal><span class="block__k">01</span><h3 data-i18n="std.6">Identity</h3><p data-i18n="std.7">Each product is confirmed to be what its specification says it is.</p></article>
+      <article class="block spot" data-reveal data-delay="60"><span class="block__k">02</span><h3 data-i18n="std.8">Characterization</h3><p data-i18n="std.9">Defining markers and parameters are measured for every lot.</p></article>
+      <article class="block spot" data-reveal data-delay="120"><span class="block__k">03</span><h3 data-i18n="std.10">Quality</h3><p data-i18n="std.11">Sourced from cGMP production and released against specification.</p></article>
+      <article class="block spot" data-reveal data-delay="180"><span class="block__k">04</span><h3 data-i18n="std.12">Documentation</h3><p data-i18n="std.13">Every lot is released with a lot-specific Certificate of Analysis.</p></article>
+      <article class="block spot" data-reveal><span class="block__k">05</span><h3 data-i18n="std.14">Traceability</h3><p data-i18n="std.15">Every vial links back to its lot, its source and its custody record.</p></article>
+      <article class="block spot" data-reveal data-delay="60"><span class="block__k">06</span><h3 data-i18n="std.16">Preservation</h3><p data-i18n="std.17">Storage and transport follow each product's requirements.</p></article>
+      <article class="block spot" data-reveal data-delay="120"><span class="block__k">07</span><h3 data-i18n="std.18">Delivery</h3><p data-i18n="std.19">Handoff to the clinic is coordinated, documented and confirmed.</p></article>
       <a class="block block--link" href="#documentation" data-reveal data-delay="180"><span class="block__k">→</span><h3 data-i18n="std.20">See the documentation</h3><p data-i18n="std.21">The records that accompany each lot.</p></a>
     </div>
   </div>
@@ -219,47 +220,44 @@
         <li><svg width="16" height="16" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="std.28">Viability thresholds for cell products</span></li>
       </ul>
     </div>
-    <div class="ph ph--tall" data-reveal data-delay="80"><!-- ASSET NEEDED: real laboratory photograph (source laboratory / quality control) -->
-      <svg aria-hidden="true"><use href="#i-flask"/></svg>
-      <span class="ph__cap" data-i18n="std.29">Laboratory</span>
-    </div>
+    <figure class="media media--45 reveal-img"><!-- PHOTO WANTED: replace with a real photo of the source laboratory / quality control --><img src="assets/img/lab-technician.jpg" width="1024" height="1280" alt="Technician working in a cleanroom" data-i18n-aria="std.a1" loading="lazy" decoding="async" /><span class="media__cap"><span class="pulse" aria-hidden="true"></span>cGMP</span></figure>
   </div>
 </section>
 
 <section class="section" id="testing">
   <div class="container">
     <div class="head" data-reveal>
-      <span class="kicker" data-i18n="std.30">Testing</span>
-      <h2 class="h2" data-i18n="std.31">What is tested, by product type.</h2>
-      <p class="lead" data-i18n="std.32">Exact tests and acceptance criteria are listed on each lot's Certificate of Analysis.</p>
+      <span class="kicker" data-i18n="std.29">Testing</span>
+      <h2 class="h2" data-i18n="std.30">What is tested, by product type.</h2>
+      <p class="lead" data-i18n="std.31">Exact tests and acceptance criteria are listed on each lot's Certificate of Analysis.</p>
     </div>
     <div class="tests">
-      <article class="block" data-reveal>
+      <article class="block spot" data-reveal>
         <span class="block__ic"><svg width="22" height="22" aria-hidden="true"><use href="#i-scatter"/></svg></span>
-        <h3 data-i18n="std.33">Cell therapies</h3><p>MSC · NK · Muse</p>
+        <h3 data-i18n="std.32">Cell therapies</h3><p>MSC · NK · Muse</p>
         <ul>
-          <li><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="std.34">Identity and purity markers (flow cytometry)</span></li>
-          <li><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="std.35">Viability</span></li>
-          <li><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="std.36">Sterility and endotoxin</span></li>
-          <li><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="std.37">Cell count per dose</span></li>
+          <li><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="std.33">Identity and purity markers (flow cytometry)</span></li>
+          <li><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="std.34">Viability</span></li>
+          <li><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="std.35">Sterility and endotoxin</span></li>
+          <li><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="std.36">Cell count per dose</span></li>
         </ul>
       </article>
-      <article class="block" data-reveal data-delay="60">
+      <article class="block spot" data-reveal data-delay="60">
         <span class="block__ic"><svg width="22" height="22" aria-hidden="true"><use href="#i-layers"/></svg></span>
-        <h3 data-i18n="std.38">Exosomes</h3><p data-i18n="std.39">Extracellular vesicles</p>
+        <h3 data-i18n="std.37">Exosomes</h3><p data-i18n="std.38">Extracellular vesicles</p>
         <ul>
-          <li><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="std.40">Particle concentration and size (NTA)</span></li>
-          <li><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="std.41">Tetraspanins CD9, CD63, CD81</span></li>
-          <li><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="std.42">Sterility and endotoxin, where applicable</span></li>
+          <li><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="std.39">Particle concentration and size (NTA)</span></li>
+          <li><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="std.40">Tetraspanins CD9, CD63, CD81</span></li>
+          <li><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="std.41">Sterility and endotoxin, where applicable</span></li>
         </ul>
       </article>
-      <article class="block" data-reveal data-delay="120">
+      <article class="block spot" data-reveal data-delay="120">
         <span class="block__ic"><svg width="22" height="22" aria-hidden="true"><use href="#i-flask"/></svg></span>
-        <h3 data-i18n="std.43">Peptides</h3><p>1CELL Longevity</p>
+        <h3 data-i18n="std.42">Peptides</h3><p>1CELL Longevity</p>
         <ul>
-          <li><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="std.44">Purity by HPLC</span></li>
-          <li><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="std.45">Identity by mass spectrometry</span></li>
-          <li><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="std.46">Endotoxin</span></li>
+          <li><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="std.43">Purity by HPLC</span></li>
+          <li><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="std.44">Identity by mass spectrometry</span></li>
+          <li><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="std.45">Endotoxin</span></li>
         </ul>
       </article>
     </div>
@@ -269,16 +267,17 @@
 <section class="section section--tint" id="traceability">
   <div class="container split split--top">
     <div data-reveal>
-      <span class="kicker" data-i18n="std.47">Traceability</span>
-      <h2 class="h2" data-i18n="std.48">Every vial has a complete history.</h2>
-      <p class="lead" data-i18n="std.49">If a vial is in your clinic, you can know where it came from, when it was released and how it travelled.</p>
+      <span class="kicker" data-i18n="std.46">Traceability</span>
+      <h2 class="h2" data-i18n="std.47">Every vial has a complete history.</h2>
+      <p class="lead" data-i18n="std.48">If a vial is in your clinic, you can know where it came from, when it was released and how it travelled.</p>
+      <figure class="media media--43 reveal-img mt"><img src="assets/img/product-family.jpg" width="1600" height="912" alt="1CELL product vials" data-i18n-aria="std.a2" loading="lazy" decoding="async" /></figure>
     </div>
     <ul class="checks" data-reveal data-delay="80">
-      <li><svg width="16" height="16" aria-hidden="true"><use href="#i-link"/></svg><div><span data-i18n="std.50">Lot number</span><small data-i18n="std.51">Links each vial to its production run</small></div></li>
-      <li><svg width="16" height="16" aria-hidden="true"><use href="#i-link"/></svg><div><span data-i18n="std.52">Source</span><small data-i18n="std.53">The laboratory and source material</small></div></li>
-      <li><svg width="16" height="16" aria-hidden="true"><use href="#i-link"/></svg><div><span data-i18n="std.54">Release and specification</span><small data-i18n="std.55">When and against what it was released</small></div></li>
-      <li><svg width="16" height="16" aria-hidden="true"><use href="#i-link"/></svg><div><span data-i18n="std.56">Certificate of Analysis</span><small data-i18n="std.57">The results for that lot</small></div></li>
-      <li><svg width="16" height="16" aria-hidden="true"><use href="#i-link"/></svg><div><span data-i18n="std.58">Custody and temperature record</span><small data-i18n="std.59">Every handoff until receipt</small></div></li>
+      <li><svg width="16" height="16" aria-hidden="true"><use href="#i-link"/></svg><div><span data-i18n="std.49">Lot number</span><small data-i18n="std.50">Links each vial to its production run</small></div></li>
+      <li><svg width="16" height="16" aria-hidden="true"><use href="#i-link"/></svg><div><span data-i18n="std.51">Source</span><small data-i18n="std.52">The laboratory and source material</small></div></li>
+      <li><svg width="16" height="16" aria-hidden="true"><use href="#i-link"/></svg><div><span data-i18n="std.53">Release and specification</span><small data-i18n="std.54">When and against what it was released</small></div></li>
+      <li><svg width="16" height="16" aria-hidden="true"><use href="#i-link"/></svg><div><span data-i18n="std.55">Certificate of Analysis</span><small data-i18n="std.56">The results for that lot</small></div></li>
+      <li><svg width="16" height="16" aria-hidden="true"><use href="#i-link"/></svg><div><span data-i18n="std.57">Custody and temperature record</span><small data-i18n="std.58">Every handoff until receipt</small></div></li>
     </ul>
   </div>
 </section>
@@ -286,16 +285,16 @@
 <section class="section" id="preservation">
   <div class="container split">
     <div data-reveal>
-      <span class="kicker" data-i18n="std.60">Preservation</span>
-      <h2 class="h2" data-i18n="std.61">Conditions set by the product.</h2>
-      <p class="lead" data-i18n="std.62">From controlled refrigeration to frozen or cryogenic storage, conditions are set for each product and maintained through transport.</p>
-      <p class="cta-line"><a class="link" href="logistics.html#preservation"><span data-i18n="std.63">How we preserve and transport</span><span class="arr" aria-hidden="true">→</span></a></p>
+      <span class="kicker" data-i18n="std.59">Preservation</span>
+      <h2 class="h2" data-i18n="std.60">Conditions set by the product.</h2>
+      <p class="lead" data-i18n="std.61">From controlled refrigeration to frozen or cryogenic storage, conditions are set for each product and maintained through transport.</p>
+      <p class="cta-line"><a class="link" href="logistics.html#preservation"><span data-i18n="std.62">How we preserve and transport</span><span class="arr" aria-hidden="true">→</span></a></p>
     </div>
     <ul class="caps caps--light" data-reveal data-delay="80">
-      <li><svg width="18" height="18" aria-hidden="true"><use href="#i-thermo"/></svg><span data-i18n="std.64">Controlled refrigeration</span></li>
-      <li><svg width="18" height="18" aria-hidden="true"><use href="#i-snow"/></svg><span data-i18n="std.65">Frozen storage</span></li>
-      <li><svg width="18" height="18" aria-hidden="true"><use href="#i-dewar"/></svg><span data-i18n="std.66">Cryopreservation and nitrogen-based transport, when required</span></li>
-      <li><svg width="18" height="18" aria-hidden="true"><use href="#i-route"/></svg><span data-i18n="std.67">Monitoring in transit</span></li>
+      <li><svg width="18" height="18" aria-hidden="true"><use href="#i-thermo"/></svg><span data-i18n="std.63">Controlled refrigeration</span></li>
+      <li><svg width="18" height="18" aria-hidden="true"><use href="#i-snow"/></svg><span data-i18n="std.64">Frozen storage</span></li>
+      <li><svg width="18" height="18" aria-hidden="true"><use href="#i-dewar"/></svg><span data-i18n="std.65">Cryopreservation and nitrogen-based transport, when required</span></li>
+      <li><svg width="18" height="18" aria-hidden="true"><use href="#i-route"/></svg><span data-i18n="std.66">Monitoring in transit</span></li>
     </ul>
   </div>
 </section>
@@ -303,21 +302,21 @@
 <section class="section section--tint" id="documentation">
   <div class="container">
     <div class="head" data-reveal>
-      <span class="kicker" data-i18n="std.68">Documentation</span>
-      <h2 class="h2" data-i18n="std.69">Documentation you can verify.</h2>
-      <p class="lead" data-i18n="std.70">Verified professionals can request a sample COA and the documentation for every lot they receive.</p>
+      <span class="kicker" data-i18n="std.67">Documentation</span>
+      <h2 class="h2" data-i18n="std.68">Documentation you can verify.</h2>
+      <p class="lead" data-i18n="std.69">Verified professionals can request a sample COA and the documentation for every lot they receive.</p>
     </div>
     <div class="docs" data-reveal>
-      <article class="doc"><div class="doc__sheet" aria-hidden="true"><i class="doc__hd"></i><i></i><i class="s"></i><i></i><i class="s"></i><i></i></div><h3 data-i18n="std.71">Sample COA</h3><p data-i18n="std.72">The Certificate of Analysis released with each lot.</p><span class="doc__status" data-i18n="std.73">Available on request</span></article>
-      <article class="doc"><div class="doc__sheet" aria-hidden="true"><i class="doc__hd"></i><i class="doc__plot"></i><i></i><i class="s"></i></div><h3 data-i18n="std.74">Product characterization</h3><p data-i18n="std.75">Identity and purity markers measured for each lot.</p><span class="doc__status" data-i18n="std.76">Per lot</span></article>
-      <article class="doc"><div class="doc__sheet" aria-hidden="true"><i class="doc__hd"></i><i></i><i></i><i class="s"></i><i></i></div><h3 data-i18n="std.77">Batch documentation</h3><p data-i18n="std.78">Source, release date and specification of the lot.</p><span class="doc__status" data-i18n="std.79">Per lot</span></article>
-      <article class="doc"><div class="doc__sheet" aria-hidden="true"><i class="doc__hd"></i><i class="doc__line"></i><i class="s"></i><i></i></div><h3 data-i18n="std.80">Temperature monitoring</h3><p data-i18n="std.81">The shipment's temperature record in transit.</p><span class="doc__status" data-i18n="std.82">Per shipment</span></article>
-      <article class="doc"><div class="doc__sheet" aria-hidden="true"><i class="doc__hd"></i><i></i><i class="s"></i><i></i><i class="s"></i></div><h3 data-i18n="std.83">Chain of custody</h3><p data-i18n="std.84">Every handoff, from release to receipt at the clinic.</p><span class="doc__status" data-i18n="std.85">Per shipment</span></article>
+      <article class="doc"><div class="doc__sheet" aria-hidden="true"><i class="doc__hd"></i><i></i><i class="s"></i><i></i><i class="s"></i><i></i></div><h3 data-i18n="std.70">Sample COA</h3><p data-i18n="std.71">The Certificate of Analysis released with each lot.</p><span class="doc__status" data-i18n="std.72">Available on request</span></article>
+      <article class="doc"><div class="doc__sheet" aria-hidden="true"><i class="doc__hd"></i><i class="doc__plot"></i><i></i><i class="s"></i></div><h3 data-i18n="std.73">Product characterization</h3><p data-i18n="std.74">Identity and purity markers measured for each lot.</p><span class="doc__status" data-i18n="std.75">Per lot</span></article>
+      <article class="doc"><div class="doc__sheet" aria-hidden="true"><i class="doc__hd"></i><i></i><i></i><i class="s"></i><i></i></div><h3 data-i18n="std.76">Batch documentation</h3><p data-i18n="std.77">Source, release date and specification of the lot.</p><span class="doc__status" data-i18n="std.78">Per lot</span></article>
+      <article class="doc"><div class="doc__sheet" aria-hidden="true"><i class="doc__hd"></i><i class="doc__line"></i><i class="s"></i><i></i></div><h3 data-i18n="std.79">Temperature monitoring</h3><p data-i18n="std.80">The shipment's temperature record in transit.</p><span class="doc__status" data-i18n="std.81">Per shipment</span></article>
+      <article class="doc"><div class="doc__sheet" aria-hidden="true"><i class="doc__hd"></i><i></i><i class="s"></i><i></i><i class="s"></i></div><h3 data-i18n="std.82">Chain of custody</h3><p data-i18n="std.83">Every handoff, from release to receipt at the clinic.</p><span class="doc__status" data-i18n="std.84">Per shipment</span></article>
     </div>
     <div class="docs__cta" data-reveal>
       <!-- DOCUMENT NEEDED: add the real sample COA (e.g. assets/docs/sample-coa.pdf) to data-doc-src; the button then opens it directly. -->
-      <a class="btn btn--primary" href="clinicians.html?interest=documentation#access" data-doc-src="" data-doc-view="View sample COA" data-doc-view-es="Ver COA de muestra"><span data-i18n="std.86">Request sample COA</span></a>
-      <a class="btn btn--ghost" href="clinicians.html#access" data-i18n="std.87">Request professional access</a>
+      <a class="btn btn--primary" href="clinicians.html?interest=documentation#access" data-doc-src="" data-doc-view="View sample COA" data-doc-view-es="Ver COA de muestra"><span data-i18n="std.85">Request sample COA</span></a>
+      <a class="btn btn--ghost" href="clinicians.html#access" data-i18n="std.86">Request professional access</a>
     </div>
   </div>
 </section>
@@ -427,7 +426,7 @@
 
 <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 <a href="#top" class="totop" id="toTop" aria-label="Back to top" data-i18n-aria="c-overlays.a3"><svg width="18" height="18" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-<script src="assets/js/i18n-es.js?v=18.2" defer></script>
-<script src="assets/js/main.js?v=18.2" defer></script>
+<script src="assets/js/i18n-es.js?v=19.3" defer></script>
+<script src="assets/js/main.js?v=19.3" defer></script>
 </body>
 </html>

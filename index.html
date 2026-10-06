@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-<link rel="preload" as="image" href="assets/img/hero-vial.png" fetchpriority="high" /><link rel="stylesheet" href="assets/css/styles.css?v=18.2" />
+<link rel="preload" as="image" href="assets/img/hero-vial.png" fetchpriority="high" /><link rel="stylesheet" href="assets/css/styles.css?v=19.3" />
 <script>(function(d){d.className+=" js";try{if(localStorage.getItem("1cell_lang")==="es"){d.className+=" es-pending";setTimeout(function(){d.classList.remove("es-pending")},1500)}}catch(e){}})(document.documentElement);</script>
 </head>
 <body class="page-home">
@@ -57,6 +57,7 @@
   </defs>
 </svg>
 <a class="skip" href="#main" data-i18n="c-skip">Skip to content</a>
+<div class="progress" aria-hidden="true"><span></span></div>
 <div class="topbar" id="top">
   <div class="container topbar__inner">
     <p class="topbar__msg"><span class="topbar__dot" aria-hidden="true"></span><span data-i18n="c-topbar.1"><span class="topbar__opt">Specialized </span>biological logistics · US &amp; LATAM</span></p>
@@ -181,27 +182,44 @@
 </header>
 <main id="main">
 <section class="hero">
+  <div class="hero__media" aria-hidden="true">
+    <img class="hero__bg" src="assets/img/cell-macro.jpg" width="1600" height="912" alt="" decoding="async" />
+    <canvas class="hero__mesh" id="mesh"></canvas>
+    <div class="hero__scrim"></div>
+  </div>
   <div class="container hero__inner">
     <div class="hero__copy">
-      <h1 class="hero__title" data-split data-i18n="home.1">Regeneration, engineered.</h1>
-      <p class="hero__lead" data-i18n="home.2">Advanced biologics — verified, preserved and delivered from source to clinic.</p>
+      <p class="hero__eyebrow"><span class="pulse" aria-hidden="true"></span><span data-i18n="home.1">Regenerative biologics · Specialized logistics</span></p>
+      <h1 class="hero__title" data-split data-i18n="home.2">Regeneration, engineered.</h1>
+      <p class="hero__lead" data-i18n="home.3">Advanced biologics — verified, preserved and delivered from source to clinic.</p>
       <div class="hero__cta">
-        <a class="btn btn--light btn--lg" href="therapies.html"><span data-i18n="home.3">Explore Therapies</span><span class="arr" aria-hidden="true">→</span></a>
-        <a class="btn btn--ondark btn--lg" href="clinicians.html" data-i18n="home.4">For Clinicians</a>
+        <a class="btn btn--light btn--lg" href="therapies.html"><span data-i18n="home.4">Explore Therapies</span><span class="arr" aria-hidden="true">→</span></a>
+        <a class="btn btn--ondark btn--lg" href="clinicians.html" data-i18n="home.5">For Clinicians</a>
       </div>
     </div>
     <div class="hero__visual">
-      <img class="hero__vial" src="assets/img/hero-vial.png" width="720" height="900" alt="1CELL vial" data-i18n-aria="home.a1" fetchpriority="high" decoding="async" />
-      <p class="hero__chip"><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="home.5">Documented from release to delivery</span></p>
+      <span class="hero__glow" aria-hidden="true"></span>
+      <span class="hero__ring hero__ring--2" aria-hidden="true"></span>
+      <span class="hero__ring hero__ring--1" aria-hidden="true"></span>
+      <div class="hero__depth" data-depth="18"><div class="hero__float"><img class="hero__vial" src="assets/img/hero-vial.png" width="720" height="900" alt="1CELL vial" data-i18n-aria="home.a1" fetchpriority="high" decoding="async" /></div></div>
+      <p class="hero__chip hero__chip--a" data-depth="34"><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="home.6">COA per lot</span></p>
+      <p class="hero__chip hero__chip--b" data-depth="26"><span data-i18n="home.7">Source</span><i aria-hidden="true"></i><span data-i18n="home.8">Clinic</span></p>
     </div>
   </div>
   <div class="container">
     <ul class="strip" aria-label="What 1CELL does" data-i18n-aria="home.a2">
-      <li class="strip__item"><span class="strip__k" data-i18n="home.6">Biology</span><span class="strip__t" data-i18n="home.7">Characterized regenerative products.</span></li>
-      <li class="strip__item"><span class="strip__k" data-i18n="home.8">Verification</span><span class="strip__t" data-i18n="home.9">Lot-specific documentation.</span></li>
-      <li class="strip__item"><span class="strip__k" data-i18n="home.10">Preservation</span><span class="strip__t" data-i18n="home.11">Conditions matched to each product.</span></li>
-      <li class="strip__item"><span class="strip__k" data-i18n="home.12">Delivery</span><span class="strip__t" data-i18n="home.13">Coordinated from source to clinic.</span></li>
+      <li class="strip__item"><span class="strip__k" data-i18n="home.9">Biology</span><span class="strip__t" data-i18n="home.10">Characterized regenerative products.</span></li>
+      <li class="strip__item"><span class="strip__k" data-i18n="home.11">Verification</span><span class="strip__t" data-i18n="home.12">Lot-specific documentation.</span></li>
+      <li class="strip__item"><span class="strip__k" data-i18n="home.13">Preservation</span><span class="strip__t" data-i18n="home.14">Conditions matched to each product.</span></li>
+      <li class="strip__item"><span class="strip__k" data-i18n="home.15">Delivery</span><span class="strip__t" data-i18n="home.16">Coordinated from source to clinic.</span></li>
     </ul>
+  </div>
+</section>
+
+<section class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span data-i18n="home.17">Mesenchymal Stem Cells</span><span data-i18n="home.18">NK Cells</span><span data-i18n="home.19">Muse Cells</span><span data-i18n="home.20">Exosomes</span><span data-i18n="home.21">Cold chain</span><span data-i18n="home.22">Cryopreservation</span><span data-i18n="home.23">Chain of custody</span><span data-i18n="home.24">US &amp; LATAM</span>
+    <span data-i18n="home.25">Mesenchymal Stem Cells</span><span data-i18n="home.26">NK Cells</span><span data-i18n="home.27">Muse Cells</span><span data-i18n="home.28">Exosomes</span><span data-i18n="home.29">Cold chain</span><span data-i18n="home.30">Cryopreservation</span><span data-i18n="home.31">Chain of custody</span><span data-i18n="home.32">US &amp; LATAM</span>
   </div>
 </section>
 
@@ -210,142 +228,153 @@
     <div class="head head--row" data-reveal>
       <div>
         <span class="kicker">1CELL Clinical</span>
-        <h2 class="h2" data-i18n="home.14">Advanced biologics for clinical practice.</h2>
-        <p class="lead" data-i18n="home.15">Characterized cell and vesicle therapies, supplied to licensed physicians and clinics with the documentation and logistics each one requires.</p>
+        <h2 class="h2" data-i18n="home.33">Advanced biologics for clinical practice.</h2>
+        <p class="lead" data-i18n="home.34">Characterized cell and vesicle therapies, supplied to licensed physicians and clinics with the documentation and logistics each one requires.</p>
       </div>
-      <a class="link" href="therapies.html"><span data-i18n="home.16">View all therapies</span><span class="arr" aria-hidden="true">→</span></a>
+      <a class="link" href="therapies.html"><span data-i18n="home.35">View all therapies</span><span class="arr" aria-hidden="true">→</span></a>
     </div>
-    <div class="tgrid">
-      <a class="tcard" href="stem-cells.html" data-reveal>
-        <div class="vtile" aria-hidden="true"><!-- ASSET NEEDED: product photograph (stem cell vial) --><span class="vtile__label">1CELL Clinical</span><span class="vtile__abbr">MSC</span><svg class="vtile__vial"><use href="#i-vial-tall"/></svg></div>
-        <div class="tcard__body"><span class="tcard__cat" data-i18n="home.17">Cell therapy</span><h3 data-i18n="home.18">Mesenchymal Stem Cells</h3><p data-i18n="home.19">Multipotent cells characterized by flow cytometry, in 50M, 100M and 200M presentations.</p><span class="tcard__more"><span data-i18n="home.20">View therapy</span><span class="arr" aria-hidden="true">→</span></span></div>
+    <div class="bento">
+      <a class="pc xl spot" href="stem-cells.html" data-reveal>
+        <img src="assets/img/product-stemcell.jpg" width="1024" height="1024" alt="Mesenchymal stem cell vial" data-i18n-aria="home.a3" loading="lazy" decoding="async" />
+        <span class="pc__tag" data-i18n="home.36">Professional</span>
+        <div class="pc__body"><span class="pc__cat" data-i18n="home.37">Cell therapy</span><h3 data-i18n="home.38">Mesenchymal Stem Cells</h3><p data-i18n="home.39">Multipotent cells characterized by flow cytometry, in 50M, 100M and 200M presentations.</p><span class="pc__more"><span data-i18n="home.40">View therapy</span><b aria-hidden="true">→</b></span></div>
       </a>
-      <a class="tcard" href="nk-cells.html" data-reveal data-delay="60">
-        <div class="vtile" aria-hidden="true"><!-- ASSET NEEDED: product photograph (NK cell vial) --><span class="vtile__label">1CELL Clinical</span><span class="vtile__abbr">NK</span><svg class="vtile__vial"><use href="#i-vial-tall"/></svg></div>
-        <div class="tcard__body"><span class="tcard__cat" data-i18n="home.21">Cell immunotherapy</span><h3 data-i18n="home.22">NK Cells</h3><p data-i18n="home.23">CD56+ CD3− natural killer cells, with purity and functional activity confirmed per lot.</p><span class="tcard__more"><span data-i18n="home.24">View therapy</span><span class="arr" aria-hidden="true">→</span></span></div>
+      <a class="pc wide spot" href="nk-cells.html" data-reveal data-delay="60">
+        <img src="assets/img/product-nk.jpg" width="1024" height="1024" alt="NK cell vials" data-i18n-aria="home.a4" loading="lazy" decoding="async" />
+        <span class="pc__tag" data-i18n="home.41">Professional</span>
+        <div class="pc__body"><span class="pc__cat" data-i18n="home.42">Cell immunotherapy</span><h3 data-i18n="home.43">NK Cells</h3><p data-i18n="home.44">CD56+ CD3−, with purity and functional activity confirmed per lot.</p><span class="pc__more"><span data-i18n="home.45">View therapy</span><b aria-hidden="true">→</b></span></div>
       </a>
-      <a class="tcard" href="muse-cells.html" data-reveal data-delay="120">
-        <div class="vtile" aria-hidden="true"><!-- ASSET NEEDED: product photograph (Muse cell vial) --><span class="vtile__label">1CELL Clinical</span><span class="vtile__abbr">Muse</span><svg class="vtile__vial"><use href="#i-vial-tall"/></svg></div>
-        <div class="tcard__body"><span class="tcard__cat" data-i18n="home.25">Cell therapy</span><h3 data-i18n="home.26">Muse Cells</h3><p data-i18n="home.27">A stress-enduring SSEA-3+ subpopulation, in a standardized per-dose presentation.</p><span class="tcard__more"><span data-i18n="home.28">View therapy</span><span class="arr" aria-hidden="true">→</span></span></div>
+      <a class="pc spot" href="muse-cells.html" data-reveal data-delay="120">
+        <img src="assets/img/product-muse.jpg" width="1024" height="1024" alt="Muse cell product" data-i18n-aria="home.a5" loading="lazy" decoding="async" />
+        <div class="pc__body"><span class="pc__cat" data-i18n="home.46">Cell therapy</span><h3 data-i18n="home.47">Muse Cells</h3><span class="pc__more"><span data-i18n="home.48">View therapy</span><b aria-hidden="true">→</b></span></div>
       </a>
-      <a class="tcard" href="exosomes.html" data-reveal data-delay="180">
-        <div class="vtile" aria-hidden="true"><!-- ASSET NEEDED: product photograph (exosome vial) --><span class="vtile__label">1CELL Clinical</span><span class="vtile__abbr">EV</span><svg class="vtile__vial"><use href="#i-vial-tall"/></svg></div>
-        <div class="tcard__body"><span class="tcard__cat" data-i18n="home.29">Extracellular vesicles</span><h3 data-i18n="home.30">Exosomes</h3><p data-i18n="home.31">30–150 nm vesicles, quantified by NTA and confirmed CD9+ CD63+ CD81+.</p><span class="tcard__more"><span data-i18n="home.32">View therapy</span><span class="arr" aria-hidden="true">→</span></span></div>
+      <a class="pc pc--exo spot" href="exosomes.html" data-reveal data-delay="180">
+        <img src="assets/img/product-exosome-crop.jpg" width="1024" height="660" alt="Exosome vials" data-i18n-aria="home.a6" loading="lazy" decoding="async" />
+        <div class="pc__body"><span class="pc__cat" data-i18n="home.49">Extracellular vesicles</span><h3 data-i18n="home.50">Exosomes</h3><span class="pc__more"><span data-i18n="home.51">View therapy</span><b aria-hidden="true">→</b></span></div>
       </a>
     </div>
-    <p class="note" data-reveal><svg width="16" height="16" aria-hidden="true"><use href="#i-shield"/></svg><span data-i18n="home.33">For licensed healthcare professionals, where permitted by local regulation. <a href="clinicians.html#access">Request professional access →</a></span></p>
+    <p class="note" data-reveal><svg width="16" height="16" aria-hidden="true"><use href="#i-shield"/></svg><span data-i18n="home.52">For licensed healthcare professionals, where permitted by local regulation. <a href="clinicians.html#access">Request professional access →</a></span></p>
   </div>
 </section>
 
-<section class="section section--dark logi" id="logistics">
+<section class="section section--dark logi glowfx" id="logistics">
   <div class="container">
     <div class="head head--row" data-reveal>
       <div>
-        <span class="kicker" data-i18n="home.34">Logistics</span>
-        <h2 class="h2" data-i18n="home.35">From source to clinic.</h2>
-        <p class="lead" data-i18n="home.36">1CELL coordinates specialized logistics for advanced biologics, including product-specific temperature control, cold-chain management and cryopreservation when required.</p>
+        <span class="kicker" data-i18n="home.53">Logistics</span>
+        <h2 class="h2" data-i18n="home.54">From source to clinic.</h2>
+        <p class="lead" data-i18n="home.55">1CELL coordinates specialized logistics for advanced biologics, including product-specific temperature control, cold-chain management and cryopreservation when required.</p>
       </div>
-      <a class="btn btn--light" href="logistics.html"><span data-i18n="home.37">Explore Logistics</span><span class="arr" aria-hidden="true">→</span></a>
+      <a class="btn btn--light" href="logistics.html"><span data-i18n="home.56">Explore Logistics</span><span class="arr" aria-hidden="true">→</span></a>
     </div>
 
-    <ol class="flow" data-reveal>
-      <li class="flow__step"><span class="flow__n">01</span><h3 data-i18n="home.38">Release</h3><p data-i18n="home.39">The source laboratory releases the lot against specification.</p></li>
-      <li class="flow__step"><span class="flow__n">02</span><h3 data-i18n="home.40">Verify</h3><p data-i18n="home.41">Documentation is checked against the lot before it moves.</p></li>
-      <li class="flow__step"><span class="flow__n">03</span><h3 data-i18n="home.42">Preserve</h3><p data-i18n="home.43">Packed for the conditions that product requires.</p></li>
-      <li class="flow__step"><span class="flow__n">04</span><h3 data-i18n="home.44">Transport</h3><p data-i18n="home.45">Cold-chain or cryogenic transport, as required.</p></li>
-      <li class="flow__step"><span class="flow__n">05</span><h3 data-i18n="home.46">Track</h3><p data-i18n="home.47">Temperature and custody recorded in transit.</p></li>
-      <li class="flow__step"><span class="flow__n">06</span><h3 data-i18n="home.48">Deliver</h3><p data-i18n="home.49">Handed off to the clinic with its documentation.</p></li>
+    <ol class="flow">
+      <li class="flow__step"><span class="flow__n">01</span><h3 data-i18n="home.57">Release</h3><p data-i18n="home.58">The source laboratory releases the lot against specification.</p></li>
+      <li class="flow__step"><span class="flow__n">02</span><h3 data-i18n="home.59">Verify</h3><p data-i18n="home.60">Documentation is checked against the lot before it moves.</p></li>
+      <li class="flow__step"><span class="flow__n">03</span><h3 data-i18n="home.61">Preserve</h3><p data-i18n="home.62">Packed for the conditions that product requires.</p></li>
+      <li class="flow__step"><span class="flow__n">04</span><h3 data-i18n="home.63">Transport</h3><p data-i18n="home.64">Cold-chain or cryogenic transport, as required.</p></li>
+      <li class="flow__step"><span class="flow__n">05</span><h3 data-i18n="home.65">Track</h3><p data-i18n="home.66">Temperature and custody recorded in transit.</p></li>
+      <li class="flow__step"><span class="flow__n">06</span><h3 data-i18n="home.67">Deliver</h3><p data-i18n="home.68">Handed off to the clinic with its documentation.</p></li>
     </ol>
 
     <div class="logi__grid">
-      <div class="video" data-video-src="" data-reveal>
-        <!-- VIDEO NEEDED: 15–20 s silent brand film (laboratory → product → vial → documentation → cryogenic logistics → transport → clinic). Set data-video-src="assets/video/brand.mp4" (and optionally data-video-poster). -->
+      <div class="video reveal-img" data-video-src="">
+        <!-- VIDEO NEEDED: 15–20 s silent brand film (laboratory → product → vial → documentation → cryogenic logistics → transport → clinic). Set data-video-src="assets/video/brand.mp4"; it plays over this photo. -->
+        <img class="video__img" src="assets/img/lab-cleanroom.jpg" width="1600" height="912" alt="" loading="lazy" decoding="async" />
         <div class="video__ph" aria-hidden="true">
-          <span class="video__label">1CELL · Source to clinic</span>
+          <span class="video__label"><span class="pulse"></span> 1CELL · Source to clinic</span>
           <ol class="video__seq">
-            <li data-i18n="home.50">Laboratory</li><li data-i18n="home.51">Product</li><li data-i18n="home.52">Documentation</li><li data-i18n="home.53">Cryogenic logistics</li><li data-i18n="home.54">Transport</li><li data-i18n="home.55">Clinic</li>
+            <li data-i18n="home.69">Laboratory</li><li data-i18n="home.70">Product</li><li data-i18n="home.71">Documentation</li><li data-i18n="home.72">Cryogenic logistics</li><li data-i18n="home.73">Transport</li><li data-i18n="home.74">Clinic</li>
           </ol>
         </div>
       </div>
       <ul class="caps" data-reveal data-delay="80">
-        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-box"/></svg><span data-i18n="home.56">Specialized packaging</span></li>
-        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-snow"/></svg><span data-i18n="home.57">Cold-chain management</span></li>
-        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-dewar"/></svg><span data-i18n="home.58">Cryogenic preservation, when applicable</span></li>
-        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-dewar"/></svg><span data-i18n="home.59">Nitrogen-based transport, when applicable</span></li>
-        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-thermo"/></svg><span data-i18n="home.60">Temperature monitoring</span></li>
-        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-link"/></svg><span data-i18n="home.61">Chain of custody</span></li>
-        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-globe"/></svg><span data-i18n="home.62">International logistics</span></li>
-        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-clinic"/></svg><span data-i18n="home.63">Clinic handoff</span></li>
+        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-box"/></svg><span data-i18n="home.75">Specialized packaging</span></li>
+        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-snow"/></svg><span data-i18n="home.76">Cold-chain management</span></li>
+        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-dewar"/></svg><span data-i18n="home.77">Cryogenic preservation, when applicable</span></li>
+        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-dewar"/></svg><span data-i18n="home.78">Nitrogen-based transport, when applicable</span></li>
+        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-thermo"/></svg><span data-i18n="home.79">Temperature monitoring</span></li>
+        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-link"/></svg><span data-i18n="home.80">Chain of custody</span></li>
+        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-globe"/></svg><span data-i18n="home.81">International logistics</span></li>
+        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-clinic"/></svg><span data-i18n="home.82">Clinic handoff</span></li>
       </ul>
     </div>
   </div>
+</section>
+
+<section class="imgband" aria-label="Advanced biology, controlled from source to clinic" data-i18n-aria="home.a7">
+  <img src="assets/img/clinician-hands.jpg" width="1024" height="1280" alt="" loading="lazy" decoding="async" />
+  <div class="container"><p class="imgband__text" data-i18n="home.83">Advanced biology.<br><em>Controlled from source to clinic.</em></p></div>
 </section>
 
 <section class="section" id="documentation">
   <div class="container">
     <div class="head head--row" data-reveal>
       <div>
-        <span class="kicker" data-i18n="home.64">Proof</span>
-        <h2 class="h2" data-i18n="home.65">Documentation you can verify.</h2>
-        <p class="lead" data-i18n="home.66">Every lot carries its own record. Verified professionals can review it before and after delivery.</p>
+        <span class="kicker" data-i18n="home.84">Proof</span>
+        <h2 class="h2" data-i18n="home.85">Documentation you can verify.</h2>
+        <p class="lead" data-i18n="home.86">Every lot carries its own record. Verified professionals can review it before and after delivery.</p>
       </div>
-      <a class="link" href="standard.html#documentation"><span data-i18n="home.67">View documentation</span><span class="arr" aria-hidden="true">→</span></a>
+      <a class="link" href="standard.html#documentation"><span data-i18n="home.87">View documentation</span><span class="arr" aria-hidden="true">→</span></a>
     </div>
     <div class="docs" data-reveal>
-      <article class="doc">
+      <article class="doc spot">
         <div class="doc__sheet" aria-hidden="true"><i class="doc__hd"></i><i></i><i class="s"></i><i></i><i class="s"></i><i></i></div>
-        <h3 data-i18n="home.68">Sample COA</h3>
-        <p data-i18n="home.69">The Certificate of Analysis released with each lot.</p>
+        <h3 data-i18n="home.88">Sample COA</h3>
+        <p data-i18n="home.89">The Certificate of Analysis released with each lot.</p>
       </article>
-      <article class="doc">
+      <article class="doc spot">
         <div class="doc__sheet" aria-hidden="true"><i class="doc__hd"></i><i class="doc__plot"></i><i></i><i class="s"></i></div>
-        <h3 data-i18n="home.70">Product characterization</h3>
-        <p data-i18n="home.71">Identity and purity markers measured for each lot.</p>
+        <h3 data-i18n="home.90">Product characterization</h3>
+        <p data-i18n="home.91">Identity and purity markers measured for each lot.</p>
       </article>
-      <article class="doc">
+      <article class="doc spot">
         <div class="doc__sheet" aria-hidden="true"><i class="doc__hd"></i><i></i><i></i><i class="s"></i><i></i></div>
-        <h3 data-i18n="home.72">Batch documentation</h3>
-        <p data-i18n="home.73">Source, release date and specification of the lot.</p>
+        <h3 data-i18n="home.92">Batch documentation</h3>
+        <p data-i18n="home.93">Source, release date and specification of the lot.</p>
       </article>
-      <article class="doc">
+      <article class="doc spot">
         <div class="doc__sheet" aria-hidden="true"><i class="doc__hd"></i><i class="doc__line"></i><i class="s"></i><i></i></div>
-        <h3 data-i18n="home.74">Temperature monitoring</h3>
-        <p data-i18n="home.75">The shipment's temperature record in transit.</p>
+        <h3 data-i18n="home.94">Temperature monitoring</h3>
+        <p data-i18n="home.95">The shipment's temperature record in transit.</p>
       </article>
-      <article class="doc">
+      <article class="doc spot">
         <div class="doc__sheet" aria-hidden="true"><i class="doc__hd"></i><i></i><i class="s"></i><i></i><i class="s"></i></div>
-        <h3 data-i18n="home.76">Chain of custody</h3>
-        <p data-i18n="home.77">Every handoff, from release to receipt at the clinic.</p>
+        <h3 data-i18n="home.96">Chain of custody</h3>
+        <p data-i18n="home.97">Every handoff, from release to receipt at the clinic.</p>
       </article>
     </div>
     <div class="docs__cta" data-reveal>
       <!-- DOCUMENT NEEDED: add the real sample COA (e.g. assets/docs/sample-coa.pdf) to data-doc-src; the button then opens it directly. -->
-      <a class="btn btn--primary" href="clinicians.html?interest=documentation#access" data-doc-src="" data-doc-view="View sample COA" data-doc-view-es="Ver COA de muestra"><span data-i18n="home.78">Request sample COA</span></a>
-      <a class="btn btn--ghost" href="standard.html#documentation" data-i18n="home.79">View documentation</a>
+      <a class="btn btn--primary" href="clinicians.html?interest=documentation#access" data-doc-src="" data-doc-view="View sample COA" data-doc-view-es="Ver COA de muestra"><span data-i18n="home.98">Request sample COA</span></a>
+      <a class="btn btn--ghost" href="standard.html#documentation" data-i18n="home.99">View documentation</a>
     </div>
   </div>
 </section>
 
 <section class="section section--tint" id="clinicians">
-  <div class="container coord">
-    <div class="coord__copy" data-reveal>
-      <span class="kicker" data-i18n="home.80">For clinicians</span>
-      <h2 class="h2" data-i18n="home.81">We coordinate what slows clinics down.</h2>
-      <p class="lead" data-i18n="home.82">From product access to receipt at the clinic, one team coordinates the product, its documents and its conditions.</p>
+  <div class="container coord coord--img">
+    <figure class="media media--45 reveal-img">
+      <img src="assets/img/consultation.jpg" width="1600" height="912" alt="Physician in a consultation" data-i18n-aria="home.a8" loading="lazy" decoding="async" style="object-position:62% 50%" />
+      <figcaption class="media__cap"><span class="pulse" aria-hidden="true"></span><span data-i18n="home.100">For clinicians</span></figcaption>
+    </figure>
+    <div class="coord__copy" data-reveal data-delay="80">
+      <span class="kicker" data-i18n="home.101">For clinicians</span>
+      <h2 class="h2" data-i18n="home.102">We coordinate what slows clinics down.</h2>
+      <p class="lead" data-i18n="home.103">From product access to receipt at the clinic, one team coordinates the product, its documents and its conditions.</p>
+      <ul class="coord__list">
+        <li><svg width="20" height="20" aria-hidden="true"><use href="#i-vial"/></svg><span data-i18n="home.104">Access to products</span></li>
+        <li><svg width="20" height="20" aria-hidden="true"><use href="#i-doc"/></svg><span data-i18n="home.105">Documentation</span></li>
+        <li><svg width="20" height="20" aria-hidden="true"><use href="#i-shield"/></svg><span data-i18n="home.106">Preservation</span></li>
+        <li><svg width="20" height="20" aria-hidden="true"><use href="#i-dewar"/></svg><span data-i18n="home.107">Cryopreservation</span></li>
+        <li><svg width="20" height="20" aria-hidden="true"><use href="#i-snow"/></svg><span data-i18n="home.108">Cold-chain logistics</span></li>
+        <li><svg width="20" height="20" aria-hidden="true"><use href="#i-truck"/></svg><span data-i18n="home.109">Delivery</span></li>
+      </ul>
       <div class="coord__cta">
-        <a class="btn btn--primary btn--lg" href="clinicians.html#access" data-i18n="home.83">Request professional access</a>
-        <a class="link" href="clinicians.html"><span data-i18n="home.84">How it works</span><span class="arr" aria-hidden="true">→</span></a>
+        <a class="btn btn--primary btn--lg" href="clinicians.html#access" data-i18n="home.110">Request professional access</a>
+        <a class="link" href="clinicians.html"><span data-i18n="home.111">How it works</span><span class="arr" aria-hidden="true">→</span></a>
       </div>
     </div>
-    <ul class="coord__list" data-reveal data-delay="80">
-      <li><svg width="20" height="20" aria-hidden="true"><use href="#i-vial"/></svg><span data-i18n="home.85">Access to products</span></li>
-      <li><svg width="20" height="20" aria-hidden="true"><use href="#i-doc"/></svg><span data-i18n="home.86">Documentation</span></li>
-      <li><svg width="20" height="20" aria-hidden="true"><use href="#i-shield"/></svg><span data-i18n="home.87">Preservation</span></li>
-      <li><svg width="20" height="20" aria-hidden="true"><use href="#i-dewar"/></svg><span data-i18n="home.88">Cryopreservation, where required</span></li>
-      <li><svg width="20" height="20" aria-hidden="true"><use href="#i-snow"/></svg><span data-i18n="home.89">Cold-chain logistics</span></li>
-      <li><svg width="20" height="20" aria-hidden="true"><use href="#i-truck"/></svg><span data-i18n="home.90">Delivery</span></li>
-      <li><svg width="20" height="20" aria-hidden="true"><use href="#i-users"/></svg><span data-i18n="home.91">Professional coordination</span></li>
-    </ul>
   </div>
 </section>
 
@@ -354,23 +383,23 @@
     <div class="head head--row" data-reveal>
       <div>
         <span class="kicker">1CELL Longevity</span>
-        <h2 class="h2" data-i18n="home.92">Everyday longevity, held to the same standard.</h2>
-        <p class="lead" data-i18n="home.93">Peptides, nutraceuticals and skincare — documented, with a written protocol and access to medical guidance.</p>
+        <h2 class="h2" data-i18n="home.112">Everyday longevity, held to the same standard.</h2>
+        <p class="lead" data-i18n="home.113">Peptides, nutraceuticals and skincare — documented, with a written protocol and access to medical guidance.</p>
       </div>
-      <a class="btn btn--primary" href="longevity.html"><span data-i18n="home.94">Explore Longevity</span><span class="arr" aria-hidden="true">→</span></a>
+      <a class="btn btn--primary" href="longevity.html"><span data-i18n="home.114">Explore Longevity</span><span class="arr" aria-hidden="true">→</span></a>
     </div>
     <div class="ltiles">
-      <a class="ltile" href="longevity.html#peptides" data-reveal>
-        <div class="ltile__media ptile" aria-hidden="true"><!-- ASSET NEEDED: peptide product photograph --><span class="ptile__k" data-i18n="home.95">Peptides</span><span class="ptile__names">BPC-157 · TB-500<br>GHK-Cu · Ipamorelin</span></div>
-        <div class="ltile__body"><h3 data-i18n="home.96">Peptides</h3><span class="ltile__more" aria-hidden="true">→</span></div>
+      <a class="ltile spot" href="longevity.html#peptides" data-reveal>
+        <div class="ltile__media"><img src="assets/img/product-peptides.jpg" width="1024" height="1024" alt="Peptide line" data-i18n-aria="home.a9" loading="lazy" decoding="async" /></div>
+        <div class="ltile__body"><h3 data-i18n="home.115">Peptides</h3><span class="ltile__more" aria-hidden="true">→</span></div>
       </a>
-      <a class="ltile" href="longevity.html#nutraceuticals" data-reveal data-delay="60">
-        <div class="ltile__media ptile" aria-hidden="true"><!-- ASSET NEEDED: nutraceutical product photograph --><span class="ptile__k" data-i18n="home.97">Nutraceuticals</span><span class="ptile__names">Omega 3<br>EPA · DHA</span></div>
-        <div class="ltile__body"><h3 data-i18n="home.98">Nutraceuticals</h3><span class="ltile__more" aria-hidden="true">→</span></div>
+      <a class="ltile spot" href="longevity.html#nutraceuticals" data-reveal data-delay="60">
+        <div class="ltile__media"><img src="assets/img/product-nutra.jpg" width="1024" height="1024" alt="Omega 3 capsules" data-i18n-aria="home.a10" loading="lazy" decoding="async" /></div>
+        <div class="ltile__body"><h3 data-i18n="home.116">Nutraceuticals</h3><span class="ltile__more" aria-hidden="true">→</span></div>
       </a>
-      <a class="ltile" href="longevity.html#skincare" data-reveal data-delay="120">
-        <div class="ltile__media ltile__media--img" aria-hidden="true"><img src="assets/img/hero-vial.png" width="720" height="900" alt="" loading="lazy" decoding="async" /></div>
-        <div class="ltile__body"><h3 data-i18n="home.99">Skincare</h3><span class="ltile__more" aria-hidden="true">→</span></div>
+      <a class="ltile spot" href="longevity.html#skincare" data-reveal data-delay="120">
+        <div class="ltile__media"><img src="assets/img/product-cosmetic.jpg" width="1024" height="1024" alt="1CELL facial serum" data-i18n-aria="home.a11" loading="lazy" decoding="async" /></div>
+        <div class="ltile__body"><h3 data-i18n="home.117">Skincare</h3><span class="ltile__more" aria-hidden="true">→</span></div>
       </a>
     </div>
   </div>
@@ -379,19 +408,19 @@
 <section class="section section--tint" id="faq">
   <div class="container faqblock">
     <div class="head" data-reveal>
-      <span class="kicker" data-i18n="home.100">Questions</span>
-      <h2 class="h2" data-i18n="home.101">The essentials.</h2>
-      <a class="link" href="faq.html"><span data-i18n="home.102">All questions</span><span class="arr" aria-hidden="true">→</span></a>
+      <span class="kicker" data-i18n="home.118">Questions</span>
+      <h2 class="h2" data-i18n="home.119">The essentials.</h2>
+      <a class="link" href="faq.html"><span data-i18n="home.120">All questions</span><span class="arr" aria-hidden="true">→</span></a>
     </div>
     <div class="accordion" data-reveal data-delay="80">
-      <details class="acc"><summary><span data-i18n="home.103">What does 1CELL Health do?</span><i class="acc__ic" aria-hidden="true"></i></summary>
-        <div class="acc__body"><p data-i18n="home.104">We supply advanced regenerative products to physicians and clinics and coordinate the specialized logistics they require — preservation, cold-chain or cryogenic transport, documentation and delivery.</p></div></details>
-      <details class="acc"><summary><span data-i18n="home.105">Is everything shipped at <span class="nw">2–8&nbsp;°C</span>?</span><i class="acc__ic" aria-hidden="true"></i></summary>
-        <div class="acc__body"><p data-i18n="home.106">No. Conditions depend on the product: some require controlled refrigeration, others frozen or cryogenic storage. We confirm the requirements with the source laboratory and coordinate packaging and transport accordingly.</p></div></details>
-      <details class="acc"><summary><span data-i18n="home.107">Who can order clinical products?</span><i class="acc__ic" aria-hidden="true"></i></summary>
-        <div class="acc__body"><p data-i18n="home.108">Cell therapies and exosomes are supplied to licensed physicians and clinics, where permitted by local regulation. We verify professional credentials before granting access.</p></div></details>
-      <details class="acc"><summary><span data-i18n="home.109">What documentation comes with a product?</span><i class="acc__ic" aria-hidden="true"></i></summary>
-        <div class="acc__body"><p data-i18n="home.110">Each lot is released with a lot-specific Certificate of Analysis. Depending on the product, characterization reports and custody records are also available to verified professionals.</p></div></details>
+      <details class="acc"><summary><span data-i18n="home.121">What does 1CELL Health do?</span><i class="acc__ic" aria-hidden="true"></i></summary>
+        <div class="acc__body"><p data-i18n="home.122">We supply advanced regenerative products to physicians and clinics and coordinate the specialized logistics they require — preservation, cold-chain or cryogenic transport, documentation and delivery.</p></div></details>
+      <details class="acc"><summary><span data-i18n="home.123">Is everything shipped at <span class="nw">2–8&nbsp;°C</span>?</span><i class="acc__ic" aria-hidden="true"></i></summary>
+        <div class="acc__body"><p data-i18n="home.124">No. Conditions depend on the product: some require controlled refrigeration, others frozen or cryogenic storage. We confirm the requirements with the source laboratory and coordinate packaging and transport accordingly.</p></div></details>
+      <details class="acc"><summary><span data-i18n="home.125">Who can order clinical products?</span><i class="acc__ic" aria-hidden="true"></i></summary>
+        <div class="acc__body"><p data-i18n="home.126">Cell therapies and exosomes are supplied to licensed physicians and clinics, where permitted by local regulation. We verify professional credentials before granting access.</p></div></details>
+      <details class="acc"><summary><span data-i18n="home.127">What documentation comes with a product?</span><i class="acc__ic" aria-hidden="true"></i></summary>
+        <div class="acc__body"><p data-i18n="home.128">Each lot is released with a lot-specific Certificate of Analysis. Depending on the product, characterization reports and custody records are also available to verified professionals.</p></div></details>
     </div>
   </div>
 </section>
@@ -501,7 +530,7 @@
 
 <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 <a href="#top" class="totop" id="toTop" aria-label="Back to top" data-i18n-aria="c-overlays.a3"><svg width="18" height="18" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-<script src="assets/js/i18n-es.js?v=18.2" defer></script>
-<script src="assets/js/main.js?v=18.2" defer></script>
+<script src="assets/js/i18n-es.js?v=19.3" defer></script>
+<script src="assets/js/main.js?v=19.3" defer></script>
 </body>
 </html>

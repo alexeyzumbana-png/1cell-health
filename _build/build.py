@@ -6,7 +6,7 @@ import json, os, re, sys, html
 HERE = os.path.dirname(os.path.abspath(__file__))
 SRC = os.path.join(HERE, "src")
 OUT = os.path.dirname(HERE)
-VERSION = "18.2"
+VERSION = "19.3"
 SITE = "https://1cellhealth.com/"
 
 ES = {}

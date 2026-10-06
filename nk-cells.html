@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/css/styles.css?v=18.2" />
+<link rel="stylesheet" href="assets/css/styles.css?v=19.3" />
 <script>(function(d){d.className+=" js";try{if(localStorage.getItem("1cell_lang")==="es"){d.className+=" es-pending";setTimeout(function(){d.classList.remove("es-pending")},1500)}}catch(e){}})(document.documentElement);</script>
 </head>
 <body class="page-nk">
@@ -57,6 +57,7 @@
   </defs>
 </svg>
 <a class="skip" href="#main" data-i18n="c-skip">Skip to content</a>
+<div class="progress" aria-hidden="true"><span></span></div>
 <div class="topbar" id="top">
   <div class="container topbar__inner">
     <p class="topbar__msg"><span class="topbar__dot" aria-hidden="true"></span><span data-i18n="c-topbar.1"><span class="topbar__opt">Specialized </span>biological logistics · US &amp; LATAM</span></p>
@@ -192,13 +193,11 @@
         <a class="btn btn--ondark btn--lg" href="#documentation" data-i18n="nk.8">View documentation</a>
       </div>
     </div>
-    <div class="phero__visual">
-      <div class="vtile vtile--lg" aria-hidden="true"><!-- ASSET NEEDED: product photograph (NK cell vial) --><span class="vtile__label">1CELL Clinical</span><span class="vtile__main"><span class="vtile__abbr">NK</span><span class="vtile__name" data-i18n="nk.9">Natural killer cells</span></span><svg class="vtile__vial"><use href="#i-vial-tall"/></svg></div>
-    </div>
+    <figure class="hero-photo phero__visual"><div class="media media--45 reveal-img"><img src="assets/img/product-nk.jpg" width="1024" height="1024" alt="NK cell vials" data-i18n-aria="nk.a1" decoding="async" fetchpriority="high" /><span class="media__cap"><span class="pulse" aria-hidden="true"></span><span data-i18n="nk.9">COA per lot</span></span></div></figure>
   </div>
 </section>
 
-<nav class="subnav" aria-label="On this page" data-i18n-aria="nk.a1">
+<nav class="subnav" aria-label="On this page" data-i18n-aria="nk.a2">
   <div class="container subnav__inner">
     <a href="#overview" data-i18n="nk.10">Overview</a><a href="#product" data-i18n="nk.11">Product</a><a href="#characterization" data-i18n="nk.12">Characterization</a><a href="#quality" data-i18n="nk.13">Quality</a><a href="#documentation" data-i18n="nk.14">Documentation</a><a href="#logistics" data-i18n="nk.15">Logistics</a><a href="#science" data-i18n="nk.16">Science</a><a href="#faq">FAQ</a>
   </div>
@@ -271,12 +270,13 @@
   </div>
 </section>
 
-<section class="section section--dark" id="logistics">
+<section class="section section--dark glowfx" id="logistics">
   <div class="container split split--top">
     <div data-reveal><span class="kicker" data-i18n="nk.62">Preservation &amp; logistics</span><h2 class="h2" data-i18n="nk.63">Preserved as the product requires.</h2></div>
     <div class="prose-sm" data-reveal data-delay="80">
       <p data-i18n="nk.64">NK cells can require cryopreserved storage and cryogenic transport, or controlled cold-chain conditions, depending on formulation. 1CELL confirms the conditions with the source laboratory for each lot and coordinates packaging, transport and clinic handoff.</p>
       <p><a class="link" href="logistics.html"><span data-i18n="nk.65">How our logistics work</span><span class="arr" aria-hidden="true">→</span></a></p>
+      <figure class="media media--169 reveal-img mt"><img src="assets/img/coldchain.jpg" width="1024" height="1280" alt="Temperature-controlled shipper with vials" data-i18n-aria="nk.a3" loading="lazy" decoding="async" /></figure>
     </div>
   </div>
 </section>
@@ -288,6 +288,7 @@
       <p data-i18n="nk.68">NK cells recognize and eliminate stressed or abnormal cells without prior sensitization. They are studied in oncology and immune research, including adoptive transfer approaches; many studies are early-stage.</p>
       <p data-i18n="nk.69">NK cell therapies are investigational in most settings and should be used only under specialist supervision, within applicable regulation.</p>
       <p><a class="link" href="science.html#nk-cells"><span data-i18n="nk.70">Read the evidence overview</span><span class="arr" aria-hidden="true">→</span></a></p>
+      <figure class="media media--169 reveal-img mt"><img src="assets/img/cell-macro.jpg" width="1600" height="912" alt="Microscopy-style illustration of cells" data-i18n-aria="nk.a4" loading="lazy" decoding="async" /></figure>
     </div>
   </div>
 </section>
@@ -421,7 +422,7 @@
 
 <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 <a href="#top" class="totop" id="toTop" aria-label="Back to top" data-i18n-aria="c-overlays.a3"><svg width="18" height="18" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-<script src="assets/js/i18n-es.js?v=18.2" defer></script>
-<script src="assets/js/main.js?v=18.2" defer></script>
+<script src="assets/js/i18n-es.js?v=19.3" defer></script>
+<script src="assets/js/main.js?v=19.3" defer></script>
 </body>
 </html>

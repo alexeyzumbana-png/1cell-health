@@ -8,6 +8,7 @@ nav: therapies
 <section class="phero phero--tint">
   <div class="container">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="./" data-es="Inicio">Home</a><span aria-hidden="true">/</span><span data-es="Terapias">Therapies</span></nav>
+    <div class="phero__grid">
     <div class="phero__copy">
       <span class="kicker">1CELL Clinical</span>
       <h1 data-es="Biológicos avanzados, <em>documentados y preservados.</em>">Advanced biologics, <em>documented and preserved.</em></h1>
@@ -17,14 +18,16 @@ nav: therapies
         <a class="btn btn--ghost btn--lg" href="standard.html" data-es="Nuestro estándar">Our standard</a>
       </div>
     </div>
+    <figure class="hero-photo phero__visual"><div class="media media--43 reveal-img"><img src="assets/img/product-family.jpg" width="1600" height="912" alt="1CELL product vials" data-es-aria="Viales de productos 1CELL" decoding="async" /><span class="media__cap"><span class="pulse" aria-hidden="true"></span>1CELL Clinical</span></div></figure>
+    </div>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
     <div class="tgrid tgrid--2">
-      <a class="tcard" href="stem-cells.html" id="msc" data-reveal>
-        <div class="vtile" aria-hidden="true"><span class="vtile__label">1CELL Clinical</span><span class="vtile__abbr">MSC</span><svg class="vtile__vial"><use href="#i-vial-tall"/></svg></div>
+      <a class="tcard spot" href="stem-cells.html" id="msc" data-reveal>
+        <div class="tcard__img"><img src="assets/img/product-stemcell.jpg" width="1024" height="1024" alt="Mesenchymal stem cell vial" data-es-aria="Vial de células madre mesenquimales" loading="lazy" decoding="async" /></div>
         <div class="tcard__body">
           <span class="tcard__cat" data-es="Terapia celular">Cell therapy</span>
           <h3 data-es="Células madre mesenquimales">Mesenchymal Stem Cells</h3>
@@ -33,8 +36,8 @@ nav: therapies
           <span class="tcard__more"><span data-es="Ver terapia">View therapy</span><span class="arr" aria-hidden="true">→</span></span>
         </div>
       </a>
-      <a class="tcard" href="nk-cells.html" id="nk" data-reveal data-delay="60">
-        <div class="vtile" aria-hidden="true"><span class="vtile__label">1CELL Clinical</span><span class="vtile__abbr">NK</span><svg class="vtile__vial"><use href="#i-vial-tall"/></svg></div>
+      <a class="tcard spot" href="nk-cells.html" id="nk" data-reveal data-delay="60">
+        <div class="tcard__img"><img src="assets/img/product-nk.jpg" width="1024" height="1024" alt="NK cell vials" data-es-aria="Viales de células NK" loading="lazy" decoding="async" /></div>
         <div class="tcard__body">
           <span class="tcard__cat" data-es="Inmunoterapia celular">Cell immunotherapy</span>
           <h3 data-es="Células NK">NK Cells</h3>
@@ -43,8 +46,8 @@ nav: therapies
           <span class="tcard__more"><span data-es="Ver terapia">View therapy</span><span class="arr" aria-hidden="true">→</span></span>
         </div>
       </a>
-      <a class="tcard" href="muse-cells.html" id="muse" data-reveal>
-        <div class="vtile" aria-hidden="true"><span class="vtile__label">1CELL Clinical</span><span class="vtile__abbr">Muse</span><svg class="vtile__vial"><use href="#i-vial-tall"/></svg></div>
+      <a class="tcard spot" href="muse-cells.html" id="muse" data-reveal>
+        <div class="tcard__img"><img src="assets/img/product-muse.jpg" width="1024" height="1024" alt="Muse cell product" data-es-aria="Producto de células Muse" loading="lazy" decoding="async" /></div>
         <div class="tcard__body">
           <span class="tcard__cat" data-es="Terapia celular">Cell therapy</span>
           <h3 data-es="Células Muse">Muse Cells</h3>
@@ -53,8 +56,8 @@ nav: therapies
           <span class="tcard__more"><span data-es="Ver terapia">View therapy</span><span class="arr" aria-hidden="true">→</span></span>
         </div>
       </a>
-      <a class="tcard" href="exosomes.html" id="exosomes" data-reveal data-delay="60">
-        <div class="vtile" aria-hidden="true"><span class="vtile__label">1CELL Clinical</span><span class="vtile__abbr">EV</span><svg class="vtile__vial"><use href="#i-vial-tall"/></svg></div>
+      <a class="tcard spot" href="exosomes.html" id="exosomes" data-reveal data-delay="60">
+        <div class="tcard__img"><img src="assets/img/product-exosome-crop.jpg" width="1024" height="660" alt="Exosome vials" data-es-aria="Viales de exosomas" loading="lazy" decoding="async" /></div>
         <div class="tcard__body">
           <span class="tcard__cat" data-es="Vesículas extracelulares">Extracellular vesicles</span>
           <h3 data-es="Exosomas">Exosomes</h3>
@@ -74,17 +77,17 @@ nav: therapies
       <h2 class="h2" data-es="El producto es solo una parte.">The product is only one part.</h2>
     </div>
     <div class="blocks">
-      <article class="block" data-reveal>
+      <article class="block spot" data-reveal>
         <span class="block__ic"><svg width="22" height="22" aria-hidden="true"><use href="#i-doc"/></svg></span>
         <h3 data-es="Documentado">Documented</h3>
         <p data-es="Un Certificado de Análisis específico de cada lote, con los resultados de caracterización y calidad.">A lot-specific Certificate of Analysis with characterization and quality results.</p>
       </article>
-      <article class="block" data-reveal data-delay="60">
+      <article class="block spot" data-reveal data-delay="60">
         <span class="block__ic"><svg width="22" height="22" aria-hidden="true"><use href="#i-dewar"/></svg></span>
         <h3 data-es="Preservado">Preserved</h3>
         <p data-es="Condiciones de almacenamiento y transporte confirmadas con el laboratorio de origen para cada producto.">Storage and transport conditions confirmed with the source laboratory for each product.</p>
       </article>
-      <article class="block" data-reveal data-delay="120">
+      <article class="block spot" data-reveal data-delay="120">
         <span class="block__ic"><svg width="22" height="22" aria-hidden="true"><use href="#i-clinic"/></svg></span>
         <h3 data-es="Entregado">Delivered</h3>
         <p data-es="Entrega coordinada con la clínica receptora, con instrucciones de recepción y manejo.">Delivery coordinated with the receiving clinic, with receiving and handling instructions.</p>

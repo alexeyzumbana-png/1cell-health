@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/css/styles.css?v=18.2" />
+<link rel="stylesheet" href="assets/css/styles.css?v=19.3" />
 <script>(function(d){d.className+=" js";try{if(localStorage.getItem("1cell_lang")==="es"){d.className+=" es-pending";setTimeout(function(){d.classList.remove("es-pending")},1500)}}catch(e){}})(document.documentElement);</script>
 </head>
 <body class="page-logi">
@@ -57,6 +57,7 @@
   </defs>
 </svg>
 <a class="skip" href="#main" data-i18n="c-skip">Skip to content</a>
+<div class="progress" aria-hidden="true"><span></span></div>
 <div class="topbar" id="top">
   <div class="container topbar__inner">
     <p class="topbar__msg"><span class="topbar__dot" aria-hidden="true"></span><span data-i18n="c-topbar.1"><span class="topbar__opt">Specialized </span>biological logistics · US &amp; LATAM</span></p>
@@ -193,10 +194,11 @@
           <a class="btn btn--ondark btn--lg" href="#chain-of-custody" data-i18n="logi.7">Chain of custody</a>
         </div>
       </div>
-      <div class="video" data-video-src="">
+      <div class="video reveal-img" data-video-src="">
         <!-- VIDEO NEEDED: short "From source to clinic" film. Set data-video-src="assets/video/source-to-clinic.mp4" (and optionally data-video-poster). -->
+        <img class="video__img" src="assets/img/lab-cleanroom.jpg" width="1600" height="912" alt="" decoding="async" />
         <div class="video__ph" aria-hidden="true">
-          <span class="video__label" data-i18n="logi.8">From source to clinic</span>
+          <span class="video__label"><span class="pulse"></span> <span data-i18n="logi.8">From source to clinic</span></span>
           <ol class="video__seq">
             <li data-i18n="logi.9">Release</li><li data-i18n="logi.10">Verify</li><li data-i18n="logi.11">Preserve</li><li data-i18n="logi.12">Transport</li><li data-i18n="logi.13">Track</li><li data-i18n="logi.14">Deliver</li>
           </ol>
@@ -220,19 +222,19 @@
       <p class="lead" data-i18n="logi.23">Storage and transport conditions depend on the biological product. We set them from the source laboratory's specification for each lot — rather than applying one rule to everything.</p>
     </div>
     <div class="blocks">
-      <article class="block" data-reveal>
+      <article class="block spot" data-reveal>
         <span class="block__ic"><svg width="22" height="22" aria-hidden="true"><use href="#i-thermo"/></svg></span>
         <span class="block__k" data-i18n="logi.24">REFRIGERATED</span>
         <h3 data-i18n="logi.25">Controlled refrigeration</h3>
         <p data-i18n="logi.26">For products specified for refrigerated storage — for example <span class="nw">2–8&nbsp;°C</span> — in qualified, monitored packaging.</p>
       </article>
-      <article class="block" data-reveal data-delay="60">
+      <article class="block spot" data-reveal data-delay="60">
         <span class="block__ic"><svg width="22" height="22" aria-hidden="true"><use href="#i-snow"/></svg></span>
         <span class="block__k" data-i18n="logi.27">FROZEN</span>
         <h3 data-i18n="logi.28">Frozen storage</h3>
         <p data-i18n="logi.29">For preparations specified for frozen storage, with packaging and route timing to match.</p>
       </article>
-      <article class="block" data-reveal data-delay="120">
+      <article class="block spot" data-reveal data-delay="120">
         <span class="block__ic"><svg width="22" height="22" aria-hidden="true"><use href="#i-dewar"/></svg></span>
         <span class="block__k" data-i18n="logi.30">CRYOGENIC</span>
         <h3 data-i18n="logi.31">Cryogenic conditions</h3>
@@ -255,46 +257,44 @@
         <li><svg width="16" height="16" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="logi.39">Receiving and handling instructions coordinated with the clinic</span></li>
       </ul>
     </div>
-    <div class="ph ph--tall" data-reveal data-delay="80"><!-- ASSET NEEDED: photograph of the nitrogen-based cryogenic dry shipper / transport equipment -->
-      <svg aria-hidden="true"><use href="#i-dewar"/></svg>
-      <span class="ph__cap" data-i18n="logi.40">Nitrogen-based cryogenic shipper</span>
-    </div>
+    <figure class="media media--45 reveal-img"><!-- PHOTO WANTED: replace with a real photo of the nitrogen-based cryogenic dry shipper --><img src="assets/img/lab-technician.jpg" width="1024" height="1280" alt="Technician handling samples in a cleanroom" data-i18n-aria="logi.a2" loading="lazy" decoding="async" /><span class="media__cap"><span class="pulse" aria-hidden="true"></span><span data-i18n="logi.40">Cryogenic, when required</span></span></figure>
   </div>
 </section>
 
 <section class="section" id="cold-chain">
   <div class="container split">
-    <figure class="figure" data-reveal>
-      <img src="assets/img/coldchain.jpg" width="1024" height="1280" alt="Temperature-controlled shipper with vials and a temperature display" data-i18n-aria="logi.a2" loading="lazy" decoding="async" />
+    <figure class="media media--45 reveal-img">
+      <img src="assets/img/coldchain.jpg" width="1024" height="1280" alt="Temperature-controlled shipper with vials and a temperature display" data-i18n-aria="logi.a3" loading="lazy" decoding="async" />
+      <span class="media__cap"><span class="pulse" aria-hidden="true"></span><span data-i18n="logi.41">Temperature-monitored</span></span>
     </figure>
     <div data-reveal data-delay="80">
-      <span class="kicker" data-i18n="logi.41">Cold chain</span>
-      <h2 class="h2" data-i18n="logi.42">Temperature-controlled, end to end.</h2>
-      <p class="lead" data-i18n="logi.43">For products that travel refrigerated or frozen, the cold chain is planned around the product, the route and the timing.</p>
+      <span class="kicker" data-i18n="logi.42">Cold chain</span>
+      <h2 class="h2" data-i18n="logi.43">Temperature-controlled, end to end.</h2>
+      <p class="lead" data-i18n="logi.44">For products that travel refrigerated or frozen, the cold chain is planned around the product, the route and the timing.</p>
       <ul class="checks">
-        <li><svg width="16" height="16" aria-hidden="true"><use href="#i-box"/></svg><span data-i18n="logi.44">Qualified packaging matched to the product and route</span></li>
-        <li><svg width="16" height="16" aria-hidden="true"><use href="#i-thermo"/></svg><span data-i18n="logi.45">Temperature monitoring during transit</span></li>
-        <li><svg width="16" height="16" aria-hidden="true"><use href="#i-route"/></svg><span data-i18n="logi.46">Route planning for time-sensitive shipments</span></li>
-        <li><svg width="16" height="16" aria-hidden="true"><use href="#i-doc"/></svg><span data-i18n="logi.47">Temperature record reviewed on arrival</span></li>
+        <li><svg width="16" height="16" aria-hidden="true"><use href="#i-box"/></svg><span data-i18n="logi.45">Qualified packaging matched to the product and route</span></li>
+        <li><svg width="16" height="16" aria-hidden="true"><use href="#i-thermo"/></svg><span data-i18n="logi.46">Temperature monitoring during transit</span></li>
+        <li><svg width="16" height="16" aria-hidden="true"><use href="#i-route"/></svg><span data-i18n="logi.47">Route planning for time-sensitive shipments</span></li>
+        <li><svg width="16" height="16" aria-hidden="true"><use href="#i-doc"/></svg><span data-i18n="logi.48">Temperature record reviewed on arrival</span></li>
       </ul>
     </div>
   </div>
 </section>
 
-<section class="section section--dark" id="chain-of-custody">
+<section class="section section--dark glowfx" id="chain-of-custody">
   <div class="container">
     <div class="head" data-reveal>
-      <span class="kicker" data-i18n="logi.48">Chain of custody</span>
-      <h2 class="h2" data-i18n="logi.49">Every handoff, on record.</h2>
-      <p class="lead" data-i18n="logi.50">A lot is traceable from its source to receipt at the clinic. Each stage is linked to the next.</p>
+      <span class="kicker" data-i18n="logi.49">Chain of custody</span>
+      <h2 class="h2" data-i18n="logi.50">Every handoff, on record.</h2>
+      <p class="lead" data-i18n="logi.51">A lot is traceable from its source to receipt at the clinic. Each stage is linked to the next.</p>
     </div>
-    <ol class="flow" data-reveal>
-      <li class="flow__step"><span class="flow__n">01</span><h3 data-i18n="logi.51">Source</h3><p data-i18n="logi.52">Product origin and lot identity confirmed.</p></li>
-      <li class="flow__step"><span class="flow__n">02</span><h3 data-i18n="logi.53">Batch</h3><p data-i18n="logi.54">Lot released against its specification.</p></li>
-      <li class="flow__step"><span class="flow__n">03</span><h3 data-i18n="logi.55">Documentation</h3><p data-i18n="logi.56">COA and records matched to the lot.</p></li>
-      <li class="flow__step"><span class="flow__n">04</span><h3 data-i18n="logi.57">Packaging</h3><p data-i18n="logi.58">Packed and sealed for the required conditions.</p></li>
-      <li class="flow__step"><span class="flow__n">05</span><h3 data-i18n="logi.59">Transport</h3><p data-i18n="logi.60">Moved under monitored conditions.</p></li>
-      <li class="flow__step"><span class="flow__n">06</span><h3 data-i18n="logi.61">Receipt</h3><p data-i18n="logi.62">Received, checked and confirmed by the clinic.</p></li>
+    <ol class="flow">
+      <li class="flow__step"><span class="flow__n">01</span><h3 data-i18n="logi.52">Source</h3><p data-i18n="logi.53">Product origin and lot identity confirmed.</p></li>
+      <li class="flow__step"><span class="flow__n">02</span><h3 data-i18n="logi.54">Batch</h3><p data-i18n="logi.55">Lot released against its specification.</p></li>
+      <li class="flow__step"><span class="flow__n">03</span><h3 data-i18n="logi.56">Documentation</h3><p data-i18n="logi.57">COA and records matched to the lot.</p></li>
+      <li class="flow__step"><span class="flow__n">04</span><h3 data-i18n="logi.58">Packaging</h3><p data-i18n="logi.59">Packed and sealed for the required conditions.</p></li>
+      <li class="flow__step"><span class="flow__n">05</span><h3 data-i18n="logi.60">Transport</h3><p data-i18n="logi.61">Moved under monitored conditions.</p></li>
+      <li class="flow__step"><span class="flow__n">06</span><h3 data-i18n="logi.62">Receipt</h3><p data-i18n="logi.63">Received, checked and confirmed by the clinic.</p></li>
     </ol>
   </div>
 </section>
@@ -302,15 +302,15 @@
 <section class="section" id="international">
   <div class="container split">
     <div data-reveal>
-      <span class="kicker" data-i18n="logi.63">International coordination</span>
-      <h2 class="h2" data-i18n="logi.64">Across borders, to the same standard.</h2>
-      <p class="lead" data-i18n="logi.65">We coordinate delivery across the United States, Mexico and supported Latin American markets. Availability depends on the product, the destination and local regulation.</p>
+      <span class="kicker" data-i18n="logi.64">International coordination</span>
+      <h2 class="h2" data-i18n="logi.65">Across borders, to the same standard.</h2>
+      <p class="lead" data-i18n="logi.66">We coordinate delivery across the United States, Mexico and supported Latin American markets. Availability depends on the product, the destination and local regulation.</p>
     </div>
     <ul class="caps caps--light" data-reveal data-delay="80">
-      <li><svg width="18" height="18" aria-hidden="true"><use href="#i-globe"/></svg><span data-i18n="logi.66">Routes and timing planned around the product's conditions</span></li>
-      <li><svg width="18" height="18" aria-hidden="true"><use href="#i-doc"/></svg><span data-i18n="logi.67">Shipping documentation coordinated for each destination</span></li>
-      <li><svg width="18" height="18" aria-hidden="true"><use href="#i-pin"/></svg><span data-i18n="logi.68">United States · Mexico · Latin America</span></li>
-      <li><svg width="18" height="18" aria-hidden="true"><use href="#i-shield"/></svg><span data-i18n="logi.69">Subject to each country's import regulations</span></li>
+      <li><svg width="18" height="18" aria-hidden="true"><use href="#i-globe"/></svg><span data-i18n="logi.67">Routes and timing planned around the product's conditions</span></li>
+      <li><svg width="18" height="18" aria-hidden="true"><use href="#i-doc"/></svg><span data-i18n="logi.68">Shipping documentation coordinated for each destination</span></li>
+      <li><svg width="18" height="18" aria-hidden="true"><use href="#i-pin"/></svg><span data-i18n="logi.69">United States · Mexico · Latin America</span></li>
+      <li><svg width="18" height="18" aria-hidden="true"><use href="#i-shield"/></svg><span data-i18n="logi.70">Subject to each country's import regulations</span></li>
     </ul>
   </div>
 </section>
@@ -318,14 +318,15 @@
 <section class="section section--tint" id="handoff">
   <div class="container">
     <div class="head" data-reveal>
-      <span class="kicker" data-i18n="logi.70">Clinic handoff</span>
-      <h2 class="h2" data-i18n="logi.71">Delivery ends at the clinic — not at the door.</h2>
+      <span class="kicker" data-i18n="logi.71">Clinic handoff</span>
+      <h2 class="h2" data-i18n="logi.72">Delivery ends at the clinic — not at the door.</h2>
     </div>
+    <figure class="media media--wide media--par reveal-img mb"><img src="assets/img/consultation.jpg" width="1600" height="912" alt="Physician receiving a delivery at the clinic" data-i18n-aria="logi.a4" loading="lazy" decoding="async" /></figure>
     <div class="blocks blocks--4">
-      <article class="block" data-reveal><span class="block__ic"><svg width="22" height="22" aria-hidden="true"><use href="#i-clinic"/></svg></span><h3 data-i18n="logi.72">Receiving instructions</h3><p data-i18n="logi.73">What to expect, when, and how to receive the shipment.</p></article>
-      <article class="block" data-reveal data-delay="60"><span class="block__ic"><svg width="22" height="22" aria-hidden="true"><use href="#i-doc"/></svg></span><h3 data-i18n="logi.74">Documentation</h3><p data-i18n="logi.75">The COA and shipment records, together with the product.</p></article>
-      <article class="block" data-reveal data-delay="120"><span class="block__ic"><svg width="22" height="22" aria-hidden="true"><use href="#i-vial"/></svg></span><h3 data-i18n="logi.76">Product handling coordination</h3><p data-i18n="logi.77">Handling guidance coordinated with the source laboratory.</p></article>
-      <article class="block" data-reveal data-delay="180"><span class="block__ic"><svg width="22" height="22" aria-hidden="true"><use href="#i-users"/></svg></span><h3 data-i18n="logi.78">Professional support</h3><p data-i18n="logi.79">A 1CELL contact for questions before and after delivery.</p></article>
+      <article class="block spot" data-reveal><span class="block__ic"><svg width="22" height="22" aria-hidden="true"><use href="#i-clinic"/></svg></span><h3 data-i18n="logi.73">Receiving instructions</h3><p data-i18n="logi.74">What to expect, when, and how to receive the shipment.</p></article>
+      <article class="block spot" data-reveal data-delay="60"><span class="block__ic"><svg width="22" height="22" aria-hidden="true"><use href="#i-doc"/></svg></span><h3 data-i18n="logi.75">Documentation</h3><p data-i18n="logi.76">The COA and shipment records, together with the product.</p></article>
+      <article class="block spot" data-reveal data-delay="120"><span class="block__ic"><svg width="22" height="22" aria-hidden="true"><use href="#i-vial"/></svg></span><h3 data-i18n="logi.77">Product handling coordination</h3><p data-i18n="logi.78">Handling guidance coordinated with the source laboratory.</p></article>
+      <article class="block spot" data-reveal data-delay="180"><span class="block__ic"><svg width="22" height="22" aria-hidden="true"><use href="#i-users"/></svg></span><h3 data-i18n="logi.79">Professional support</h3><p data-i18n="logi.80">A 1CELL contact for questions before and after delivery.</p></article>
     </div>
   </div>
 </section>
@@ -334,12 +335,12 @@
   <div class="container">
     <div class="band" data-reveal>
       <div>
-        <h2 data-i18n="logi.80">Let's discuss your logistics.</h2>
-        <p data-i18n="logi.81">Tell us which products and destinations you work with. We'll coordinate the conditions they need.</p>
+        <h2 data-i18n="logi.81">Let's discuss your logistics.</h2>
+        <p data-i18n="logi.82">Tell us which products and destinations you work with. We'll coordinate the conditions they need.</p>
       </div>
       <div class="band__cta">
-        <a class="btn btn--light" href="clinicians.html?interest=logistics#access" data-i18n="logi.82">Discuss logistics</a>
-        <a class="btn btn--ondark" href="contact.html?topic=logistics" data-i18n="logi.83">Contact</a>
+        <a class="btn btn--light" href="clinicians.html?interest=logistics#access" data-i18n="logi.83">Discuss logistics</a>
+        <a class="btn btn--ondark" href="contact.html?topic=logistics" data-i18n="logi.84">Contact</a>
       </div>
     </div>
   </div>
@@ -450,7 +451,7 @@
 
 <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 <a href="#top" class="totop" id="toTop" aria-label="Back to top" data-i18n-aria="c-overlays.a3"><svg width="18" height="18" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-<script src="assets/js/i18n-es.js?v=18.2" defer></script>
-<script src="assets/js/main.js?v=18.2" defer></script>
+<script src="assets/js/i18n-es.js?v=19.3" defer></script>
+<script src="assets/js/main.js?v=19.3" defer></script>
 </body>
 </html>

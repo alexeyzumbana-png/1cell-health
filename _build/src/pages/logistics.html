@@ -19,10 +19,11 @@ nav: logistics
           <a class="btn btn--ondark btn--lg" href="#chain-of-custody" data-es="Cadena de custodia">Chain of custody</a>
         </div>
       </div>
-      <div class="video" data-video-src="">
+      <div class="video reveal-img" data-video-src="">
         <!-- VIDEO NEEDED: short "From source to clinic" film. Set data-video-src="assets/video/source-to-clinic.mp4" (and optionally data-video-poster). -->
+        <img class="video__img" src="assets/img/lab-cleanroom.jpg" width="1600" height="912" alt="" decoding="async" />
         <div class="video__ph" aria-hidden="true">
-          <span class="video__label" data-es="Del origen a la clínica">From source to clinic</span>
+          <span class="video__label"><span class="pulse"></span> <span data-es="Del origen a la clínica">From source to clinic</span></span>
           <ol class="video__seq">
             <li data-es="Liberación">Release</li><li data-es="Verificación">Verify</li><li data-es="Preservación">Preserve</li><li data-es="Transporte">Transport</li><li data-es="Seguimiento">Track</li><li data-es="Entrega">Deliver</li>
           </ol>
@@ -46,19 +47,19 @@ nav: logistics
       <p class="lead" data-es="Las condiciones de almacenamiento y transporte dependen del producto biológico. Las definimos a partir de la especificación del laboratorio de origen para cada lote, en lugar de aplicar una sola regla a todo.">Storage and transport conditions depend on the biological product. We set them from the source laboratory's specification for each lot — rather than applying one rule to everything.</p>
     </div>
     <div class="blocks">
-      <article class="block" data-reveal>
+      <article class="block spot" data-reveal>
         <span class="block__ic"><svg width="22" height="22" aria-hidden="true"><use href="#i-thermo"/></svg></span>
         <span class="block__k" data-es="REFRIGERADO">REFRIGERATED</span>
         <h3 data-es="Refrigeración controlada">Controlled refrigeration</h3>
         <p data-es="Para productos especificados para almacenamiento refrigerado, por ejemplo <span class='nw'>2–8&nbsp;°C</span>, en empaque calificado y con monitoreo.">For products specified for refrigerated storage — for example <span class="nw">2–8&nbsp;°C</span> — in qualified, monitored packaging.</p>
       </article>
-      <article class="block" data-reveal data-delay="60">
+      <article class="block spot" data-reveal data-delay="60">
         <span class="block__ic"><svg width="22" height="22" aria-hidden="true"><use href="#i-snow"/></svg></span>
         <span class="block__k" data-es="CONGELADO">FROZEN</span>
         <h3 data-es="Almacenamiento congelado">Frozen storage</h3>
         <p data-es="Para preparaciones especificadas para conservación congelada, con empaque y tiempos de ruta adecuados.">For preparations specified for frozen storage, with packaging and route timing to match.</p>
       </article>
-      <article class="block" data-reveal data-delay="120">
+      <article class="block spot" data-reveal data-delay="120">
         <span class="block__ic"><svg width="22" height="22" aria-hidden="true"><use href="#i-dewar"/></svg></span>
         <span class="block__k" data-es="CRIOGÉNICO">CRYOGENIC</span>
         <h3 data-es="Condiciones criogénicas">Cryogenic conditions</h3>
@@ -81,17 +82,15 @@ nav: logistics
         <li><svg width="16" height="16" aria-hidden="true"><use href="#i-check"/></svg><span data-es="Instrucciones de recepción y manejo coordinadas con la clínica">Receiving and handling instructions coordinated with the clinic</span></li>
       </ul>
     </div>
-    <div class="ph ph--tall" data-reveal data-delay="80"><!-- ASSET NEEDED: photograph of the nitrogen-based cryogenic dry shipper / transport equipment -->
-      <svg aria-hidden="true"><use href="#i-dewar"/></svg>
-      <span class="ph__cap" data-es="Contenedor criogénico con nitrógeno">Nitrogen-based cryogenic shipper</span>
-    </div>
+    <figure class="media media--45 reveal-img"><!-- PHOTO WANTED: replace with a real photo of the nitrogen-based cryogenic dry shipper --><img src="assets/img/lab-technician.jpg" width="1024" height="1280" alt="Technician handling samples in a cleanroom" data-es-aria="Técnico manipulando muestras en sala limpia" loading="lazy" decoding="async" /><span class="media__cap"><span class="pulse" aria-hidden="true"></span><span data-es="Criogénico, cuando se requiere">Cryogenic, when required</span></span></figure>
   </div>
 </section>
 
 <section class="section" id="cold-chain">
   <div class="container split">
-    <figure class="figure" data-reveal>
+    <figure class="media media--45 reveal-img">
       <img src="assets/img/coldchain.jpg" width="1024" height="1280" alt="Temperature-controlled shipper with vials and a temperature display" data-es-aria="Contenedor con temperatura controlada, viales y pantalla de temperatura" loading="lazy" decoding="async" />
+      <span class="media__cap"><span class="pulse" aria-hidden="true"></span><span data-es="Temperatura monitoreada">Temperature-monitored</span></span>
     </figure>
     <div data-reveal data-delay="80">
       <span class="kicker" data-es="Cadena de frío">Cold chain</span>
@@ -107,14 +106,14 @@ nav: logistics
   </div>
 </section>
 
-<section class="section section--dark" id="chain-of-custody">
+<section class="section section--dark glowfx" id="chain-of-custody">
   <div class="container">
     <div class="head" data-reveal>
       <span class="kicker" data-es="Cadena de custodia">Chain of custody</span>
       <h2 class="h2" data-es="Cada traspaso, registrado.">Every handoff, on record.</h2>
       <p class="lead" data-es="Un lote es trazable desde su origen hasta la recepción en clínica. Cada etapa queda vinculada a la siguiente.">A lot is traceable from its source to receipt at the clinic. Each stage is linked to the next.</p>
     </div>
-    <ol class="flow" data-reveal>
+    <ol class="flow">
       <li class="flow__step"><span class="flow__n">01</span><h3 data-es="Origen">Source</h3><p data-es="Se confirman el origen del producto y la identidad del lote.">Product origin and lot identity confirmed.</p></li>
       <li class="flow__step"><span class="flow__n">02</span><h3 data-es="Lote">Batch</h3><p data-es="Lote liberado contra su especificación.">Lot released against its specification.</p></li>
       <li class="flow__step"><span class="flow__n">03</span><h3 data-es="Documentación">Documentation</h3><p data-es="COA y registros vinculados al lote.">COA and records matched to the lot.</p></li>
@@ -147,11 +146,12 @@ nav: logistics
       <span class="kicker" data-es="Entrega en clínica">Clinic handoff</span>
       <h2 class="h2" data-es="La entrega termina en la clínica, no en la puerta.">Delivery ends at the clinic — not at the door.</h2>
     </div>
+    <figure class="media media--wide media--par reveal-img mb"><img src="assets/img/consultation.jpg" width="1600" height="912" alt="Physician receiving a delivery at the clinic" data-es-aria="Médica recibiendo una entrega en la clínica" loading="lazy" decoding="async" /></figure>
     <div class="blocks blocks--4">
-      <article class="block" data-reveal><span class="block__ic"><svg width="22" height="22" aria-hidden="true"><use href="#i-clinic"/></svg></span><h3 data-es="Instrucciones de recepción">Receiving instructions</h3><p data-es="Qué esperar, cuándo y cómo recibir el envío.">What to expect, when, and how to receive the shipment.</p></article>
-      <article class="block" data-reveal data-delay="60"><span class="block__ic"><svg width="22" height="22" aria-hidden="true"><use href="#i-doc"/></svg></span><h3 data-es="Documentación">Documentation</h3><p data-es="El COA y los registros del envío, junto con el producto.">The COA and shipment records, together with the product.</p></article>
-      <article class="block" data-reveal data-delay="120"><span class="block__ic"><svg width="22" height="22" aria-hidden="true"><use href="#i-vial"/></svg></span><h3 data-es="Coordinación del manejo">Product handling coordination</h3><p data-es="Indicaciones de manejo coordinadas con el laboratorio de origen.">Handling guidance coordinated with the source laboratory.</p></article>
-      <article class="block" data-reveal data-delay="180"><span class="block__ic"><svg width="22" height="22" aria-hidden="true"><use href="#i-users"/></svg></span><h3 data-es="Soporte profesional">Professional support</h3><p data-es="Un contacto de 1CELL para preguntas antes y después de la entrega.">A 1CELL contact for questions before and after delivery.</p></article>
+      <article class="block spot" data-reveal><span class="block__ic"><svg width="22" height="22" aria-hidden="true"><use href="#i-clinic"/></svg></span><h3 data-es="Instrucciones de recepción">Receiving instructions</h3><p data-es="Qué esperar, cuándo y cómo recibir el envío.">What to expect, when, and how to receive the shipment.</p></article>
+      <article class="block spot" data-reveal data-delay="60"><span class="block__ic"><svg width="22" height="22" aria-hidden="true"><use href="#i-doc"/></svg></span><h3 data-es="Documentación">Documentation</h3><p data-es="El COA y los registros del envío, junto con el producto.">The COA and shipment records, together with the product.</p></article>
+      <article class="block spot" data-reveal data-delay="120"><span class="block__ic"><svg width="22" height="22" aria-hidden="true"><use href="#i-vial"/></svg></span><h3 data-es="Coordinación del manejo">Product handling coordination</h3><p data-es="Indicaciones de manejo coordinadas con el laboratorio de origen.">Handling guidance coordinated with the source laboratory.</p></article>
+      <article class="block spot" data-reveal data-delay="180"><span class="block__ic"><svg width="22" height="22" aria-hidden="true"><use href="#i-users"/></svg></span><h3 data-es="Soporte profesional">Professional support</h3><p data-es="Un contacto de 1CELL para preguntas antes y después de la entrega.">A 1CELL contact for questions before and after delivery.</p></article>
     </div>
   </div>
 </section>

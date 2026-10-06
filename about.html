@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/css/styles.css?v=18.2" />
+<link rel="stylesheet" href="assets/css/styles.css?v=19.3" />
 <script>(function(d){d.className+=" js";try{if(localStorage.getItem("1cell_lang")==="es"){d.className+=" es-pending";setTimeout(function(){d.classList.remove("es-pending")},1500)}}catch(e){}})(document.documentElement);</script>
 </head>
 <body class="page-about">
@@ -57,6 +57,7 @@
   </defs>
 </svg>
 <a class="skip" href="#main" data-i18n="c-skip">Skip to content</a>
+<div class="progress" aria-hidden="true"><span></span></div>
 <div class="topbar" id="top">
   <div class="container topbar__inner">
     <p class="topbar__msg"><span class="topbar__dot" aria-hidden="true"></span><span data-i18n="c-topbar.1"><span class="topbar__opt">Specialized </span>biological logistics · US &amp; LATAM</span></p>
@@ -180,7 +181,8 @@
   </div>
 </header>
 <main id="main">
-<section class="phero phero--dark">
+<section class="phero phero--dark phero--img">
+  <img class="phero__bgimg" src="assets/img/lab-cleanroom.jpg" width="1600" height="912" alt="" decoding="async" />
   <div class="container">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="./" data-i18n="about.1">Home</a><span aria-hidden="true">/</span><span data-i18n="about.2">About</span></nav>
     <div class="phero__copy">
@@ -200,6 +202,7 @@
       <li class="strip__item"><span class="strip__k" data-i18n="about.11">Preservation</span><span class="strip__t" data-i18n="about.12">Conditions matched to each product.</span></li>
       <li class="strip__item"><span class="strip__k" data-i18n="about.13">Delivery</span><span class="strip__t" data-i18n="about.14">Coordinated from source to clinic.</span></li>
     </ul>
+    <figure class="media media--wide media--par reveal-img mt"><img src="assets/img/product-family.jpg" width="1600" height="912" alt="1CELL product vials" data-i18n-aria="about.a2" loading="lazy" decoding="async" /></figure>
   </div>
 </section>
 
@@ -211,7 +214,7 @@
     </div>
     <div class="people">
       <article class="person" data-reveal>
-        <div class="person__photo"><!-- PHOTO NEEDED: professional portrait of Ing. Alexey Zumbana (portrait 4:5, min. 1200px tall). Replace the svg with <img src="assets/img/team/alexey-zumbana.jpg" alt="Ing. Alexey Zumbana" width="960" height="1200" loading="lazy" /> --><svg class="silhouette" viewBox="0 0 120 150" aria-hidden="true"><use href="#i-user"/></svg></div>
+        <div class="person__photo person__photo--brand"><!-- PHOTO WANTED: professional portrait of Ing. Alexey Zumbana (portrait 4:5, min. 1200px tall). Add inside this div: <img src="assets/img/team/alexey-zumbana.jpg" alt="Ing. Alexey Zumbana" width="960" height="1200" loading="lazy" /> --><span class="person__lbl">1CELL Health</span><span class="person__mark" aria-hidden="true">1</span></div>
         <div class="person__body">
           <p class="person__cred" data-i18n="about.17">General management</p>
           <h3>Ing. Alexey Zumbana</h3>
@@ -221,7 +224,7 @@
         </div>
       </article>
       <article class="person" data-reveal data-delay="80">
-        <div class="person__photo"><!-- PHOTO NEEDED: professional portrait of Dr. Gerardo Zumbana (portrait 4:5). Replace the svg with <img src="assets/img/team/gerardo-zumbana.jpg" alt="Dr. Gerardo Zumbana" width="960" height="1200" loading="lazy" /> --><svg class="silhouette" viewBox="0 0 120 150" aria-hidden="true"><use href="#i-user"/></svg></div>
+        <div class="person__photo person__photo--brand"><!-- PHOTO WANTED: professional portrait of Dr. Gerardo Zumbana (portrait 4:5). Add inside this div: <img src="assets/img/team/gerardo-zumbana.jpg" alt="Dr. Gerardo Zumbana" width="960" height="1200" loading="lazy" /> --><span class="person__lbl">1CELL Health</span><span class="person__mark" aria-hidden="true">1</span></div>
         <div class="person__body">
           <p class="person__cred" data-i18n="about.21">Regenerative medicine</p>
           <h3>Dr. Gerardo Zumbana</h3>
@@ -242,7 +245,7 @@
     </div>
     <div class="people">
       <article class="person" data-reveal>
-        <div class="person__photo"><!-- PHOTO NEEDED: professional portrait of Dr. Valero Voinov (portrait 4:5). Replace the svg with <img src="assets/img/team/valero-voinov.jpg" alt="Dr. Valero Voinov" width="960" height="1200" loading="lazy" /> --><svg class="silhouette" viewBox="0 0 120 150" aria-hidden="true"><use href="#i-user"/></svg></div>
+        <div class="person__photo person__photo--brand"><!-- PHOTO WANTED: professional portrait of Dr. Valero Voinov (portrait 4:5). Add inside this div: <img src="assets/img/team/valero-voinov.jpg" alt="Dr. Valero Voinov" width="960" height="1200" loading="lazy" /> --><span class="person__lbl">1CELL Health</span><span class="person__mark" aria-hidden="true">1</span></div>
         <div class="person__body">
           <p class="person__cred" data-i18n="about.27">Clinical immunology</p>
           <h3>Dr. Valero Voinov</h3>
@@ -405,7 +408,7 @@
     </div>
   </div>
 </div>
-<script src="assets/js/i18n-es.js?v=18.2" defer></script>
-<script src="assets/js/main.js?v=18.2" defer></script>
+<script src="assets/js/i18n-es.js?v=19.3" defer></script>
+<script src="assets/js/main.js?v=19.3" defer></script>
 </body>
 </html>
