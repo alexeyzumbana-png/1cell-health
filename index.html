@@ -3,443 +3,505 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>1CELL Health — Regeneration, engineered.</title>
-<meta name="description" content="Clinical-grade regenerative biologics — cellular therapies, exosomes and peptides. Every lot traceable to its Certificate of Analysis, delivered in an unbroken 2–8 °C cold chain, guided by a real medical team." />
-<meta name="author" content="1CELL Health" />
-<meta name="theme-color" content="#FFFFFF" />
-<meta property="og:site_name" content="1CELL HEALTH" />
+<title data-i18n="home.title">1CELL Health — Regeneration, engineered.</title>
+<meta name="description" content="Advanced regenerative biologics — verified, preserved and delivered from source to clinic. Cell therapies, exosomes and specialized biological logistics for physicians and clinics in the US and Latin America." />
+<meta name="theme-color" content="#04302C" />
+<link rel="canonical" href="https://1cellhealth.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="1CELL Health" />
 <meta property="og:title" content="1CELL Health — Regeneration, engineered." />
-<meta property="og:description" content="Regenerative biologics you can verify — traceable, cold-chain, medically guided." />
-<meta property="og:image" content="assets/img/hero-vial.png" />
+<meta property="og:description" content="Advanced regenerative biologics — verified, preserved and delivered from source to clinic. Cell therapies, exosomes and specialized biological logistics for physicians and clinics in the US and Latin America." />
+<meta property="og:url" content="https://1cellhealth.com/" />
+<meta property="og:image" content="https://1cellhealth.com/assets/img/product-family.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
+<!-- Form delivery: set an endpoint (e.g. a form service URL) to receive submissions directly; otherwise forms open an email to contact-email. -->
+<meta name="1cell:form-endpoint" content="" />
+<meta name="1cell:contact-email" content="contacto@1cellhealth.com" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%230B5A54'/%3E%3Cpath d='M19.5 8.5V23.5H15V15.2L11.5 17Z' fill='%23fff'/%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;450;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-<link rel="preload" as="image" href="assets/img/hero-vial.png" />
-<link rel="stylesheet" href="assets/css/styles.css?v=17" />
-<script>document.documentElement.className+=" js";</script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="preload" as="image" href="assets/img/hero-vial.png" fetchpriority="high" /><link rel="stylesheet" href="assets/css/styles.css?v=18.2" />
+<script>(function(d){d.className+=" js";try{if(localStorage.getItem("1cell_lang")==="es"){d.className+=" es-pending";setTimeout(function(){d.classList.remove("es-pending")},1500)}}catch(e){}})(document.documentElement);</script>
 </head>
-<body>
-
-<!-- ===== PRELOADER ===== -->
-<div class="preloader" id="preloader" aria-hidden="true">
-  <div class="preloader__mark">
-    <svg viewBox="0 0 32 32" width="42" height="42"><path d="M16 3l11.3 6.5v13L16 29 4.7 22.5v-13z" fill="none" stroke="currentColor" stroke-width="1" opacity=".4"/><path class="pl-hex" d="M16 9l6.9 4v8l-6.9 4-6.9-4v-8z" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="16" cy="16" r="2.4" fill="currentColor"/></svg>
-    <span class="preloader__word"><i>1</i>CELL</span>
-  </div>
-  <div class="preloader__bar"><span id="plBar"></span></div>
-  <span class="preloader__pct" id="plPct">0</span>
-</div>
-
-<!-- ===== CURSOR ===== -->
-<div class="cursor" id="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"></span></div>
-
-<!-- ===== TOPBAR ===== -->
+<body class="page-home">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-caret" viewBox="0 0 12 12"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 12h5M10 15.5h5M10 8.5h1.5"/></g></symbol>
+    <symbol id="i-vial" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v5.5L6.6 17a3 3 0 0 0 2.8 4h5.2a3 3 0 0 0 2.8-4L14 8.5V3"/><path d="M8.3 14h7.4"/></g></symbol>
+    <symbol id="i-scatter" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 4v16h16"/><circle cx="9" cy="14" r="1.2"/><circle cx="12.5" cy="9.5" r="1.2"/><circle cx="16.5" cy="12" r="1.2"/><circle cx="9.5" cy="8" r="1.2"/><circle cx="15" cy="15.5" r="1.2"/></g></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5.2c0 4.7-3.2 8.2-7 9.8-3.8-1.6-7-5.1-7-9.8V6z"/><path d="M9 12l2.1 2.1L15.2 10"/></g></symbol>
+    <symbol id="i-snow" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M4.2 7.5l15.6 9M4.2 16.5l15.6-9"/><path d="M9.6 4.6L12 7l2.4-2.4M9.6 19.4L12 17l2.4 2.4M4.7 11l3.2.9-.9 3.2M19.3 13l-3.2-.9.9-3.2"/></g></symbol>
+    <symbol id="i-dewar" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M9.8 3v3.4C7.5 7.5 6 9.8 6 12.5V19a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-6.5c0-2.7-1.5-5-3.8-6.1V3"/><path d="M6 15h12M10 18h4"/></g></symbol>
+    <symbol id="i-thermo" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a2 2 0 0 0-2 2v9.3a4 4 0 1 0 4 0V5a2 2 0 0 0-2-2z"/><path d="M12 10v7M15.5 6h2.5M15.5 9h2.5"/></g></symbol>
+    <symbol id="i-box" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M4 7.5L12 3l8 4.5v9L12 21l-8-4.5z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></g></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6.5h11v9.5H3zM14 10h3.8l3.2 3.4V16h-7"/><circle cx="7" cy="18" r="1.8"/><circle cx="17" cy="18" r="1.8"/></g></symbol>
+    <symbol id="i-route" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="18.5" r="2"/><circle cx="18.5" cy="5.5" r="2"/><path d="M7.5 18.5H15a3.5 3.5 0 0 0 0-7H9a3.5 3.5 0 0 1 0-7h7.5"/></g></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></g></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3z"/></g></symbol>
+    <symbol id="i-clinic" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V8.5L12 4l8 4.5V21M3 21h18"/><path d="M10 21v-5h4v5M12 8.5v4M10 10.5h4"/></g></symbol>
+    <symbol id="i-flask" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6l-5.2 8.7A2.2 2.2 0 0 0 6.7 21h10.6a2.2 2.2 0 0 0 1.9-3.3L14 9V3"/><path d="M7.4 15h9.2"/></g></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 20a5.5 5.5 0 0 1 11 0M15.5 5.2a3.2 3.2 0 0 1 0 6M17 14.6a5.5 5.5 0 0 1 3.5 5.4"/></g></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5l8.5 6.2 8.5-6.2"/></g></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></g></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 21s-6.5-5.7-6.5-11.2a6.5 6.5 0 0 1 13 0C18.5 15.3 12 21 12 21z"/><circle cx="12" cy="9.8" r="2.3"/></g></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 3.5l9 4.8-9 4.8-9-4.8z"/><path d="M3 12.6l9 4.8 9-4.8M3 16.4l9 4.8 9-4.8"/></g></symbol>
+    <symbol id="i-handshake" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3-2 5 1.5 2-1 3 0 5 2.5M3 8.5v6l2 1M21 9.5v5l-2.5 1.5"/><path d="M8 14.5l2.5 2.5a1.4 1.4 0 0 0 2-2M11 13.5l2.8 2.8a1.4 1.4 0 0 0 2-2l-3.3-3.3-2 1a1.6 1.6 0 0 1-2.2-.6"/></g></symbol>
+    <symbol id="i-cart" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h13l-1.2 9.2a2 2 0 0 1-2 1.8H9.2a2 2 0 0 1-2-1.8L6 7zM6 7L5.2 4H3"/><circle cx="9.5" cy="20.5" r=".9"/><circle cx="15.5" cy="20.5" r=".9"/></g></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-user" viewBox="0 0 120 150"><path d="M60 22c15.5 0 26 12 26 28.5S75.5 82 60 82 34 67 34 50.5 44.5 22 60 22zM8 150c3-33 23-54 52-54s49 21 52 54z" fill="currentColor"/></symbol>
+    <symbol id="i-vial-tall" viewBox="0 0 40 72"><g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"><rect x="11" y="2" width="18" height="9" rx="2"/><path d="M13 11v5h14v-5"/><rect x="8" y="16" width="24" height="53" rx="5"/><path d="M8 38h24" opacity=".55"/><path d="M13 45h14M13 51h9" opacity=".55"/></g></symbol>
+  </defs>
+</svg>
+<a class="skip" href="#main" data-i18n="c-skip">Skip to content</a>
 <div class="topbar" id="top">
   <div class="container topbar__inner">
-    <p><span class="livedot"></span> <span data-i18n="top.ship">Cold-chain shipped worldwide — free over</span> <strong>$150</strong></p>
-    <div class="topbar__right">
-      <a href="#professional" data-i18n="top.clin">For clinicians →</a>
-      <button class="langtoggle" id="langToggle" aria-label="Switch language"><b data-lang="en">EN</b><span>/</span><b data-lang="es">ES</b></button>
-    </div>
+    <p class="topbar__msg"><span class="topbar__dot" aria-hidden="true"></span><span data-i18n="c-topbar.1"><span class="topbar__opt">Specialized </span>biological logistics · US &amp; LATAM</span></p>
+    <button class="langtoggle" id="langToggle" type="button" aria-label="Switch language / Cambiar idioma"><b data-lang="en">EN</b><span aria-hidden="true">/</span><b data-lang="es">ES</b></button>
   </div>
 </div>
-
-<!-- ===== HEADER ===== -->
 <header class="header" id="header">
   <div class="container header__inner">
-    <a class="brand" href="#top" data-cursor aria-label="1CELL Health home">
-      
+    <a class="brand" href="./" aria-label="1CELL Health — home">
       <span class="brand__lock"><span class="brand__word"><i>1</i>CELL</span><span class="brand__sub">HEALTH</span></span>
     </a>
+
     <nav class="nav" aria-label="Primary">
-      <a href="products.html" data-cursor data-i18n="nav.products">Products</a>
-      <a href="standard.html" data-cursor data-i18n="nav.standard">Standard</a>
-      <a href="process.html" data-cursor data-i18n="nav.process">Process</a>
-      <a href="faq.html" data-cursor data-i18n="nav.faq">FAQ</a>
-      <a href="about.html" data-cursor data-i18n="page.about">About</a>
+      <div class="nav__item">
+        <a class="nav__link" data-nav="therapies" href="therapies.html"><span data-i18n="c-header.1">Therapies</span><svg class="nav__caret" aria-hidden="true"><use href="#i-caret"/></svg></a>
+        <div class="nav__menu">
+          <a href="therapies.html"><b data-i18n="c-header.2">All therapies</b><small data-i18n="c-header.3">1CELL Clinical</small></a>
+          <a href="stem-cells.html"><b data-i18n="c-header.4">Stem Cells</b><small data-i18n="c-header.5">Mesenchymal stem cells</small></a>
+          <a href="nk-cells.html"><b data-i18n="c-header.6">NK Cells</b><small data-i18n="c-header.7">Natural killer cells</small></a>
+          <a href="muse-cells.html"><b data-i18n="c-header.8">Muse Cells</b><small data-i18n="c-header.9">Stress-enduring cells</small></a>
+          <a href="exosomes.html"><b data-i18n="c-header.10">Exosomes</b><small data-i18n="c-header.11">Extracellular vesicles</small></a>
+        </div>
+      </div>
+      <div class="nav__item">
+        <a class="nav__link" data-nav="standard" href="standard.html"><span data-i18n="c-header.12">The Standard</span><svg class="nav__caret" aria-hidden="true"><use href="#i-caret"/></svg></a>
+        <div class="nav__menu">
+          <a href="standard.html#quality"><b data-i18n="c-header.13">Quality</b><small data-i18n="c-header.14">Sourcing and release</small></a>
+          <a href="standard.html#testing"><b data-i18n="c-header.15">Testing</b><small data-i18n="c-header.16">What each lot is tested for</small></a>
+          <a href="standard.html#traceability"><b data-i18n="c-header.17">Traceability</b><small data-i18n="c-header.18">Lot, source and custody</small></a>
+          <a href="standard.html#preservation"><b data-i18n="c-header.19">Preservation</b><small data-i18n="c-header.20">Conditions per product</small></a>
+        </div>
+      </div>
+      <div class="nav__item">
+        <a class="nav__link" data-nav="logistics" href="logistics.html"><span data-i18n="c-header.21">Logistics</span><svg class="nav__caret" aria-hidden="true"><use href="#i-caret"/></svg></a>
+        <div class="nav__menu">
+          <a href="logistics.html#cold-chain"><b data-i18n="c-header.22">Cold Chain</b><small data-i18n="c-header.23">Temperature-controlled transport</small></a>
+          <a href="logistics.html#cryopreservation"><b data-i18n="c-header.24">Cryopreservation</b><small data-i18n="c-header.25">Cryogenic conditions, when required</small></a>
+          <a href="logistics.html#chain-of-custody"><b data-i18n="c-header.26">Chain of Custody</b><small data-i18n="c-header.27">From release to receipt</small></a>
+          <a href="logistics.html#international"><b data-i18n="c-header.28">International Delivery</b><small data-i18n="c-header.29">United States &amp; Latin America</small></a>
+        </div>
+      </div>
+      <div class="nav__item">
+        <a class="nav__link" data-nav="clinicians" href="clinicians.html"><span data-i18n="c-header.30">For Clinicians</span><svg class="nav__caret" aria-hidden="true"><use href="#i-caret"/></svg></a>
+        <div class="nav__menu">
+          <a href="clinicians.html#access"><b data-i18n="c-header.31">Professional Access</b><small data-i18n="c-header.32">Request verified access</small></a>
+          <a href="clinicians.html#partnerships"><b data-i18n="c-header.33">Clinic Partnerships</b><small data-i18n="c-header.34">Ongoing supply and logistics</small></a>
+          <a href="clinicians.html#product-information"><b data-i18n="c-header.35">Product Information</b><small data-i18n="c-header.36">Specifications and documents</small></a>
+        </div>
+      </div>
+      <div class="nav__item">
+        <a class="nav__link" data-nav="science" href="science.html"><span data-i18n="c-header.37">Science</span><svg class="nav__caret" aria-hidden="true"><use href="#i-caret"/></svg></a>
+        <div class="nav__menu">
+          <a href="science.html"><b data-i18n="c-header.38">Research</b><small data-i18n="c-header.39">Evidence by modality</small></a>
+          <a href="standard.html#documentation"><b data-i18n="c-header.40">Documentation</b><small data-i18n="c-header.41">COA and lot records</small></a>
+        </div>
+      </div>
+      <div class="nav__item">
+        <a class="nav__link" data-nav="company" href="about.html"><span data-i18n="c-header.42">Company</span><svg class="nav__caret" aria-hidden="true"><use href="#i-caret"/></svg></a>
+        <div class="nav__menu nav__menu--end">
+          <a href="about.html"><b data-i18n="c-header.43">About</b><small data-i18n="c-header.44">Who we are</small></a>
+          <a href="about.html#team"><b data-i18n="c-header.45">Medical &amp; Scientific Team</b><small data-i18n="c-header.46">Leadership and advisors</small></a>
+          <a href="contact.html"><b data-i18n="c-header.47">Contact</b><small data-i18n="c-header.48">Talk to 1CELL</small></a>
+        </div>
+      </div>
     </nav>
+
     <div class="header__actions">
-      <button class="iconbtn" id="searchOpen" data-cursor aria-label="Search products">
-        <svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <button class="iconbtn cartbtn" id="cartOpen" type="button" aria-label="Your order" data-i18n-aria="c-header.a1" hidden>
+        <svg width="20" height="20" aria-hidden="true"><use href="#i-cart"/></svg>
+        <span class="cartbtn__count" id="cartCount">0</span>
       </button>
-      <button class="cartbtn iconbtn" id="cartOpen" data-cursor aria-label="Open cart">
-        <svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><path d="M6 7h13l-1.2 9.2a2 2 0 0 1-2 1.8H9.2a2 2 0 0 1-2-1.8L6 7zM6 7L5.2 4H3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9.5" cy="20.5" r="1.2" fill="currentColor"/><circle cx="15.5" cy="20.5" r="1.2" fill="currentColor"/></svg>
-        <span class="cartbtn__count" id="cartCount" hidden>0</span>
-      </button>
-      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <a class="btn btn--primary btn--sm header__cta" data-nav-cta="longevity" href="longevity.html" data-i18n="c-header.49">Explore Longevity</a>
+      <button class="burger" id="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="drawer"><span></span><span></span><span></span></button>
     </div>
   </div>
+
   <div class="drawer" id="drawer" hidden>
-    <a href="products.html" data-i18n="nav.products">Products</a><a href="standard.html" data-i18n="nav.standard">Standard</a><a href="process.html" data-i18n="nav.process">Process</a><a href="faq.html" data-i18n="nav.faq">FAQ</a><a href="about.html" data-i18n="page.about">About</a>
-    <a href="#professional" class="btn btn--primary" data-i18n="nav.clin">For clinicians</a>
+    <nav class="drawer__nav" aria-label="Mobile">
+      <details class="drawer__group" data-nav="therapies"><summary data-i18n="c-header.50">Therapies</summary>
+        <a href="therapies.html" data-i18n="c-header.51">All therapies</a>
+        <a href="stem-cells.html" data-i18n="c-header.52">Stem Cells</a>
+        <a href="nk-cells.html" data-i18n="c-header.53">NK Cells</a>
+        <a href="muse-cells.html" data-i18n="c-header.54">Muse Cells</a>
+        <a href="exosomes.html" data-i18n="c-header.55">Exosomes</a>
+      </details>
+      <details class="drawer__group" data-nav="standard"><summary data-i18n="c-header.56">The Standard</summary>
+        <a href="standard.html" data-i18n="c-header.57">Overview</a>
+        <a href="standard.html#quality" data-i18n="c-header.58">Quality</a>
+        <a href="standard.html#testing" data-i18n="c-header.59">Testing</a>
+        <a href="standard.html#traceability" data-i18n="c-header.60">Traceability</a>
+        <a href="standard.html#preservation" data-i18n="c-header.61">Preservation</a>
+      </details>
+      <details class="drawer__group" data-nav="logistics"><summary data-i18n="c-header.62">Logistics</summary>
+        <a href="logistics.html" data-i18n="c-header.63">Overview</a>
+        <a href="logistics.html#cold-chain" data-i18n="c-header.64">Cold Chain</a>
+        <a href="logistics.html#cryopreservation" data-i18n="c-header.65">Cryopreservation</a>
+        <a href="logistics.html#chain-of-custody" data-i18n="c-header.66">Chain of Custody</a>
+        <a href="logistics.html#international" data-i18n="c-header.67">International Delivery</a>
+      </details>
+      <details class="drawer__group" data-nav="clinicians"><summary data-i18n="c-header.68">For Clinicians</summary>
+        <a href="clinicians.html" data-i18n="c-header.69">Overview</a>
+        <a href="clinicians.html#access" data-i18n="c-header.70">Professional Access</a>
+        <a href="clinicians.html#partnerships" data-i18n="c-header.71">Clinic Partnerships</a>
+        <a href="clinicians.html#product-information" data-i18n="c-header.72">Product Information</a>
+      </details>
+      <details class="drawer__group" data-nav="science"><summary data-i18n="c-header.73">Science</summary>
+        <a href="science.html" data-i18n="c-header.74">Research</a>
+        <a href="standard.html#documentation" data-i18n="c-header.75">Documentation</a>
+      </details>
+      <details class="drawer__group" data-nav="company"><summary data-i18n="c-header.76">Company</summary>
+        <a href="about.html" data-i18n="c-header.77">About</a>
+        <a href="about.html#team" data-i18n="c-header.78">Medical &amp; Scientific Team</a>
+        <a href="contact.html" data-i18n="c-header.79">Contact</a>
+        <a href="faq.html" data-i18n="c-header.80">FAQ</a>
+      </details>
+    </nav>
+    <div class="drawer__cta">
+      <a class="btn btn--primary btn--block" href="longevity.html" data-i18n="c-header.81">Explore Longevity</a>
+      <a class="btn btn--ghost btn--block" href="clinicians.html#access" data-i18n="c-header.82">Request professional access</a>
+    </div>
   </div>
 </header>
-
-<main>
-<!-- ===== HERO ===== -->
+<main id="main">
 <section class="hero">
-  <div class="hero__bg" aria-hidden="true"><img src="assets/img/cell-macro.jpg" alt="" /></div>
-  <canvas class="hero__mesh" id="mesh" aria-hidden="true"></canvas>
-  <div class="hero__scrim" aria-hidden="true"></div>
-  <div class="hero__noise" aria-hidden="true"></div>
   <div class="container hero__inner">
     <div class="hero__copy">
-      <span class="eyebrow" data-reveal><i class="livedot"></i> <span data-i18n="hero.eyebrow">Established 2026 · Mexico &amp; United States</span></span>
-      <h1 class="hero__title" data-split data-i18n="hero.title">Regeneration, engineered.</h1>
-      <p class="hero__lead" data-reveal style="--d:.5s" data-i18n="hero.lead">One standard for regenerative medicine — mesenchymal stem cells, exosomes, NK and Muse cells, peptides. Every lot characterized, documented, and delivered without ever leaving 2–8 °C.</p>
-      <div class="hero__cta" data-reveal style="--d:.62s">
-        <a href="products.html" class="btn btn--primary btn--lg magnetic" data-cursor data-i18n="hero.cta1">Explore products <span class="arr">→</span></a>
-        <a href="#professional" class="btn btn--ghost btn--lg" data-cursor data-i18n="hero.cta2">For clinicians</a>
+      <h1 class="hero__title" data-split data-i18n="home.1">Regeneration, engineered.</h1>
+      <p class="hero__lead" data-i18n="home.2">Advanced biologics — verified, preserved and delivered from source to clinic.</p>
+      <div class="hero__cta">
+        <a class="btn btn--light btn--lg" href="therapies.html"><span data-i18n="home.3">Explore Therapies</span><span class="arr" aria-hidden="true">→</span></a>
+        <a class="btn btn--ondark btn--lg" href="clinicians.html" data-i18n="home.4">For Clinicians</a>
       </div>
     </div>
-    <div class="hero__stage" data-reveal-fade style="--d:.4s">
-      <div class="hero__glow" aria-hidden="true"></div>
-      <div class="hero__orbit hero__orbit--2" aria-hidden="true"></div>
-      <div class="hero__orbit" aria-hidden="true"></div>
-      <div class="hero__float" data-parallax="20">
-        <img src="assets/img/hero-vial.png" alt="1CELL Regenerative Cellular Serum" class="hero__product" />
-      </div>
-      <div class="hero__read" data-parallax="42"><span class="livedot"></span><b>4.2</b>&nbsp;°C · <span data-i18n="hero.range">in range</span></div>
-      <div class="hero__tag" data-parallax="30"><svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true"><path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="hero.coa">COA per batch</span></div>
+    <div class="hero__visual">
+      <img class="hero__vial" src="assets/img/hero-vial.png" width="720" height="900" alt="1CELL vial" data-i18n-aria="home.a1" fetchpriority="high" decoding="async" />
+      <p class="hero__chip"><svg width="14" height="14" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="home.5">Documented from release to delivery</span></p>
     </div>
   </div>
-  <div class="hero__stats" data-reveal-fade style="--d:.6s">
-    <div class="hero__stat"><b data-i18n="hero.s1n">≥ 95%</b><span data-i18n="hero.s1l">Viability, every lot</span></div>
-    <div class="hero__stat"><b data-i18n="hero.s2n">2–8 °C</b><span data-i18n="hero.s2l">Unbroken cold chain</span></div>
-    <div class="hero__stat"><b data-i18n="hero.s3n">100%</b><span data-i18n="hero.s3l">Batches with COA</span></div>
-    <div class="hero__stat"><b data-i18n="hero.s4n">24/7</b><span data-i18n="hero.s4l">Medical team support</span></div>
-  </div>
-  <a href="#products" class="hero__scroll" data-cursor aria-label="Scroll down"><span></span></a>
-</section>
-
-<!-- ===== MARQUEE ===== -->
-<section class="marquee" aria-hidden="true">
-  <div class="marquee__track">
-    <span>Mesenchymal Stem Cells</span><i>✳</i><span>Exosomes</span><i>✳</i><span>NK Cells</span><i>✳</i><span>Muse Cells</span><i>✳</i><span>Peptides</span><i>✳</i><span>Longevity</span><i>✳</i>
-    <span>Mesenchymal Stem Cells</span><i>✳</i><span>Exosomes</span><i>✳</i><span>NK Cells</span><i>✳</i><span>Muse Cells</span><i>✳</i><span>Peptides</span><i>✳</i><span>Longevity</span><i>✳</i>
-  </div>
-</section>
-
-<!-- ===== STATEMENT ===== -->
-<section class="section statement">
   <div class="container">
-    <p class="statement__text" data-split-lines data-i18n="stmt.text">We deliver a characterized, documented and sustainable portfolio. No promises — only evidence, from reception to your door.</p>
-    <div class="statement__foot" data-reveal>
-      <span data-i18n="stmt.a">One standard. Every batch.</span><span>Regeneration, engineered.</span>
-    </div>
+    <ul class="strip" aria-label="What 1CELL does" data-i18n-aria="home.a2">
+      <li class="strip__item"><span class="strip__k" data-i18n="home.6">Biology</span><span class="strip__t" data-i18n="home.7">Characterized regenerative products.</span></li>
+      <li class="strip__item"><span class="strip__k" data-i18n="home.8">Verification</span><span class="strip__t" data-i18n="home.9">Lot-specific documentation.</span></li>
+      <li class="strip__item"><span class="strip__k" data-i18n="home.10">Preservation</span><span class="strip__t" data-i18n="home.11">Conditions matched to each product.</span></li>
+      <li class="strip__item"><span class="strip__k" data-i18n="home.12">Delivery</span><span class="strip__t" data-i18n="home.13">Coordinated from source to clinic.</span></li>
+    </ul>
   </div>
 </section>
 
-<!-- ===== PRODUCTS ===== -->
-<section class="section products" id="products">
+<section class="section" id="therapies">
   <div class="container">
-    <div class="section__head" data-reveal>
-      <span class="kicker" data-i18n="prod.kicker">The catalog</span>
-      <h2 class="section__title" data-i18n="prod.title">Curated by biological family.</h2>
-      <p class="section__sub" data-i18n="prod.sub">Cellular therapies for clinical practice, and peptides &amp; nutraceuticals for everyday longevity — every reference characterized and cold-chain protected.</p>
-      <a href="products.html" class="link-arrow" data-reveal style="--d:.1s;margin-top:18px;display:inline-flex" data-cursor data-i18n="prod.viewall">See the full catalog <span>→</span></a>
+    <div class="head head--row" data-reveal>
+      <div>
+        <span class="kicker">1CELL Clinical</span>
+        <h2 class="h2" data-i18n="home.14">Advanced biologics for clinical practice.</h2>
+        <p class="lead" data-i18n="home.15">Characterized cell and vesicle therapies, supplied to licensed physicians and clinics with the documentation and logistics each one requires.</p>
+      </div>
+      <a class="link" href="therapies.html"><span data-i18n="home.16">View all therapies</span><span class="arr" aria-hidden="true">→</span></a>
     </div>
-
-    <div class="grid" id="catalogGrid">
-      <article class="card" data-reveal data-cat="pro" data-id="msc" data-name="Mesenchymal Stem Cells" data-cat-label="Cellular therapy" data-img="assets/img/product-stemcell.jpg" data-spec="≥ 95% viability, CD73+/CD90+/CD105+ identity, characterized by multicolor flow cytometry. Available in 50M, 100M and 200M presentations.">
-        <button class="card__media" data-quick data-cursor aria-label="Quick view Mesenchymal Stem Cells"><img src="assets/img/product-stemcell.jpg" alt="Mesenchymal stem cell vial" /><span class="card__badge">Pro</span><span class="card__view" data-i18n="prod.qv">Quick view</span></button>
-        <div class="card__body"><span class="card__cat">Cellular therapy</span><h3>Mesenchymal Stem Cells</h3><p class="card__spec">≥ 95% viability · 50M/100M/200M</p>
-          <div class="card__foot"><span class="price price--pro" data-i18n="prod.req">By request</span><a href="#professional" class="card__req" data-cursor data-i18n="prod.request">Request →</a></div></div>
-      </article>
-      <article class="card" data-reveal data-delay="60" data-cat="pro" data-id="exo" data-name="Exosomes · Secretome" data-cat-label="Extracellular vesicles" data-img="assets/img/product-exosome.jpg" data-spec="10¹⁰–10¹² particles/vial, CD9+/CD63+/CD81+, quantified by NTA and tetraspanin ELISA.">
-        <button class="card__media" data-quick data-cursor aria-label="Quick view Exosomes"><img src="assets/img/product-exosome.jpg" alt="Exosome vial" /><span class="card__badge">Pro</span><span class="card__view" data-i18n="prod.qv">Quick view</span></button>
-        <div class="card__body"><span class="card__cat">Extracellular vesicles</span><h3>Exosomes · Secretome</h3><p class="card__spec">10¹⁰–10¹² particles · CD9/CD63/CD81</p>
-          <div class="card__foot"><span class="price price--pro" data-i18n="prod.req">By request</span><a href="#professional" class="card__req" data-cursor data-i18n="prod.request">Request →</a></div></div>
-      </article>
-      <article class="card" data-reveal data-delay="120" data-cat="direct" data-id="pep" data-name="Peptide Line" data-cat-label="Peptides" data-img="assets/img/product-peptides.jpg" data-price="89" data-spec="BPC-157, TB-500, GHK-Cu, Ipamorelin — ≥ 98% HPLC purity, mass-spec verified, cold-chain shipped.">
-        <button class="card__media" data-quick data-cursor aria-label="Quick view Peptide Line"><img src="assets/img/product-peptides.jpg" alt="Peptide vial" /><span class="card__badge card__badge--soft">Direct</span><span class="card__view" data-i18n="prod.qv">Quick view</span></button>
-        <div class="card__body"><span class="card__cat">Peptides</span><h3>Peptide Line</h3><p class="card__spec">BPC-157 · TB-500 · GHK-Cu · Ipamorelin</p>
-          <div class="card__foot"><span class="price">$89</span><button class="card__add" data-add data-cursor data-i18n="prod.add">Add<span class="arr">→</span></button></div></div>
-      </article>
-      <article class="card card--help" data-reveal data-delay="180" data-cat="pro">
-        <div class="card--help__in"><h3 data-i18n="prod.help">Not sure where to start?</h3><p data-i18n="prod.helpsub">Our medical team builds a protocol around your goals.</p><a href="#professional" class="link-arrow" data-cursor data-i18n="prod.helpcta">Talk to a clinician →</a></div>
-      </article>
+    <div class="tgrid">
+      <a class="tcard" href="stem-cells.html" data-reveal>
+        <div class="vtile" aria-hidden="true"><!-- ASSET NEEDED: product photograph (stem cell vial) --><span class="vtile__label">1CELL Clinical</span><span class="vtile__abbr">MSC</span><svg class="vtile__vial"><use href="#i-vial-tall"/></svg></div>
+        <div class="tcard__body"><span class="tcard__cat" data-i18n="home.17">Cell therapy</span><h3 data-i18n="home.18">Mesenchymal Stem Cells</h3><p data-i18n="home.19">Multipotent cells characterized by flow cytometry, in 50M, 100M and 200M presentations.</p><span class="tcard__more"><span data-i18n="home.20">View therapy</span><span class="arr" aria-hidden="true">→</span></span></div>
+      </a>
+      <a class="tcard" href="nk-cells.html" data-reveal data-delay="60">
+        <div class="vtile" aria-hidden="true"><!-- ASSET NEEDED: product photograph (NK cell vial) --><span class="vtile__label">1CELL Clinical</span><span class="vtile__abbr">NK</span><svg class="vtile__vial"><use href="#i-vial-tall"/></svg></div>
+        <div class="tcard__body"><span class="tcard__cat" data-i18n="home.21">Cell immunotherapy</span><h3 data-i18n="home.22">NK Cells</h3><p data-i18n="home.23">CD56+ CD3− natural killer cells, with purity and functional activity confirmed per lot.</p><span class="tcard__more"><span data-i18n="home.24">View therapy</span><span class="arr" aria-hidden="true">→</span></span></div>
+      </a>
+      <a class="tcard" href="muse-cells.html" data-reveal data-delay="120">
+        <div class="vtile" aria-hidden="true"><!-- ASSET NEEDED: product photograph (Muse cell vial) --><span class="vtile__label">1CELL Clinical</span><span class="vtile__abbr">Muse</span><svg class="vtile__vial"><use href="#i-vial-tall"/></svg></div>
+        <div class="tcard__body"><span class="tcard__cat" data-i18n="home.25">Cell therapy</span><h3 data-i18n="home.26">Muse Cells</h3><p data-i18n="home.27">A stress-enduring SSEA-3+ subpopulation, in a standardized per-dose presentation.</p><span class="tcard__more"><span data-i18n="home.28">View therapy</span><span class="arr" aria-hidden="true">→</span></span></div>
+      </a>
+      <a class="tcard" href="exosomes.html" data-reveal data-delay="180">
+        <div class="vtile" aria-hidden="true"><!-- ASSET NEEDED: product photograph (exosome vial) --><span class="vtile__label">1CELL Clinical</span><span class="vtile__abbr">EV</span><svg class="vtile__vial"><use href="#i-vial-tall"/></svg></div>
+        <div class="tcard__body"><span class="tcard__cat" data-i18n="home.29">Extracellular vesicles</span><h3 data-i18n="home.30">Exosomes</h3><p data-i18n="home.31">30–150 nm vesicles, quantified by NTA and confirmed CD9+ CD63+ CD81+.</p><span class="tcard__more"><span data-i18n="home.32">View therapy</span><span class="arr" aria-hidden="true">→</span></span></div>
+      </a>
     </div>
-    <div style="text-align:center;margin-top:40px" data-reveal>
-      <a href="products.html" class="btn btn--ghost btn--lg" data-cursor data-i18n="prod.viewallbtn">View all 7 biological families <span class="arr">→</span></a>
-    </div>
+    <p class="note" data-reveal><svg width="16" height="16" aria-hidden="true"><use href="#i-shield"/></svg><span data-i18n="home.33">For licensed healthcare professionals, where permitted by local regulation. <a href="clinicians.html#access">Request professional access →</a></span></p>
   </div>
 </section>
 
-<!-- ===== APPROACH · product + protocol + medical guidance ===== -->
-<section class="section approach" id="approach">
+<section class="section section--dark logi" id="logistics">
   <div class="container">
-    <div class="approach__head" data-reveal>
-      <span class="kicker" data-i18n="app.kicker">The 1CELL way</span>
-      <h2 class="section__title" data-i18n="app.title">You never receive just a vial.</h2>
-      <p class="section__sub" data-i18n="app.sub">Every 1CELL order arrives as a complete regimen — the product, a written clinical protocol, and a real medical team guiding every step. Advanced science, without the self-medication.</p>
+    <div class="head head--row" data-reveal>
+      <div>
+        <span class="kicker" data-i18n="home.34">Logistics</span>
+        <h2 class="h2" data-i18n="home.35">From source to clinic.</h2>
+        <p class="lead" data-i18n="home.36">1CELL coordinates specialized logistics for advanced biologics, including product-specific temperature control, cold-chain management and cryopreservation when required.</p>
+      </div>
+      <a class="btn btn--light" href="logistics.html"><span data-i18n="home.37">Explore Logistics</span><span class="arr" aria-hidden="true">→</span></a>
     </div>
-    <div class="approach__row" data-reveal data-delay="80">
-      <div class="approach__card">
-        <span class="approach__ic"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M8.5 3h7M10 3v6l-2.6 7.6A2.8 2.8 0 0 0 10 20.4h4a2.8 2.8 0 0 0 2.6-3.8L14 9V3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8.2 14h7.6" stroke="currentColor" stroke-width="1.6"/></svg></span>
-        <span class="approach__k">01</span>
-        <h3 data-i18n="app.1t">The product</h3>
-        <p data-i18n="app.1p">A characterized, cold-chain biologic — peptides, IV therapies, exosomes and nutraceuticals, each released against a Certificate of Analysis.</p>
-      </div>
-      <span class="approach__plus" aria-hidden="true">+</span>
-      <div class="approach__card">
-        <span class="approach__ic"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M7 3h8l4 4v14H7z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M15 3v4h4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M10 12h6M10 15.5h6M10 8.5h2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
-        <span class="approach__k">02</span>
-        <h3 data-i18n="app.2t">A clinical protocol</h3>
-        <p data-i18n="app.2p">Dosage, route, timing and safety flags — written around your goals, so nothing is left to guesswork.</p>
-      </div>
-      <span class="approach__plus" aria-hidden="true">+</span>
-      <div class="approach__card">
-        <span class="approach__ic"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M12 21s-7-4.5-7-10a7 7 0 0 1 14 0c0 5.5-7 10-7 10z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8.5 11h2l1.2-2.2L13 13l1-2h1.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <span class="approach__k">03</span>
-        <h3 data-i18n="app.3t">A medical team</h3>
-        <p data-i18n="app.3p">Real clinicians guide application and follow-up — an onboarding call and a direct line, from first dose to results.</p>
-      </div>
-    </div>
-    <p class="approach__result" data-reveal data-delay="140" data-i18n="app.result">Product <b>+</b> protocol <b>+</b> medical guidance <b>=</b> results you can trust.</p>
-  </div>
-</section>
 
-<!-- ===== SCROLL-SCRUB PRODUCT MOMENT ===== -->
-<section class="scrub" id="scrub" aria-label="Regenerative Cellular Serum">
-  <div class="scrub__sticky">
-    <div class="scrub__glow" aria-hidden="true"></div>
-    <img src="assets/img/hero-vial.png" alt="1CELL Regenerative Cellular Serum" class="scrub__vial" id="scrubVial" />
-    <div class="scrub__cap scrub__cap--1"><span class="scrub__k">01</span><h3 data-i18n="scrub.1t">Exosome actives</h3><p data-i18n="scrub.1p">Signaling factors that tell skin to renew.</p></div>
-    <div class="scrub__cap scrub__cap--2"><span class="scrub__k">02</span><h3 data-i18n="scrub.2t">GHK-Cu copper peptide</h3><p data-i18n="scrub.2p">Firmness, tone and visible repair.</p></div>
-    <div class="scrub__cap scrub__cap--3"><span class="scrub__k">03</span><h3 data-i18n="scrub.3t">Kept viable, 2–8 °C</h3><p data-i18n="scrub.3p">Cold-chain from our lab to your door.</p></div>
-    <div class="scrub__intro"><span class="kicker" data-i18n="scrub.kicker">Signature product</span><h2 class="scrub__title" data-i18n="scrub.title">The serum,<br>engineered like a biologic.</h2></div>
-    <div class="scrub__buy" id="scrubBuy"><span class="price price--xl">$89</span><button class="btn btn--primary btn--lg magnetic" data-add data-id="serum" data-name="1CELL Facial Serum" data-price="89" data-img="assets/img/product-cosmetic.jpg" data-cursor data-i18n="scrub.buy">Add to cart →</button></div>
-  </div>
-</section>
-
-<!-- ===== STANDARD ===== -->
-<section class="section standard" id="standard">
-  <div class="container">
-    <div class="section__head" data-reveal>
-      <span class="kicker" data-i18n="std.kicker">Why 1CELL</span>
-      <h2 class="section__title" data-i18n="std.title">The standard, on every vial.</h2>
-      <p class="section__sub" data-i18n="std.sub">Nothing ships without documentation, a clinical plan and a validated temperature record.</p>
-      <a href="standard.html" class="link-arrow" data-reveal style="--d:.1s;margin-top:18px;display:inline-flex" data-cursor data-i18n="std.viewall">Read the full standard <span>→</span></a>
-    </div>
-    <div class="pillars">
-      <article class="pillar pillar--accent" data-reveal>
-        <span class="pillar__ic"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M4 7l8-4 8 4v10l-8 4-8-4z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M4 7l8 4 8-4M12 11v10" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></span>
-        <h3 data-i18n="std.p1t">Traceable biology</h3><p data-i18n="std.p1p">cGMP manufacturing, flow-cytometry characterization and a third-party COA archived for every lot.</p></article>
-      <article class="pillar pillar--accent" data-reveal data-delay="80">
-        <span class="pillar__ic"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M12 3v11" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="17.5" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M10 6h4M10 9h4" stroke="currentColor" stroke-width="1.5"/></svg></span>
-        <h3 data-i18n="std.p2t">Unbroken cold chain</h3><p data-i18n="std.p2p">2–8 °C from culture to clinic, with a digital logger on every shipment. Out-of-range lots are rejected.</p></article>
-      <article class="pillar pillar--accent" data-reveal data-delay="160">
-        <span class="pillar__ic"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M12 21s-7-4.5-7-10a7 7 0 0 1 14 0c0 5.5-7 10-7 10z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M9 11l2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></span>
-        <h3 data-i18n="std.p3t">Real medical guidance</h3><p data-i18n="std.p3p">A clinical protocol ships with every order, and a dedicated medical team guides application and follow-up.</p></article>
-    </div>
-    <div class="metrics" data-reveal>
-      <div class="metric"><span class="metric__n" data-count="7">0</span><span class="metric__l" data-i18n="std.m1">Biological families</span></div>
-      <div class="metric"><span class="metric__n" data-count="100" data-suffix="%">0</span><span class="metric__l" data-i18n="std.m2">COA per batch</span></div>
-      <div class="metric"><span class="metric__n" data-count="24" data-suffix="/7">0</span><span class="metric__l" data-i18n="std.m3">Medical support</span></div>
-      <div class="metric"><span class="metric__n"><i>≤</i><span data-count="8" data-suffix="°C">0</span></span><span class="metric__l" data-i18n="std.m4">Cold chain</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== PROCESS ===== -->
-<section class="section process" id="process">
-  <div class="container process__grid">
-    <div class="process__head">
-      <div data-reveal>
-        <span class="kicker" data-i18n="proc.kicker">Chain of custody</span>
-        <h2 class="section__title" data-i18n="proc.title">From culture<br>to clinic.</h2>
-        <p class="section__sub" data-i18n="proc.sub">Four stages, each documented and temperature-controlled. Scroll to follow one lot.</p>
-        <a href="process.html" class="link-arrow" data-cursor data-i18n="proc.viewall">See the full process <span>→</span></a>
-      </div>
-      <figure class="process__art" id="processArt">
-        <img data-step="1" class="is-active" src="assets/img/lab-cleanroom.jpg" alt="Culture" />
-        <img data-step="2" src="assets/img/cell-macro.jpg" alt="Characterize" />
-        <img data-step="3" src="assets/img/coldchain.jpg" alt="Ship" />
-        <img data-step="4" src="assets/img/consultation.jpg" alt="Apply" />
-        <figcaption id="processCap">01 — Culture</figcaption>
-      </figure>
-    </div>
-    <ol class="steps">
-      <li class="step" data-reveal data-step="1"><span class="step__no">01</span><h3 data-i18n="proc.1t">Culture</h3><p data-i18n="proc.1p">cGMP manufacturing under controlled, audited conditions.</p></li>
-      <li class="step" data-reveal data-step="2"><span class="step__no">02</span><h3 data-i18n="proc.2t">Characterize</h3><p data-i18n="proc.2p">Flow-cytometry profiling and reported viability, per lot.</p></li>
-      <li class="step" data-reveal data-step="3"><span class="step__no">03</span><h3 data-i18n="proc.3t">Ship at 2–8 °C</h3><p data-i18n="proc.3p">Validated cold chain with a digital logger on every box.</p></li>
-      <li class="step" data-reveal data-step="4"><span class="step__no">04</span><h3 data-i18n="proc.4t">Apply &amp; follow up</h3><p data-i18n="proc.4p">A dedicated medical team guides use and post-care.</p></li>
+    <ol class="flow" data-reveal>
+      <li class="flow__step"><span class="flow__n">01</span><h3 data-i18n="home.38">Release</h3><p data-i18n="home.39">The source laboratory releases the lot against specification.</p></li>
+      <li class="flow__step"><span class="flow__n">02</span><h3 data-i18n="home.40">Verify</h3><p data-i18n="home.41">Documentation is checked against the lot before it moves.</p></li>
+      <li class="flow__step"><span class="flow__n">03</span><h3 data-i18n="home.42">Preserve</h3><p data-i18n="home.43">Packed for the conditions that product requires.</p></li>
+      <li class="flow__step"><span class="flow__n">04</span><h3 data-i18n="home.44">Transport</h3><p data-i18n="home.45">Cold-chain or cryogenic transport, as required.</p></li>
+      <li class="flow__step"><span class="flow__n">05</span><h3 data-i18n="home.46">Track</h3><p data-i18n="home.47">Temperature and custody recorded in transit.</p></li>
+      <li class="flow__step"><span class="flow__n">06</span><h3 data-i18n="home.48">Deliver</h3><p data-i18n="home.49">Handed off to the clinic with its documentation.</p></li>
     </ol>
-  </div>
-</section>
 
-<!-- ===== COLD CHAIN ===== -->
-<section class="section section--dark coldchain">
-  <div class="container coldchain__inner">
-    <figure class="coldchain__media" data-reveal>
-      <img src="assets/img/coldchain.jpg" alt="Cold-chain box with vials and a digital temperature logger" />
-      <span class="coldchain__chip"><span class="livedot"></span><b id="liveTemp">4.2</b>&nbsp;°C · <span data-i18n="cc.range">in range</span></span>
-    </figure>
-    <div class="coldchain__copy" data-reveal data-delay="100">
-      <span class="kicker kicker--glow" data-i18n="cc.kicker">Logistics</span>
-      <h2 class="section__title on-dark" data-i18n="cc.title">Never leaving<br>2–8&nbsp;°C.</h2>
-      <p class="section__sub on-dark" data-i18n="cc.sub">Every shipment carries a digital temperature logger, monitored 24/7. Out-of-range readings automatically reject the lot — so the biology you order is the biology you receive.</p>
-      <div class="coldchain__meta">
-        <div><span class="cc__k" data-i18n="cc.k1">Range</span><span class="cc__v">2–8 °C</span></div>
-        <div><span class="cc__k" data-i18n="cc.k2">Monitoring</span><span class="cc__v">24/7</span></div>
-        <div><span class="cc__k" data-i18n="cc.k3">Logger</span><span class="cc__v" data-i18n="cc.v3">Per box</span></div>
+    <div class="logi__grid">
+      <div class="video" data-video-src="" data-reveal>
+        <!-- VIDEO NEEDED: 15–20 s silent brand film (laboratory → product → vial → documentation → cryogenic logistics → transport → clinic). Set data-video-src="assets/video/brand.mp4" (and optionally data-video-poster). -->
+        <div class="video__ph" aria-hidden="true">
+          <span class="video__label">1CELL · Source to clinic</span>
+          <ol class="video__seq">
+            <li data-i18n="home.50">Laboratory</li><li data-i18n="home.51">Product</li><li data-i18n="home.52">Documentation</li><li data-i18n="home.53">Cryogenic logistics</li><li data-i18n="home.54">Transport</li><li data-i18n="home.55">Clinic</li>
+          </ol>
+        </div>
       </div>
+      <ul class="caps" data-reveal data-delay="80">
+        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-box"/></svg><span data-i18n="home.56">Specialized packaging</span></li>
+        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-snow"/></svg><span data-i18n="home.57">Cold-chain management</span></li>
+        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-dewar"/></svg><span data-i18n="home.58">Cryogenic preservation, when applicable</span></li>
+        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-dewar"/></svg><span data-i18n="home.59">Nitrogen-based transport, when applicable</span></li>
+        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-thermo"/></svg><span data-i18n="home.60">Temperature monitoring</span></li>
+        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-link"/></svg><span data-i18n="home.61">Chain of custody</span></li>
+        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-globe"/></svg><span data-i18n="home.62">International logistics</span></li>
+        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-clinic"/></svg><span data-i18n="home.63">Clinic handoff</span></li>
+      </ul>
     </div>
   </div>
 </section>
 
-<!-- ===== FAQ ===== -->
-<section class="section faq" id="faq">
-  <div class="container faq__inner">
-    <div class="section__head" data-reveal>
-      <span class="kicker" data-i18n="faq.kicker">Good to know</span>
-      <h2 class="section__title" data-i18n="faq.title">Questions,<br>answered.</h2>
-      <a href="faq.html" class="link-arrow" data-reveal style="--d:.1s;margin-top:18px;display:inline-flex" data-cursor data-i18n="faq.viewall">See all questions <span>→</span></a>
+<section class="section" id="documentation">
+  <div class="container">
+    <div class="head head--row" data-reveal>
+      <div>
+        <span class="kicker" data-i18n="home.64">Proof</span>
+        <h2 class="h2" data-i18n="home.65">Documentation you can verify.</h2>
+        <p class="lead" data-i18n="home.66">Every lot carries its own record. Verified professionals can review it before and after delivery.</p>
+      </div>
+      <a class="link" href="standard.html#documentation"><span data-i18n="home.67">View documentation</span><span class="arr" aria-hidden="true">→</span></a>
+    </div>
+    <div class="docs" data-reveal>
+      <article class="doc">
+        <div class="doc__sheet" aria-hidden="true"><i class="doc__hd"></i><i></i><i class="s"></i><i></i><i class="s"></i><i></i></div>
+        <h3 data-i18n="home.68">Sample COA</h3>
+        <p data-i18n="home.69">The Certificate of Analysis released with each lot.</p>
+      </article>
+      <article class="doc">
+        <div class="doc__sheet" aria-hidden="true"><i class="doc__hd"></i><i class="doc__plot"></i><i></i><i class="s"></i></div>
+        <h3 data-i18n="home.70">Product characterization</h3>
+        <p data-i18n="home.71">Identity and purity markers measured for each lot.</p>
+      </article>
+      <article class="doc">
+        <div class="doc__sheet" aria-hidden="true"><i class="doc__hd"></i><i></i><i></i><i class="s"></i><i></i></div>
+        <h3 data-i18n="home.72">Batch documentation</h3>
+        <p data-i18n="home.73">Source, release date and specification of the lot.</p>
+      </article>
+      <article class="doc">
+        <div class="doc__sheet" aria-hidden="true"><i class="doc__hd"></i><i class="doc__line"></i><i class="s"></i><i></i></div>
+        <h3 data-i18n="home.74">Temperature monitoring</h3>
+        <p data-i18n="home.75">The shipment's temperature record in transit.</p>
+      </article>
+      <article class="doc">
+        <div class="doc__sheet" aria-hidden="true"><i class="doc__hd"></i><i></i><i class="s"></i><i></i><i class="s"></i></div>
+        <h3 data-i18n="home.76">Chain of custody</h3>
+        <p data-i18n="home.77">Every handoff, from release to receipt at the clinic.</p>
+      </article>
+    </div>
+    <div class="docs__cta" data-reveal>
+      <!-- DOCUMENT NEEDED: add the real sample COA (e.g. assets/docs/sample-coa.pdf) to data-doc-src; the button then opens it directly. -->
+      <a class="btn btn--primary" href="clinicians.html?interest=documentation#access" data-doc-src="" data-doc-view="View sample COA" data-doc-view-es="Ver COA de muestra"><span data-i18n="home.78">Request sample COA</span></a>
+      <a class="btn btn--ghost" href="standard.html#documentation" data-i18n="home.79">View documentation</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tint" id="clinicians">
+  <div class="container coord">
+    <div class="coord__copy" data-reveal>
+      <span class="kicker" data-i18n="home.80">For clinicians</span>
+      <h2 class="h2" data-i18n="home.81">We coordinate what slows clinics down.</h2>
+      <p class="lead" data-i18n="home.82">From product access to receipt at the clinic, one team coordinates the product, its documents and its conditions.</p>
+      <div class="coord__cta">
+        <a class="btn btn--primary btn--lg" href="clinicians.html#access" data-i18n="home.83">Request professional access</a>
+        <a class="link" href="clinicians.html"><span data-i18n="home.84">How it works</span><span class="arr" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+    <ul class="coord__list" data-reveal data-delay="80">
+      <li><svg width="20" height="20" aria-hidden="true"><use href="#i-vial"/></svg><span data-i18n="home.85">Access to products</span></li>
+      <li><svg width="20" height="20" aria-hidden="true"><use href="#i-doc"/></svg><span data-i18n="home.86">Documentation</span></li>
+      <li><svg width="20" height="20" aria-hidden="true"><use href="#i-shield"/></svg><span data-i18n="home.87">Preservation</span></li>
+      <li><svg width="20" height="20" aria-hidden="true"><use href="#i-dewar"/></svg><span data-i18n="home.88">Cryopreservation, where required</span></li>
+      <li><svg width="20" height="20" aria-hidden="true"><use href="#i-snow"/></svg><span data-i18n="home.89">Cold-chain logistics</span></li>
+      <li><svg width="20" height="20" aria-hidden="true"><use href="#i-truck"/></svg><span data-i18n="home.90">Delivery</span></li>
+      <li><svg width="20" height="20" aria-hidden="true"><use href="#i-users"/></svg><span data-i18n="home.91">Professional coordination</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="longevity">
+  <div class="container">
+    <div class="head head--row" data-reveal>
+      <div>
+        <span class="kicker">1CELL Longevity</span>
+        <h2 class="h2" data-i18n="home.92">Everyday longevity, held to the same standard.</h2>
+        <p class="lead" data-i18n="home.93">Peptides, nutraceuticals and skincare — documented, with a written protocol and access to medical guidance.</p>
+      </div>
+      <a class="btn btn--primary" href="longevity.html"><span data-i18n="home.94">Explore Longevity</span><span class="arr" aria-hidden="true">→</span></a>
+    </div>
+    <div class="ltiles">
+      <a class="ltile" href="longevity.html#peptides" data-reveal>
+        <div class="ltile__media ptile" aria-hidden="true"><!-- ASSET NEEDED: peptide product photograph --><span class="ptile__k" data-i18n="home.95">Peptides</span><span class="ptile__names">BPC-157 · TB-500<br>GHK-Cu · Ipamorelin</span></div>
+        <div class="ltile__body"><h3 data-i18n="home.96">Peptides</h3><span class="ltile__more" aria-hidden="true">→</span></div>
+      </a>
+      <a class="ltile" href="longevity.html#nutraceuticals" data-reveal data-delay="60">
+        <div class="ltile__media ptile" aria-hidden="true"><!-- ASSET NEEDED: nutraceutical product photograph --><span class="ptile__k" data-i18n="home.97">Nutraceuticals</span><span class="ptile__names">Omega 3<br>EPA · DHA</span></div>
+        <div class="ltile__body"><h3 data-i18n="home.98">Nutraceuticals</h3><span class="ltile__more" aria-hidden="true">→</span></div>
+      </a>
+      <a class="ltile" href="longevity.html#skincare" data-reveal data-delay="120">
+        <div class="ltile__media ltile__media--img" aria-hidden="true"><img src="assets/img/hero-vial.png" width="720" height="900" alt="" loading="lazy" decoding="async" /></div>
+        <div class="ltile__body"><h3 data-i18n="home.99">Skincare</h3><span class="ltile__more" aria-hidden="true">→</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tint" id="faq">
+  <div class="container faqblock">
+    <div class="head" data-reveal>
+      <span class="kicker" data-i18n="home.100">Questions</span>
+      <h2 class="h2" data-i18n="home.101">The essentials.</h2>
+      <a class="link" href="faq.html"><span data-i18n="home.102">All questions</span><span class="arr" aria-hidden="true">→</span></a>
     </div>
     <div class="accordion" data-reveal data-delay="80">
-      <details class="acc" open><summary><span data-i18n="faq.q1">What ships with each product?</span><span class="acc__ic" aria-hidden="true"></span></summary>
-        <div class="acc__body"><p data-i18n="faq.a1">Every lot ships with a third-party Certificate of Analysis, flow-cytometry characterization and a clinical protocol covering dosage, route and follow-up. Cellular therapies also include reported viability for the batch.</p></div></details>
-      <details class="acc"><summary><span data-i18n="faq.q2">How is the cold chain guaranteed?</span><span class="acc__ic" aria-hidden="true"></span></summary>
-        <div class="acc__body"><p data-i18n="faq.a2">Shipments are held at 2–8 °C and carry a digital temperature logger monitored 24/7. If a reading falls out of range, the lot is automatically rejected before it reaches a patient.</p></div></details>
-      <details class="acc"><summary><span data-i18n="faq.q3">Who can order professional products?</span><span class="acc__ic" aria-hidden="true"></span></summary>
-        <div class="acc__body"><p data-i18n="faq.a3">Cellular therapies and exosomes are available to licensed physicians and clinics. Professional access is granted after license verification — typically within 24 hours — and unlocks institutional pricing and clinical protocols.</p></div></details>
-      <details class="acc"><summary><span data-i18n="faq.q4">Can individuals buy directly?</span><span class="acc__ic" aria-hidden="true"></span></summary>
-        <div class="acc__body"><p data-i18n="faq.a4">Yes. Peptides, nutraceuticals and cosmetics are available for direct purchase and ship in cold chain with a protocol included. Consult a qualified clinician before use.</p></div></details>
+      <details class="acc"><summary><span data-i18n="home.103">What does 1CELL Health do?</span><i class="acc__ic" aria-hidden="true"></i></summary>
+        <div class="acc__body"><p data-i18n="home.104">We supply advanced regenerative products to physicians and clinics and coordinate the specialized logistics they require — preservation, cold-chain or cryogenic transport, documentation and delivery.</p></div></details>
+      <details class="acc"><summary><span data-i18n="home.105">Is everything shipped at <span class="nw">2–8&nbsp;°C</span>?</span><i class="acc__ic" aria-hidden="true"></i></summary>
+        <div class="acc__body"><p data-i18n="home.106">No. Conditions depend on the product: some require controlled refrigeration, others frozen or cryogenic storage. We confirm the requirements with the source laboratory and coordinate packaging and transport accordingly.</p></div></details>
+      <details class="acc"><summary><span data-i18n="home.107">Who can order clinical products?</span><i class="acc__ic" aria-hidden="true"></i></summary>
+        <div class="acc__body"><p data-i18n="home.108">Cell therapies and exosomes are supplied to licensed physicians and clinics, where permitted by local regulation. We verify professional credentials before granting access.</p></div></details>
+      <details class="acc"><summary><span data-i18n="home.109">What documentation comes with a product?</span><i class="acc__ic" aria-hidden="true"></i></summary>
+        <div class="acc__body"><p data-i18n="home.110">Each lot is released with a lot-specific Certificate of Analysis. Depending on the product, characterization reports and custody records are also available to verified professionals.</p></div></details>
     </div>
-  </div>
-</section>
-
-<!-- ===== PROFESSIONAL ===== -->
-<section class="section section--green professional" id="professional">
-  <div class="container professional__inner" data-reveal>
-    <span class="kicker kicker--glow" data-i18n="pro.kicker">Professional access</span>
-    <h2 class="professional__title" data-i18n="pro.title">Join the 1CELL physician network.</h2>
-    <p class="professional__sub" data-i18n="pro.sub">License validation, institutional pricing and dedicated scientific support. Held to one standard.</p>
-    <form class="professional__form" id="proForm" novalidate>
-      <input type="email" id="proEmail" placeholder="Your professional email" aria-label="Professional email" required data-i18n-ph="pro.ph" />
-      <button class="btn btn--light btn--lg" type="submit" data-cursor data-i18n="pro.btn">Request access</button>
-    </form>
-    <p class="professional__fine" id="proMsg" data-i18n="pro.fine">License verification within 24 h · Per-batch evidence, no noise.</p>
   </div>
 </section>
 </main>
-
-<!-- ===== FOOTER ===== -->
-<footer class="footer" id="contact">
+<footer class="footer">
   <div class="container footer__top">
-    <h2 class="footer__cta" data-reveal>Regeneration,<br>engineered.</h2>
-    <form class="footer__news" id="newsForm" data-reveal data-delay="80" novalidate>
-      <label data-i18n="foot.news">Get per-batch evidence, no noise.</label>
-      <div class="footer__newsrow"><input type="email" id="newsEmail" placeholder="Email address" aria-label="Email" required data-i18n-ph="foot.ph" /><button class="btn btn--primary" type="submit" data-cursor data-i18n="foot.sub">Subscribe</button></div>
-      <span class="footer__newsmsg" id="newsMsg"></span>
-    </form>
+    <p class="footer__cta" data-i18n="c-footer.1">Regeneration,<br>engineered.</p>
+    <div class="footer__actions">
+      <a class="btn btn--light" href="clinicians.html#access" data-i18n="c-footer.2">Request professional access</a>
+      <a class="btn btn--ondark" href="contact.html" data-i18n="c-footer.3">Contact 1CELL</a>
+    </div>
   </div>
-  <div class="container footer__inner">
+  <div class="container footer__main">
     <div class="footer__brand">
-      <a class="brand brand--light" href="#top" data-cursor aria-label="1CELL Health home">
-        
+      <a class="brand brand--light" href="./" aria-label="1CELL Health — home">
         <span class="brand__lock"><span class="brand__word"><i>1</i>CELL</span><span class="brand__sub">HEALTH</span></span>
       </a>
-      <p class="footer__tag" data-i18n="foot.tag">Clinical-grade regenerative biologics with per-batch traceability and real medical guidance.</p>
-      <p class="footer__contact" data-i18n="foot.contactinfo">contacto@1cellhealth.com · Lun–Vie 9:00–18:00 (CT)</p>
-      <div class="footer__socials" aria-label="Social links">
-        <a href="#" data-cursor aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="17" height="17"><path fill="currentColor" d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.8-2 3.7-2 4 0 4.45 2.6 4.45 6V21H21v-5.3c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21H13z"/></svg></a>
-        <a href="#" data-cursor aria-label="Instagram"><svg viewBox="0 0 24 24" width="17" height="17"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M4 8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><circle cx="12" cy="12" r="3.4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17" cy="7" r="1" fill="currentColor"/></svg></a>
-        <a href="#" data-cursor aria-label="X"><svg viewBox="0 0 24 24" width="17" height="17"><path fill="currentColor" d="M17.5 3h3l-7 8 8.2 10h-6.4l-5-6.1L7 21H4l7.5-8.6L3.6 3H10l4.5 5.6z"/></svg></a>
-      </div>
+      <p class="footer__tag" data-i18n="c-footer.4">Advanced regenerative products and the specialized logistics that move them from source to clinic.</p>
+      <ul class="footer__contact">
+        <li><svg width="16" height="16" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:contacto@1cellhealth.com">contacto@1cellhealth.com</a></li>
+        <li><svg width="16" height="16" aria-hidden="true"><use href="#i-clock"/></svg><span data-i18n="c-footer.5">Mon–Fri · 9:00–18:00 (CT)</span></li>
+        <li><svg width="16" height="16" aria-hidden="true"><use href="#i-pin"/></svg><span data-i18n="c-footer.6">United States · Mexico · Latin America</span></li>
+      </ul>
     </div>
     <nav class="footer__cols" aria-label="Footer">
-      <div class="footer__col"><h4 data-i18n="nav.products">Products</h4><a href="products.html?goto=msc">Stem Cells</a><a href="products.html?goto=exo">Exosomes</a><a href="products.html?goto=nk">NK Cells</a><a href="products.html?goto=pep">Peptides</a></div>
-      <div class="footer__col"><h4 data-i18n="foot.science">Science</h4><a href="standard.html" data-i18n="nav.standard">Standard</a><a href="process.html" data-i18n="nav.process">Process</a><a href="faq.html" data-i18n="nav.faq">FAQ</a></div>
-      <div class="footer__col"><h4 data-i18n="foot.company">Company</h4><a href="#professional" data-i18n="pro.kicker">Professional access</a><a href="#contact" data-i18n="foot.contact">Contact</a><a href="about.html" data-i18n="page.about">About</a></div>
-      <div class="footer__col"><h4 data-i18n="foot.legal">Legal</h4><a href="#" data-page="privacy" data-i18n="page.privacy">Privacy</a><a href="#" data-page="terms" data-i18n="page.terms">Terms</a><a href="#" data-page="compliance" data-i18n="page.compliance">Compliance</a></div>
+      <div class="footer__col">
+        <p class="footer__h" data-i18n="c-footer.7">Therapies</p>
+        <a href="stem-cells.html" data-i18n="c-footer.8">Stem Cells</a>
+        <a href="nk-cells.html" data-i18n="c-footer.9">NK Cells</a>
+        <a href="muse-cells.html" data-i18n="c-footer.10">Muse Cells</a>
+        <a href="exosomes.html" data-i18n="c-footer.11">Exosomes</a>
+        <a href="longevity.html">1CELL Longevity</a>
+      </div>
+      <div class="footer__col">
+        <p class="footer__h" data-i18n="c-footer.12">Operations</p>
+        <a href="standard.html" data-i18n="c-footer.13">The Standard</a>
+        <a href="logistics.html" data-i18n="c-footer.14">Logistics</a>
+        <a href="standard.html#documentation" data-i18n="c-footer.15">Documentation</a>
+        <a href="science.html" data-i18n="c-footer.16">Science</a>
+      </div>
+      <div class="footer__col">
+        <p class="footer__h" data-i18n="c-footer.17">Company</p>
+        <a href="about.html" data-i18n="c-footer.18">About</a>
+        <a href="about.html#team" data-i18n="c-footer.19">Medical &amp; Scientific Team</a>
+        <a href="clinicians.html" data-i18n="c-footer.20">For Clinicians</a>
+        <a href="contact.html" data-i18n="c-footer.21">Contact</a>
+        <a href="faq.html" data-i18n="c-footer.22">FAQ</a>
+      </div>
+      <div class="footer__col">
+        <p class="footer__h">Legal</p>
+        <a href="legal.html#privacy" data-i18n="c-footer.23">Privacy</a>
+        <a href="legal.html#terms" data-i18n="c-footer.24">Terms</a>
+        <a href="legal.html#disclaimer" data-i18n="c-footer.25">Medical disclaimer</a>
+      </div>
     </nav>
   </div>
-  <div class="footer__bar"><div class="container footer__bar-inner"><span>© 2026 1CELL HEALTH. All rights reserved.</span><span class="footer__biologics">1CELL · Biologics</span></div></div>
-  <p class="footer__disclaimer container">These statements have not been evaluated by a regulatory agency. Cellular therapies and exosomes are provided for professional use where permitted by law. This site is informational and not medical advice; consult a qualified clinician.</p>
+  <div class="footer__bar">
+    <div class="container footer__bar-inner">
+      <span data-i18n="c-footer.26">© 2026 1CELL Health · Est. 2026</span>
+      <span class="footer__mark" data-i18n="c-footer.27">Verified · Documented · Preserved · Delivered</span>
+    </div>
+  </div>
+  <p class="container footer__disclaimer" data-i18n="c-footer.28">Statements on this site have not been evaluated by the U.S. Food and Drug Administration or other regulatory agencies. Cell therapies and exosomes are supplied for professional use where permitted by applicable law. This site is informational and is not medical advice; consult a qualified clinician.</p>
 </footer>
-
-<!-- ===== CART ===== -->
 <div class="overlay" id="overlay" hidden></div>
-<aside class="cart" id="cart" aria-label="Shopping cart" aria-hidden="true">
-  <div class="cart__head"><h3 data-i18n="cart.title">Your cart</h3><button class="cart__close" id="cartClose" data-cursor aria-label="Close cart">&times;</button></div>
+
+<aside class="cart" id="cart" aria-label="Your order" aria-hidden="true" tabindex="-1">
+  <div class="cart__head">
+    <p class="cart__title" data-i18n="c-overlays.1">Your order</p>
+    <button class="iconbtn" type="button" data-close aria-label="Close" data-i18n-aria="c-overlays.a1"><svg width="20" height="20" aria-hidden="true"><use href="#i-close"/></svg></button>
+  </div>
   <div class="cart__items" id="cartItems"></div>
   <div class="cart__empty" id="cartEmpty">
-    <svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true"><path d="M6 7h13l-1.2 9.2a2 2 0 0 1-2 1.8H9.2a2 2 0 0 1-2-1.8L6 7zM6 7L5.2 4H3" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    <p data-i18n="cart.empty">Nothing here yet — your regimen starts in the catalog.</p><button class="btn btn--ghost btn--sm" id="cartKeep" data-cursor data-i18n="cart.browse">Browse products</button>
+    <p data-i18n="c-overlays.2">Your order is empty.</p>
+    <a class="btn btn--ghost btn--sm" href="longevity.html" data-i18n="c-overlays.3">Explore Longevity</a>
   </div>
   <div class="cart__foot" id="cartFoot" hidden>
-    <div class="cart__row"><span data-i18n="cart.subtotal">Subtotal</span><strong id="cartTotal">$0</strong></div>
-    <p class="cart__note" data-i18n="cart.ship">Cold-chain shipping calculated at checkout.</p>
-    <button class="btn btn--primary btn--block" id="checkout" data-cursor data-i18n="cart.checkout">Checkout</button>
+    <div class="cart__row"><span data-i18n="c-overlays.4">Subtotal</span><strong id="cartTotal">$0</strong></div>
+    <p class="cart__note" data-i18n="c-overlays.5">Prices in USD. Our team confirms availability, protocol, shipping and payment before anything ships.</p>
+    <button class="btn btn--primary btn--block" id="orderOpen" type="button" data-i18n="c-overlays.6">Request order</button>
   </div>
 </aside>
 
-<!-- ===== QUICK VIEW ===== -->
-<div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true">
-  <div class="modal__box">
-    <button class="modal__close" id="modalClose" data-cursor aria-label="Close">&times;</button>
-    <div class="modal__media"><img id="mvImg" src="" alt="" /></div>
-    <div class="modal__body"><span class="modal__cat" id="mvCat"></span><h3 id="mvName"></h3><p class="modal__spec" id="mvSpec"></p><div class="modal__detail" id="mvDetail"></div>
-      <div class="modal__foot"><span class="price price--lg" id="mvPrice"></span><button class="btn btn--primary" id="mvAction" data-cursor></button></div>
-      <p class="modal__note" id="mvNote"></p></div>
-  </div>
-</div>
-
-<!-- ===== CHECKOUT ===== -->
-<div class="modal modal--checkout" id="checkoutModal" aria-hidden="true" role="dialog" aria-modal="true">
-  <div class="co">
-    <button class="modal__close" id="coClose" data-cursor aria-label="Close">&times;</button>
-    <div class="co__steps" id="coSteps"><span class="is-active" data-i18n="co.s1">Details</span><span data-i18n="co.s2">Review</span><span data-i18n="co.s3">Done</span></div>
-    <!-- step 1 -->
-    <form class="co__pane is-active" id="coStep1" data-pane="1" novalidate>
-      <h3 data-i18n="co.detailsh">Shipping details</h3>
-      <p class="co__demo" data-i18n="co.demo">Demo checkout — no payment is taken and nothing is shipped.</p>
-      <div class="co__field"><label data-i18n="co.name">Full name</label><input type="text" id="coName" required /></div>
-      <div class="co__field"><label data-i18n="co.email">Email</label><input type="email" id="coEmail" required /></div>
-      <div class="co__field"><label data-i18n="co.addr">Address</label><input type="text" id="coAddr" required /></div>
-      <div class="co__two"><div class="co__field"><label data-i18n="co.city">City</label><input type="text" id="coCity" required /></div><div class="co__field"><label data-i18n="co.country">Country</label><input type="text" id="coCountry" required /></div></div>
-      <button class="btn btn--primary btn--block" type="submit" data-cursor data-i18n="co.toreview">Continue to review</button>
+<div class="modal" id="orderModal" role="dialog" aria-modal="true" aria-labelledby="orderTitle" aria-hidden="true">
+  <div class="modal__box modal__box--form">
+    <button class="modal__close" type="button" data-close aria-label="Close" data-i18n-aria="c-overlays.a2"><svg width="18" height="18" aria-hidden="true"><use href="#i-close"/></svg></button>
+    <span class="kicker">1CELL Longevity</span>
+    <h2 class="modal__title" id="orderTitle" data-i18n="c-overlays.7">Request your order</h2>
+    <p class="modal__lead" data-i18n="c-overlays.8">Send your request and our team will confirm availability, your protocol and payment details. Payment is arranged directly with our team once your order is confirmed.</p>
+    <ul class="order__summary" id="orderSummary"></ul>
+    <form class="form" data-form="order" novalidate>
+      <div class="form__row">
+        <div class="field"><label for="oName" data-i18n="c-overlays.9">Full name</label><input id="oName" name="name" type="text" autocomplete="name" required /><p class="field__err" data-i18n="c-overlays.10">Please enter your name.</p></div>
+        <div class="field"><label for="oEmail">Email</label><input id="oEmail" name="email" type="email" autocomplete="email" required /><p class="field__err" data-i18n="c-overlays.11">Please enter a valid email.</p></div>
+      </div>
+      <div class="form__row">
+        <div class="field"><label for="oCountry" data-i18n="c-overlays.12">Country</label><input id="oCountry" name="country" type="text" autocomplete="country-name" required /><p class="field__err" data-i18n="c-overlays.13">Please enter your country.</p></div>
+        <div class="field"><label for="oPhone" data-i18n="c-overlays.14">Phone (optional)</label><input id="oPhone" name="phone" type="tel" autocomplete="tel" /></div>
+      </div>
+      <div class="field"><label for="oNotes" data-i18n="c-overlays.15">Notes (optional)</label><textarea id="oNotes" name="notes" rows="3"></textarea></div>
+      <button class="btn btn--primary btn--block btn--lg" type="submit" data-i18n="c-overlays.16">Send order request</button>
+      <p class="form__note" data-i18n="c-overlays.17">By sending, you agree to our <a href="legal.html#privacy">privacy notice</a>.</p>
     </form>
-    <!-- step 2 -->
-    <div class="co__pane" id="coStep2" data-pane="2">
-      <h3 data-i18n="co.reviewh">Review your order</h3>
-      <div class="co__summary" id="coSummary"></div>
-      <div class="co__totrow"><span data-i18n="cart.subtotal">Subtotal</span><strong id="coTotal">$0</strong></div>
-      <div class="co__totrow co__totrow--muted"><span data-i18n="co.shiprow">Cold-chain shipping</span><span data-i18n="co.free">Free</span></div>
-      <div class="co__actions"><button class="btn btn--ghost" id="coBack" data-cursor data-i18n="co.back">Back</button><button class="btn btn--primary" id="coPlace" data-cursor data-i18n="co.place">Place order</button></div>
-    </div>
-    <!-- step 3 -->
-    <div class="co__pane co__pane--done" id="coStep3" data-pane="3">
-      <div class="co__check"><svg viewBox="0 0 24 24" width="30" height="30"><path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      <h3 data-i18n="co.doneh">Order placed</h3>
-      <p id="coDoneMsg" data-i18n="co.donep">Thank you — this was a demo, so no payment was taken. A confirmation would normally arrive by email.</p>
-      <button class="btn btn--primary" id="coFinish" data-cursor data-i18n="co.finish">Continue browsing</button>
-    </div>
-  </div>
-</div>
-
-<!-- ===== SEARCH OVERLAY ===== -->
-<div class="searchmodal" id="searchModal" aria-hidden="true" role="dialog" aria-modal="true">
-  <div class="searchmodal__box">
-    <div class="searchmodal__field"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><input type="search" id="searchModalInput" placeholder="Search products…" aria-label="Search" data-i18n-ph="prod.search" /><button id="searchClose" data-cursor aria-label="Close">Esc</button></div>
-    <div class="searchmodal__results" id="searchResults"></div>
-  </div>
-</div>
-
-<!-- ===== INFO PAGES ===== -->
-<div class="pagemodal" id="pageModal" aria-hidden="true" role="dialog" aria-modal="true">
-  <div class="pagemodal__box">
-    <div class="pagemodal__head"><h2 id="pageTitle"></h2><button class="modal__close" id="pageClose" data-cursor aria-label="Close">&times;</button></div>
-    <div class="pagemodal__body" id="pageBody"></div>
+    <div class="form__done" data-form-done hidden></div>
   </div>
 </div>
 
 <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
-<a href="#top" class="totop" id="toTop" data-cursor aria-label="Back to top">↑</a>
-<script src="assets/js/main.js?v=17"></script>
+<a href="#top" class="totop" id="toTop" aria-label="Back to top" data-i18n-aria="c-overlays.a3"><svg width="18" height="18" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+<script src="assets/js/i18n-es.js?v=18.2" defer></script>
+<script src="assets/js/main.js?v=18.2" defer></script>
 </body>
 </html>
