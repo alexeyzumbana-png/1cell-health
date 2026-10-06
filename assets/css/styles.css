@@ -214,8 +214,8 @@ dl,dd{margin:0}
 .hero__float{animation:floaty 7s ease-in-out infinite}
 @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
 .hero__vial{width:min(72vw,330px);filter:drop-shadow(0 40px 56px rgba(0,0,0,.45)) drop-shadow(0 0 40px rgba(31,184,148,.22))}
-.js .hero__vial{opacity:0;transform:translateY(24px) scale(.97);transition:opacity 1s var(--ease),transform 1.2s var(--spring)}
-.js .hero__vial.is-loaded{opacity:1;transform:none}
+.hero__vial{animation:vialIn 1.2s var(--spring) .1s both}
+@keyframes vialIn{from{opacity:0;transform:translateY(26px) scale(.96)}to{opacity:1;transform:none}}
 .hero__chip{position:absolute;z-index:3;display:inline-flex;align-items:center;gap:8px;padding:10px 15px;border-radius:100px;background:rgba(3,30,27,.62);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.14);font-family:var(--font-mono);font-size:11.5px;letter-spacing:.03em;color:#fff;box-shadow:0 14px 36px -16px rgba(0,0,0,.7);white-space:nowrap;transition:transform .5s var(--ease)}
 .hero__chip svg{color:var(--live);flex:none}
 .hero__chip--a{left:0;bottom:16%}
@@ -837,7 +837,6 @@ html:has(.subnav){scroll-padding-top:calc(var(--header-h) + 84px)}
   .js .flow .flow__step{opacity:1;transform:none}
   .js .flow::before{transform:none}
   .hero__mesh{display:none}
-  .js .hero__vial{opacity:1;transform:none}
   .hero__bg{opacity:.34}
 }
 

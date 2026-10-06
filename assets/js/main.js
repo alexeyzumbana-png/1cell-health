@@ -495,7 +495,7 @@
     var done = function () { img.classList.add("is-loaded"); };
     if (img.complete && img.naturalWidth) done(); else { img.addEventListener("load", done); img.addEventListener("error", done); }
   }
-  $$(".hero__bg,.hero__vial").forEach(whenLoaded);
+  $$(".hero__bg").forEach(whenLoaded);
 
   var progressBar = $(".progress span");
   var parEls = $$(".media--par>img,.imgband>img");
